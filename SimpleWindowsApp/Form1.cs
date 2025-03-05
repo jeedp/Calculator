@@ -380,11 +380,13 @@ namespace SimpleWindowsApp
         private void roundedButton_CalcStandard_Click(object sender, EventArgs e)
         {
             textBox_CalcType.Text = "Standard";
+            panel_SciCal.Height = 0;
         }
 
         private void roundedButton_CalcScientific_Click(object sender, EventArgs e)
         {
             textBox_CalcType.Text = "Scientific";
+            panel_SciCal.Height = 340;
         }
 
 
