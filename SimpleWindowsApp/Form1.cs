@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SimpleWindowsApp;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace SimpleWindowsApp
 {
@@ -23,7 +24,6 @@ namespace SimpleWindowsApp
         private string currentExpression = "";
         private Point lastLocation;
         private bool mouseDown;
-        private int panelTargetHeight;
         private List<string> historyList = new List<string>();
 
 
@@ -36,6 +36,8 @@ namespace SimpleWindowsApp
             this.Panel_Title.MouseMove += new MouseEventHandler(this.Calculator_MouseMove);
             this.Panel_Title.MouseUp += new MouseEventHandler(this.Calculator_MouseUp);
             panel_ShowHistory.Height = 0;
+            panel_Menu1.Width = 0;
+            panel_Menu2.Width = 0;
             UpdateHistoryDisplay();
         }
 
@@ -345,7 +347,7 @@ namespace SimpleWindowsApp
 
         private void button_History_Click(object sender, EventArgs e)
         {
-            panel_ShowHistory.Height = (panel_ShowHistory.Height == 0) ? panelTargetHeight = 300 : 0;
+            panel_ShowHistory.Height = (panel_ShowHistory.Height == 0) ? 300 : 0;
 
             //panelTargetHeight = 300;
             //if (panel_ShowHistory.Height == 2)
@@ -366,7 +368,12 @@ namespace SimpleWindowsApp
 
         private void button_Menu_Click(object sender, EventArgs e)
         {
+            panel_Menu1.Width = (panel_Menu1.Width == 0) ? 255 : 0;
+            panel_Menu2.Width = (panel_Menu2.Width == 0) ? 255 : 0;
+            button_Menu.BackColor = (panel_Menu2.Width == 0) ? Color.FromArgb(32, 32, 32) : Color.FromArgb(47, 47, 47);
 
+
+            button_Menu.BringToFront();
         }
 
 
