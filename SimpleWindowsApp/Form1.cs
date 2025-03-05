@@ -368,12 +368,23 @@ namespace SimpleWindowsApp
 
         private void button_Menu_Click(object sender, EventArgs e)
         {
-            panel_Menu1.Width = (panel_Menu1.Width == 0) ? 255 : 0;
-            panel_Menu2.Width = (panel_Menu2.Width == 0) ? 255 : 0;
+            panel_Menu1.Width = (panel_Menu1.Width == 0) ? 255 : 0; panel_Menu1.BringToFront();
+            panel_Menu2.Width = (panel_Menu2.Width == 0) ? 255 : 0; panel_Menu2.BringToFront();
             button_Menu.BackColor = (panel_Menu2.Width == 0) ? Color.FromArgb(32, 32, 32) : Color.FromArgb(47, 47, 47);
 
 
+
             button_Menu.BringToFront();
+        }
+
+        private void roundedButton_CalcStandard_Click(object sender, EventArgs e)
+        {
+            textBox_CalcType.Text = "Standard";
+        }
+
+        private void roundedButton_CalcScientific_Click(object sender, EventArgs e)
+        {
+            textBox_CalcType.Text = "Scientific";
         }
 
 
@@ -485,5 +496,6 @@ namespace SimpleWindowsApp
                 listBox_History.Items.Add(item);
             }
         }
+
     }
 }

@@ -36,11 +36,12 @@
             this.button_Exit = new System.Windows.Forms.Button();
             this.pictureBox_Calculator = new System.Windows.Forms.PictureBox();
             this.panel_Menu1 = new System.Windows.Forms.Panel();
+            this.textBox_MenuCalcTitle = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox_CalcType = new System.Windows.Forms.TextBox();
-            this.panel_Menu2 = new System.Windows.Forms.Panel();
             this.button_Menu = new System.Windows.Forms.Button();
+            this.panel_Menu2 = new System.Windows.Forms.Panel();
             this.button_History = new System.Windows.Forms.Button();
+            this.textBox_CalcType = new System.Windows.Forms.TextBox();
             this.textBox_Display2 = new System.Windows.Forms.TextBox();
             this.textBox_Display1 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -55,6 +56,8 @@
             this.panel_ShowHistory = new System.Windows.Forms.Panel();
             this.listBox_History = new System.Windows.Forms.ListBox();
             this.button_ClearHistory = new System.Windows.Forms.Button();
+            this.roundedButton_CalcScientific = new SimpleWindowsApp.RoundedButton();
+            this.roundedButton_CalcStandard = new SimpleWindowsApp.RoundedButton();
             this.roundedButton_Num6 = new SimpleWindowsApp.RoundedButton();
             this.roundedButton_Equals = new SimpleWindowsApp.RoundedButton();
             this.roundedButton_Decimal = new SimpleWindowsApp.RoundedButton();
@@ -81,6 +84,7 @@
             this.roundedButton_Percent = new SimpleWindowsApp.RoundedButton();
             this.Panel_Title.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Calculator)).BeginInit();
+            this.panel_Menu1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel_ShowHistory.SuspendLayout();
@@ -166,6 +170,9 @@
             // panel_Menu1
             // 
             this.panel_Menu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
+            this.panel_Menu1.Controls.Add(this.roundedButton_CalcScientific);
+            this.panel_Menu1.Controls.Add(this.roundedButton_CalcStandard);
+            this.panel_Menu1.Controls.Add(this.textBox_MenuCalcTitle);
             this.panel_Menu1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_Menu1.Location = new System.Drawing.Point(0, 79);
             this.panel_Menu1.Margin = new System.Windows.Forms.Padding(0);
@@ -173,41 +180,31 @@
             this.panel_Menu1.Size = new System.Drawing.Size(2, 421);
             this.panel_Menu1.TabIndex = 41;
             // 
+            // textBox_MenuCalcTitle
+            // 
+            this.textBox_MenuCalcTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
+            this.textBox_MenuCalcTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_MenuCalcTitle.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_MenuCalcTitle.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox_MenuCalcTitle.Location = new System.Drawing.Point(18, 10);
+            this.textBox_MenuCalcTitle.Margin = new System.Windows.Forms.Padding(0, 0, 0, 13);
+            this.textBox_MenuCalcTitle.Name = "textBox_MenuCalcTitle";
+            this.textBox_MenuCalcTitle.ReadOnly = true;
+            this.textBox_MenuCalcTitle.Size = new System.Drawing.Size(95, 18);
+            this.textBox_MenuCalcTitle.TabIndex = 43;
+            this.textBox_MenuCalcTitle.Text = "Calculator";
+            // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.textBox_CalcType);
-            this.panel2.Controls.Add(this.panel_Menu2);
             this.panel2.Controls.Add(this.button_Menu);
+            this.panel2.Controls.Add(this.panel_Menu2);
             this.panel2.Controls.Add(this.button_History);
+            this.panel2.Controls.Add(this.textBox_CalcType);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 35);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(320, 44);
             this.panel2.TabIndex = 4;
-            // 
-            // textBox_CalcType
-            // 
-            this.textBox_CalcType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.textBox_CalcType.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_CalcType.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_CalcType.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox_CalcType.Location = new System.Drawing.Point(46, 12);
-            this.textBox_CalcType.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox_CalcType.Name = "textBox_CalcType";
-            this.textBox_CalcType.ReadOnly = true;
-            this.textBox_CalcType.Size = new System.Drawing.Size(95, 26);
-            this.textBox_CalcType.TabIndex = 42;
-            this.textBox_CalcType.Text = "Standard";
-            // 
-            // panel_Menu2
-            // 
-            this.panel_Menu2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
-            this.panel_Menu2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel_Menu2.Location = new System.Drawing.Point(0, 0);
-            this.panel_Menu2.Margin = new System.Windows.Forms.Padding(0);
-            this.panel_Menu2.Name = "panel_Menu2";
-            this.panel_Menu2.Size = new System.Drawing.Size(2, 44);
-            this.panel_Menu2.TabIndex = 42;
             // 
             // button_Menu
             // 
@@ -222,6 +219,16 @@
             this.button_Menu.UseVisualStyleBackColor = true;
             this.button_Menu.Click += new System.EventHandler(this.button_Menu_Click);
             // 
+            // panel_Menu2
+            // 
+            this.panel_Menu2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
+            this.panel_Menu2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel_Menu2.Location = new System.Drawing.Point(0, 0);
+            this.panel_Menu2.Margin = new System.Windows.Forms.Padding(0);
+            this.panel_Menu2.Name = "panel_Menu2";
+            this.panel_Menu2.Size = new System.Drawing.Size(2, 44);
+            this.panel_Menu2.TabIndex = 42;
+            // 
             // button_History
             // 
             this.button_History.FlatAppearance.BorderSize = 0;
@@ -234,6 +241,20 @@
             this.button_History.TabIndex = 22;
             this.button_History.UseVisualStyleBackColor = true;
             this.button_History.Click += new System.EventHandler(this.button_History_Click);
+            // 
+            // textBox_CalcType
+            // 
+            this.textBox_CalcType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.textBox_CalcType.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_CalcType.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_CalcType.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox_CalcType.Location = new System.Drawing.Point(46, 12);
+            this.textBox_CalcType.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox_CalcType.Name = "textBox_CalcType";
+            this.textBox_CalcType.ReadOnly = true;
+            this.textBox_CalcType.Size = new System.Drawing.Size(95, 26);
+            this.textBox_CalcType.TabIndex = 42;
+            this.textBox_CalcType.Text = "Standard";
             // 
             // textBox_Display2
             // 
@@ -419,6 +440,48 @@
             this.button_ClearHistory.TabIndex = 23;
             this.button_ClearHistory.UseVisualStyleBackColor = true;
             this.button_ClearHistory.Click += new System.EventHandler(this.button_ClearHistory_Click);
+            // 
+            // roundedButton_CalcScientific
+            // 
+            this.roundedButton_CalcScientific.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
+            this.roundedButton_CalcScientific.BorderRadius = 5;
+            this.roundedButton_CalcScientific.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_CalcScientific.FlatAppearance.BorderSize = 0;
+            this.roundedButton_CalcScientific.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_CalcScientific.Font = new System.Drawing.Font("Gadugi", 10F);
+            this.roundedButton_CalcScientific.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_CalcScientific.Image = ((System.Drawing.Image)(resources.GetObject("roundedButton_CalcScientific.Image")));
+            this.roundedButton_CalcScientific.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.roundedButton_CalcScientific.Location = new System.Drawing.Point(0, 80);
+            this.roundedButton_CalcScientific.Margin = new System.Windows.Forms.Padding(1);
+            this.roundedButton_CalcScientific.Name = "roundedButton_CalcScientific";
+            this.roundedButton_CalcScientific.Size = new System.Drawing.Size(255, 36);
+            this.roundedButton_CalcScientific.TabIndex = 44;
+            this.roundedButton_CalcScientific.Text = "       Scientific";
+            this.roundedButton_CalcScientific.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.roundedButton_CalcScientific.UseVisualStyleBackColor = false;
+            this.roundedButton_CalcScientific.Click += new System.EventHandler(this.roundedButton_CalcScientific_Click);
+            // 
+            // roundedButton_CalcStandard
+            // 
+            this.roundedButton_CalcStandard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
+            this.roundedButton_CalcStandard.BorderRadius = 5;
+            this.roundedButton_CalcStandard.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_CalcStandard.FlatAppearance.BorderSize = 0;
+            this.roundedButton_CalcStandard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_CalcStandard.Font = new System.Drawing.Font("Gadugi", 10F);
+            this.roundedButton_CalcStandard.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_CalcStandard.Image = ((System.Drawing.Image)(resources.GetObject("roundedButton_CalcStandard.Image")));
+            this.roundedButton_CalcStandard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.roundedButton_CalcStandard.Location = new System.Drawing.Point(0, 42);
+            this.roundedButton_CalcStandard.Margin = new System.Windows.Forms.Padding(1);
+            this.roundedButton_CalcStandard.Name = "roundedButton_CalcStandard";
+            this.roundedButton_CalcStandard.Size = new System.Drawing.Size(255, 36);
+            this.roundedButton_CalcStandard.TabIndex = 42;
+            this.roundedButton_CalcStandard.Text = "       Standard";
+            this.roundedButton_CalcStandard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.roundedButton_CalcStandard.UseVisualStyleBackColor = false;
+            this.roundedButton_CalcStandard.Click += new System.EventHandler(this.roundedButton_CalcStandard_Click);
             // 
             // roundedButton_Num6
             // 
@@ -881,6 +944,8 @@
             this.Panel_Title.ResumeLayout(false);
             this.Panel_Title.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Calculator)).EndInit();
+            this.panel_Menu1.ResumeLayout(false);
+            this.panel_Menu1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -942,6 +1007,9 @@
         private System.Windows.Forms.Panel panel_Menu1;
         private System.Windows.Forms.Panel panel_Menu2;
         private System.Windows.Forms.TextBox textBox_CalcType;
+        private System.Windows.Forms.TextBox textBox_MenuCalcTitle;
+        private RoundedButton roundedButton_CalcStandard;
+        private RoundedButton roundedButton_CalcScientific;
     }
 }
 
