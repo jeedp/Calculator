@@ -158,7 +158,7 @@
   <data name="roundedButton_CalcScientific.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAAAORJREFUOE+1kTEKwkAURJPCRtJpYWMvqLW9B7CRVDlALqAHEC/gOVTs7OwEETyB
+        DAAACwwBP0AiyAAAAORJREFUOE+1kTEKwkAURJPCRtJpYWMvqLW9B7CRVDlALqAHEC/gOVTs7OwEETyB
         tYjoJeL7YZKYQAyiDjzYPzO7m7DOXxRF0RD8AkPF1aK8gQssha03iqtF2W5carTZDvE1VutXBxR/4aMD
         AtjbJmHrQHG1KK9hotHmKaw0vhfFMZyhA215dXnjuFQmCi24wQDmhiLLzLOsJSsvAhe2MJOVCq8PTcvU
         cRVlwgzhBDVZqfCusLBMnVBRJswHdDXmhG9f0NC6B/c4eBXmEXaQvH0Z1jloWyZMD0aQvH0Z1vG07Vs5
@@ -203,6 +203,16 @@
         1qzrseZtNF3DsNzFjat6D+vW81jzWzRcw7DcQsc176EHVF3DsFxF3zXvoTesuIZhuYwPTLkHD2kH3Syp
         jwzLAj5RdB/1UBG6KahHw8EAZf+uYdZqnpUx0O/ccKS/wrZrEHY7unGNh6ND9HGBsyGX0N/jwOfxcDSB
         Ko5wOkSzTZ/+RZLkC7VO2QAIGRn7AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="roundedButton21.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAOBJREFUOE/l07sOAVEQxvFNiEiWRCKh9wzULs9i0YtK4y3oNBKdTieio9FIvANx
+        6dTrP2sOm5zdalV8yS/OzNkzyV44fxbf9/OY4I64nDHQI3bYLGCLDaqoxGjigoYe/YRmEXsskdV2bLhm
+        hqGWr9Ao44AFMtrzsIKrtat1W+spRrIOQpHDEXOktW0Oyi2KUmhtBluDetghpa136JlhD/0NhkhYW4O6
+        +MoguTj5rUloRD3sDtYIP2ypPa3tQRKayV+/CRvhD7KGqI9RtHBFXY/aYVP+ImPcEJcT+nrkd+M4T1Tl
+        w20BJODmAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="roundedButton_Delete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
