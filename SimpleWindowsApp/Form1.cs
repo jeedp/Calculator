@@ -82,6 +82,7 @@ namespace SimpleWindowsApp
         private void roundedButton_ClearEntry_Click(object sender, EventArgs e)
         {
             textBox_Display1.Text = "0";
+            EnableAllButtons();
         }
 
         private void roundedButton_Clear_Click(object sender, EventArgs e)
@@ -90,6 +91,7 @@ namespace SimpleWindowsApp
             textBox_Display2.Text = "";
             result = 0;
             operation = "";
+            EnableAllButtons();
         }
 
         private void roundedButton_Delete_Click(object sender, EventArgs e)
@@ -98,6 +100,7 @@ namespace SimpleWindowsApp
                 textBox_Display1.Text = textBox_Display1.Text.Remove(textBox_Display1.Text.Length - 1);
             else
                 textBox_Display1.Text = "0";
+            EnableAllButtons();
         }
 
 
@@ -184,7 +187,8 @@ namespace SimpleWindowsApp
             }
             catch
             {
-                MessageBox.Show("Invalid input!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_Display1.Text = "Invalid Input" ;
+                DisableButtonsInContainer(this);
             }
         }
 
@@ -211,10 +215,10 @@ namespace SimpleWindowsApp
             {
                 double inputValue;
 
-                if (string.IsNullOrEmpty(operation) && textBox_Display1.Text == "0" && string.IsNullOrEmpty(textBox_Display2.Text))
+                if (string.IsNullOrEmpty(operation) && string.IsNullOrEmpty(textBox_Display2.Text) && textBox_Display1.Text == "0")
                 {
-                    textBox_Display2.Text = "0 ="; 
                     textBox_Display1.Text = "0";
+                    textBox_Display2.Text = "0 =";
                     return;
                 }
 
@@ -270,9 +274,10 @@ namespace SimpleWindowsApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message, "Calculation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_Display1.Text = "Invalid Input";
                 textBox_Display1.Text = "0";
-                result = 0; 
+                result = 0;
+                DisableButtonsInContainer(this);
             }
         }
 
@@ -287,7 +292,8 @@ namespace SimpleWindowsApp
             }
             catch
             {
-                MessageBox.Show("Invalid input!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_Display1.Text = "Invalid Input";
+                DisableButtonsInContainer(this);
             }
 
             operation = "";
@@ -301,18 +307,22 @@ namespace SimpleWindowsApp
                 double value = Convert.ToDouble(textBox_Display1.Text);
                 if (value >= 0)
                 {
-                    textBox_Display1.Text = FormatResult(Math.Sqrt(value));
+                    double result = Math.Sqrt(value);
+                    textBox_Display1.Text = FormatResult(result);
                     textBox_Display2.Text = $"√({value})";
-                    AddToHistory(Convert.ToString(value), Convert.ToString(result));
+                    AddToHistory($"√({value})", Convert.ToString(result));
                 }
                 else
                 {
-                    MessageBox.Show("Cannot calculate square root of a negative number!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    textBox_Display2.Text = $"√({value})";
+                    textBox_Display1.Text = "Invalid Input";
+                    DisableButtonsInContainer(this);
                 }
             }
             catch
             {
-                MessageBox.Show("Invalid input!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_Display1.Text = "Invalid Input";
+                DisableButtonsInContainer(this);
             }
 
             operation = "";
@@ -326,24 +336,28 @@ namespace SimpleWindowsApp
                 double value = Convert.ToDouble(textBox_Display1.Text);
                 if (value != 0)
                 {
-                    result = 1 / value;
-                    textBox_Display1.Text = FormatResult(1 / value);
+                    double result = 1 / value;
+                    textBox_Display1.Text = FormatResult(result);
                     textBox_Display2.Text = $"1/({value})";
-                    AddToHistory(Convert.ToString(value), Convert.ToString(result));
+                    AddToHistory($"1/({value})", Convert.ToString(result));
                 }
                 else
                 {
-                    MessageBox.Show("Cannot divide by zero!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    textBox_Display2.Text = $"1/({value})";
+                    textBox_Display1.Text = "Cannot Divide by Zero";
+                    DisableButtonsInContainer(this);
                 }
             }
             catch
             {
-                MessageBox.Show("Invalid input!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_Display1.Text = "Invalid Input";
+                DisableButtonsInContainer(this);
             }
 
             operation = "";
             isOperationPerformed = true;
         }
+
 
         private void roundedButton_Percent_Click(object sender, EventArgs e)
         {
@@ -358,7 +372,8 @@ namespace SimpleWindowsApp
             }
             catch (Exception)
             {
-                MessageBox.Show("Invalid percentage operation.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_Display1.Text = "Invalid Input";
+                DisableButtonsInContainer(this);
             }
         }
 
@@ -397,11 +412,13 @@ namespace SimpleWindowsApp
             {
                 panel_CalStandard.SendToBack();     panel_CalStandard.Visible = false;
                 panel_CalSci.SendToBack();          panel_CalSci.Visible = false;
+                textBox_Display1.Visible = false;   textBox_Display1.SendToBack();
             }
             else
             {
                 panel_CalStandard.BringToFront();   panel_CalStandard.Visible = true;
-                panel_CalSci.BringToFront();        panel_CalSci.Visible = true; 
+                panel_CalSci.BringToFront();        panel_CalSci.Visible = true;
+                textBox_Display1.Visible = true;    textBox_Display1.BringToFront();
             }
 
                 button_Menu.BringToFront();
@@ -414,7 +431,8 @@ namespace SimpleWindowsApp
             panel_CalSci.Height = 0;            panel_CalSci.Visible = false;
             panel_CalStandard.Height = 340;     panel_CalStandard.Visible = true;
             panel_Menu1.Width = 0;              panel_Menu2.Width = 0;
-            //textBox_Display1.Font = new Font(textBox_Display1.Font.FontFamily, 34, textBox_Display1.Font.Style);
+            textBox_Display1.BringToFront();    textBox_Display1.Visible = true;
+            textBox_Display1.Font = new Font(textBox_Display1.Font.FontFamily, 34, textBox_Display1.Font.Style);
 
             operation = "";
             result = 0;
@@ -428,7 +446,8 @@ namespace SimpleWindowsApp
             panel_CalStandard.Height = 0;       panel_CalStandard.Visible = false;
             panel_CalSci.Height = 360;          panel_CalSci.Visible = true; 
             panel_Menu1.Width = 0;              panel_Menu2.Width = 0;
-            //textBox_Display1.Font = new Font(textBox_Display1.Font.FontFamily, 20, textBox_Display1.Font.Style);
+            textBox_Display1.BringToFront();    textBox_Display1.Visible = true;
+            textBox_Display1.Font = new Font(textBox_Display1.Font.FontFamily, 20, textBox_Display1.Font.Style);
 
             operation = "";
             result = 0;
@@ -453,25 +472,7 @@ namespace SimpleWindowsApp
                 roundedButton_Clear_Click(sender, e);
             }
             roundedButton_ClearCE.Text = "C";
-        }
-
-        private void roundedButton_log_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void roundedButton_ln_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void roundedButton_ShowTrigo_Click(object sender, EventArgs e)
-        {
-            roundedPanel_Trigo.Height = (roundedPanel_Trigo.Height == 0) ? 100 : 0;
-            roundedPanel_Trigo.Width = (roundedPanel_Trigo.Width == 0) ? 260 : 0;
-            roundedPanel_Trigo.Visible = (roundedPanel_Trigo.Visible == false) ? true : false;
-            panel_CalSci.SendToBack();
-            roundedPanel_Trigo.BringToFront();
+            EnableAllButtons();
         }
 
         private void button_FENotation_Click(object sender, EventArgs e)
@@ -483,6 +484,170 @@ namespace SimpleWindowsApp
         {
 
         }
+
+        private void roundedButton_log_Click(object sender, EventArgs e)
+        {
+            double input = Convert.ToDouble(textBox_Display1.Text);
+
+            if (input <= 0)
+            {
+                textBox_Display2.Text = $"log({input})";
+                textBox_Display1.Text = "Invalid Input";
+                DisableButtonsInContainer(this);
+                return;
+            }
+
+            double result = Math.Log10(input);
+            textBox_Display2.Text = $"log({input})";
+            textBox_Display1.Text = FormatResult(result);
+
+            roundedPanel_Trigo.Height = 0;
+            roundedPanel_Trigo.Width = 0;
+        }
+
+        private void roundedButton_ln_Click(object sender, EventArgs e)
+        {
+            double input = Convert.ToDouble(textBox_Display1.Text);
+
+            if (input <= 0)
+            {
+                textBox_Display2.Text = $"ln({input})";
+                textBox_Display1.Text = "Invalid Input";
+                DisableButtonsInContainer(this);
+                return;
+            }
+
+            double result = Math.Log(input);
+            textBox_Display2.Text = $"ln({input})";
+            textBox_Display1.Text = FormatResult(result);
+
+            roundedPanel_Trigo.Height = 0;
+            roundedPanel_Trigo.Width = 0;
+        }
+
+        private void roundedButton_ShowTrigo_Click(object sender, EventArgs e)
+        {
+            roundedPanel_Trigo.Height = (roundedPanel_Trigo.Height == 0) ? 100 : 0;
+            roundedPanel_Trigo.Width = (roundedPanel_Trigo.Width == 0) ? 260 : 0;
+            roundedPanel_Trigo.Visible = (roundedPanel_Trigo.Visible == false) ? true : false;
+            panel_CalSci.SendToBack();
+            roundedPanel_Trigo.BringToFront();
+        }
+
+        private void roundedButton_2nd_2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roundedButton_Hyp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roundedButton_Sin_Click(object sender, EventArgs e)
+        {
+            double input = Convert.ToDouble(textBox_Display1.Text);
+            double result = Math.Sin(DegreeToRadian(input));
+
+            textBox_Display2.Text = $"sin({input})";
+            textBox_Display1.Text = FormatResult(result);
+
+            roundedPanel_Trigo.Height = 0;
+            roundedPanel_Trigo.Width = 0;
+        }
+
+        private void roundedButton_Cos_Click(object sender, EventArgs e)
+        {
+            double input = Convert.ToDouble(textBox_Display1.Text);
+            double result = Math.Cos(DegreeToRadian(input));
+
+            textBox_Display2.Text = $"cos({input})";
+            textBox_Display1.Text = FormatResult(result);
+
+            roundedPanel_Trigo.Height = 0;
+            roundedPanel_Trigo.Width = 0;
+        }
+
+        private void roundedButton_Tan_Click(object sender, EventArgs e)
+        {
+            double input = Convert.ToDouble(textBox_Display1.Text);
+
+            if (input % 90 == 0 && (input / 90) % 2 != 0)
+            {
+                textBox_Display2.Text = $"tan({input})";
+                textBox_Display1.Text = "Invalid Input";
+                DisableButtonsInContainer(this);
+                return;
+            }
+
+            double result = Math.Tan(DegreeToRadian(input));
+            textBox_Display2.Text = $"tan({input})";
+            textBox_Display1.Text = FormatResult(result);
+
+            roundedPanel_Trigo.Height = 0;
+            roundedPanel_Trigo.Width = 0;
+        }
+
+        private void roundedButton_Sec_Click(object sender, EventArgs e)
+        {
+            double input = Convert.ToDouble(textBox_Display1.Text);
+
+            if (Math.Cos(DegreeToRadian(input)) == 0)
+            {
+                textBox_Display2.Text = $"sec( {input} )";
+                textBox_Display1.Text = "Invalid Input";
+                DisableButtonsInContainer(this);
+                return;
+            }
+
+            double result = 1 / Math.Cos(DegreeToRadian(input));
+            textBox_Display2.Text = $"sec({input})";
+            textBox_Display1.Text = FormatResult(result);
+
+            roundedPanel_Trigo.Height = 0;
+            roundedPanel_Trigo.Width = 0;
+        }
+
+        private void roundedButton_Csc_Click(object sender, EventArgs e)
+        {
+            double input = Convert.ToDouble(textBox_Display1.Text);
+
+            if (Math.Sin(DegreeToRadian(input)) == 0)
+            {
+                textBox_Display2.Text = $"csc( {input} )";
+                textBox_Display1.Text = "Invalid Input";
+                DisableButtonsInContainer(this);
+                return;
+            }
+
+            double result = 1 / Math.Sin(DegreeToRadian(input));
+            textBox_Display2.Text = $"csc({input})";
+            textBox_Display1.Text = FormatResult(result);
+
+            roundedPanel_Trigo.Height = 0;
+            roundedPanel_Trigo.Width = 0;
+        }
+
+        private void roundedButton_Cot_Click(object sender, EventArgs e)
+        {
+            double input = Convert.ToDouble(textBox_Display1.Text);
+
+            if (Math.Tan(DegreeToRadian(input)) == 0)
+            {
+                textBox_Display2.Text = $"cot({input})";
+                textBox_Display1.Text = "Invalid Input";
+                DisableButtonsInContainer(this);
+                return;
+            }
+
+            double result = 1 / Math.Tan(DegreeToRadian(input));
+            textBox_Display2.Text = $"cot( {input} )";
+            textBox_Display1.Text = FormatResult(result);
+
+            roundedPanel_Trigo.Height = 0;
+            roundedPanel_Trigo.Width = 0;
+        }
+
 
 
 
@@ -593,6 +758,49 @@ namespace SimpleWindowsApp
             }
         }
 
-        
+        private double DegreeToRadian(double angle)
+        {
+            return (Math.PI / 180) * angle;
+        }
+
+        private void DisableButtonsInContainer(Control parent)
+        {
+            foreach (Control control in parent.Controls)
+            {
+                if (control is Button button)
+                {
+                    if (button.Name != "roundedButton_Clear"
+                        && button.Name != "roundedButton_Delete2"
+                        && button.Name != "roundedButton_CalcStandard"
+                        && button.Name != "roundedButton_CalcScientific"
+                        && button.Name != "roundedButton_Delete"
+                        && button.Name != "button_Exit"
+                        && button.Name != "button_Maximize"
+                        && button.Name != "button_Minimize"
+                        && button.Name != "button_History"
+                        && button.Name != "button_Menu")
+                    {
+                        button.Enabled = false;
+                        //button.BackColor = Color.FromArgb(40, 40, 40);
+                    }
+                }
+                else if (control is Panel || control is GroupBox)
+                {
+                    DisableButtonsInContainer(control); // Recursively check inside panels
+                }
+            }
+        }
+
+        private void EnableAllButtons()
+        {
+            foreach (Control control in this.Controls) 
+            {
+                if (control is Button button) 
+                {
+                    button.Enabled = true; 
+                }
+            }
+        }
+
     }
 }
