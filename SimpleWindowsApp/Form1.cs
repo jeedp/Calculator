@@ -35,10 +35,13 @@ namespace SimpleWindowsApp
             this.Panel_Title.MouseDown += new MouseEventHandler(this.Calculator_MouseDown);
             this.Panel_Title.MouseMove += new MouseEventHandler(this.Calculator_MouseMove);
             this.Panel_Title.MouseUp += new MouseEventHandler(this.Calculator_MouseUp);
-            panel_ShowHistory.Height = 0;
+            //textBox_Display1.Font = new Font(textBox_Display1.Font.FontFamily, 34, textBox_Display1.Font.Style);
+            textBox_Display1.Text = "0";
             panel_CalStandard.Height = 340;     panel_CalStandard.Visible = true;
             panel_CalSci.Height = 0;            panel_CalSci.Visible = false;
             panel_ShowHistory.Height = 0;       panel_ShowHistory.Visible = false;
+            roundedPanel_Trigo.Height = 0;      roundedPanel_Trigo.Visible = false;
+            roundedPanel_Trigo.Width = 0; 
             panel_Menu1.Width = 0;
             panel_Menu2.Width = 0;
             UpdateHistoryDisplay();
@@ -105,7 +108,11 @@ namespace SimpleWindowsApp
         private void roundedButton_Num_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            int maxDigits = 16;
+            int maxDigits = (textBox_CalcType.Text == "Standard") ? 16 : 32;
+
+            //textBox_Display1.Font = (textBox_CalcType.Text != "Standard")
+            //    ? new Font(textBox_Display1.Font.FontFamily, 20, FontStyle.Bold) 
+            //    : new Font(textBox_Display1.Font.FontFamily, 34, FontStyle.Bold);
 
             if (textBox_Display1.Text.Replace(",", "").Length >= maxDigits)
             {
@@ -146,6 +153,8 @@ namespace SimpleWindowsApp
                     textBox_Display1.Text = formattedValue.ToString("N0");
                 }
             }
+
+            roundedButton_ClearCE.Text = (textBox_Display1.Text != "0") ? "CE" : "C";
 
             UpdateFontSize();
         }
@@ -201,6 +210,13 @@ namespace SimpleWindowsApp
             try
             {
                 double inputValue;
+
+                if (string.IsNullOrEmpty(operation) && textBox_Display1.Text == "0" && string.IsNullOrEmpty(textBox_Display2.Text))
+                {
+                    textBox_Display2.Text = "0 ="; 
+                    textBox_Display1.Text = "0";
+                    return;
+                }
 
                 if (operation == "")
                 {
@@ -278,7 +294,6 @@ namespace SimpleWindowsApp
             isOperationPerformed = true;
         }
 
-
         private void roundedButton_SquareRoot_Click(object sender, EventArgs e)
         {
             try
@@ -303,7 +318,6 @@ namespace SimpleWindowsApp
             operation = "";
             isOperationPerformed = true;
         }
-
 
         private void roundedButton_DivBy1_Click(object sender, EventArgs e)
         {
@@ -348,6 +362,10 @@ namespace SimpleWindowsApp
             }
         }
 
+
+
+
+
         private void button_History_Click(object sender, EventArgs e)
         {
             panel_ShowHistory.Visible = (panel_ShowHistory.Visible == false) ? true : false;
@@ -361,7 +379,7 @@ namespace SimpleWindowsApp
             }
             else
             {
-                panel_CalSci.Height = (panel_ShowHistory.Visible == true) ? 0 : 340;
+                panel_CalSci.Height = (panel_ShowHistory.Visible == true) ? 0 : 360;
                 panel_CalSci.BringToFront();
             }
 
@@ -391,22 +409,80 @@ namespace SimpleWindowsApp
 
         private void roundedButton_CalcStandard_Click(object sender, EventArgs e)
         {
+            textBox_Display1.Text = "0";        textBox_Display2.Clear();
             textBox_CalcType.Text = "Standard";
             panel_CalSci.Height = 0;            panel_CalSci.Visible = false;
             panel_CalStandard.Height = 340;     panel_CalStandard.Visible = true;
             panel_Menu1.Width = 0;              panel_Menu2.Width = 0;
-            textBox_Display1.Font = new Font(textBox_Display1.Font.FontFamily, 34, textBox_Display1.Font.Style);
+            //textBox_Display1.Font = new Font(textBox_Display1.Font.FontFamily, 34, textBox_Display1.Font.Style);
+
+            operation = "";
+            result = 0;
         }
 
         private void roundedButton_CalcScientific_Click(object sender, EventArgs e)
         {
+            textBox_Display1.Text = "0";        textBox_Display2.Clear();
             textBox_CalcType.Text = "Scientific";
+            roundedButton_ClearCE.Text = "C";
             panel_CalStandard.Height = 0;       panel_CalStandard.Visible = false;
-            panel_CalSci.Height = 340;          panel_CalSci.Visible = true; 
+            panel_CalSci.Height = 360;          panel_CalSci.Visible = true; 
             panel_Menu1.Width = 0;              panel_Menu2.Width = 0;
-            textBox_Display1.Font = new Font(textBox_Display1.Font.FontFamily, 20, textBox_Display1.Font.Style);
+            //textBox_Display1.Font = new Font(textBox_Display1.Font.FontFamily, 20, textBox_Display1.Font.Style);
+
+            operation = "";
+            result = 0;
+
+            button_DegRadGrad.BringToFront();
+            button_FENotation.BringToFront();
+            textBox_Display1.SendToBack();
         }
 
+
+
+
+
+        private void roundedButton_ClearCE_Click(object sender, EventArgs e)
+        {
+            if (textBox_Display1.Text != "0")
+            {
+                roundedButton_ClearEntry_Click(sender, e);
+            }
+            else
+            {
+                roundedButton_Clear_Click(sender, e);
+            }
+            roundedButton_ClearCE.Text = "C";
+        }
+
+        private void roundedButton_log_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roundedButton_ln_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roundedButton_ShowTrigo_Click(object sender, EventArgs e)
+        {
+            roundedPanel_Trigo.Height = (roundedPanel_Trigo.Height == 0) ? 100 : 0;
+            roundedPanel_Trigo.Width = (roundedPanel_Trigo.Width == 0) ? 260 : 0;
+            roundedPanel_Trigo.Visible = (roundedPanel_Trigo.Visible == false) ? true : false;
+            panel_CalSci.SendToBack();
+            roundedPanel_Trigo.BringToFront();
+        }
+
+        private void button_FENotation_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_DegRadGrad_Click(object sender, EventArgs e)
+        {
+
+        }
 
 
 
@@ -517,5 +593,6 @@ namespace SimpleWindowsApp
             }
         }
 
+        
     }
 }
