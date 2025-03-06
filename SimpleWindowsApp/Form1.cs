@@ -36,6 +36,9 @@ namespace SimpleWindowsApp
             this.Panel_Title.MouseMove += new MouseEventHandler(this.Calculator_MouseMove);
             this.Panel_Title.MouseUp += new MouseEventHandler(this.Calculator_MouseUp);
             panel_ShowHistory.Height = 0;
+            panel_CalStandard.Height = 340;     panel_CalStandard.Visible = true;
+            panel_CalSci.Height = 0;            panel_CalSci.Visible = false;
+            panel_ShowHistory.Height = 0;       panel_ShowHistory.Visible = false;
             panel_Menu1.Width = 0;
             panel_Menu2.Width = 0;
             UpdateHistoryDisplay();
@@ -347,46 +350,61 @@ namespace SimpleWindowsApp
 
         private void button_History_Click(object sender, EventArgs e)
         {
-            panel_ShowHistory.Height = (panel_ShowHistory.Height == 0) ? 300 : 0;
+            panel_ShowHistory.Visible = (panel_ShowHistory.Visible == false) ? true : false;
+            panel_CalStandard.Visible = (panel_ShowHistory.Visible == false) ? true : false;
+            panel_CalSci.Visible =  (panel_ShowHistory.Visible == false) ? true : false;
 
-            //panelTargetHeight = 300;
-            //if (panel_ShowHistory.Height == 2)
-            //{
-            //    for (int i = 0; panel_ShowHistory.Height < panelTargetHeight; i++)
-            //    {
-            //        panel_ShowHistory.Height += 5;
-            //    }
-            //}
-            //else
-            //{
-            //    for (int i = 0; panel_ShowHistory.Height > 2; i++)
-            //    {
-            //        panel_ShowHistory.Height -= 5;
-            //    }
-            //}
+            if (textBox_CalcType.Text == "Standard")
+            {
+                panel_CalStandard.Height = (panel_ShowHistory.Visible == true) ? 0 : 340;
+                panel_CalStandard.BringToFront();
+            }
+            else
+            {
+                panel_CalSci.Height = (panel_ShowHistory.Visible == true) ? 0 : 340;
+                panel_CalSci.BringToFront();
+            }
+
+                panel_ShowHistory.Height = (panel_ShowHistory.Height == 0) ? 300 : 0;
+                panel_ShowHistory.BringToFront();
         }
 
         private void button_Menu_Click(object sender, EventArgs e)
         {
-            panel_Menu1.Width = (panel_Menu1.Width == 0) ? 255 : 0; panel_Menu1.BringToFront();
-            panel_Menu2.Width = (panel_Menu2.Width == 0) ? 255 : 0; panel_Menu2.BringToFront();
+            panel_Menu1.Width = (panel_Menu1.Width == 0) ? 255 : 0; panel_Menu1.BringToFront(); panel_Menu1.Visible = true;
+            panel_Menu2.Width = (panel_Menu2.Width == 0) ? 255 : 0; panel_Menu2.BringToFront(); panel_Menu2.Visible = true;
             button_Menu.BackColor = (panel_Menu2.Width == 0) ? Color.FromArgb(32, 32, 32) : Color.FromArgb(47, 47, 47);
 
+            if (panel_Menu1.Width == 255 && panel_Menu2.Width == 255)
+            {
+                panel_CalStandard.SendToBack();     panel_CalStandard.Visible = false;
+                panel_CalSci.SendToBack();          panel_CalSci.Visible = false;
+            }
+            else
+            {
+                panel_CalStandard.BringToFront();   panel_CalStandard.Visible = true;
+                panel_CalSci.BringToFront();        panel_CalSci.Visible = true; 
+            }
 
-
-            button_Menu.BringToFront();
+                button_Menu.BringToFront();
         }
 
         private void roundedButton_CalcStandard_Click(object sender, EventArgs e)
         {
             textBox_CalcType.Text = "Standard";
-            panel_SciCal.Height = 0;
+            panel_CalSci.Height = 0;            panel_CalSci.Visible = false;
+            panel_CalStandard.Height = 340;     panel_CalStandard.Visible = true;
+            panel_Menu1.Width = 0;              panel_Menu2.Width = 0;
+            textBox_Display1.Font = new Font(textBox_Display1.Font.FontFamily, 34, textBox_Display1.Font.Style);
         }
 
         private void roundedButton_CalcScientific_Click(object sender, EventArgs e)
         {
             textBox_CalcType.Text = "Scientific";
-            panel_SciCal.Height = 340;
+            panel_CalStandard.Height = 0;       panel_CalStandard.Visible = false;
+            panel_CalSci.Height = 340;          panel_CalSci.Visible = true; 
+            panel_Menu1.Width = 0;              panel_Menu2.Width = 0;
+            textBox_Display1.Font = new Font(textBox_Display1.Font.FontFamily, 20, textBox_Display1.Font.Style);
         }
 
 
