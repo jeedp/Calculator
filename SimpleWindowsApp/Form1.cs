@@ -4,26 +4,30 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Globalization;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SimpleWindowsApp;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace SimpleWindowsApp
 {
     public partial class Calculator : Form
     {
-        private double result = 0;
-        private string operation = "";
+        private bool mouseDown;
+        private bool isDisabled = false;
         private bool isOperationPerformed = false;
+        private bool isScientificNotation = false;
+        private double result = 0;
         private double lastOperand = 0;
+        private string operation = "";
         private string lastOperator = "";
         private string currentExpression = "";
         private Point lastLocation;
-        private bool mouseDown;
         private List<string> historyList = new List<string>();
 
 
@@ -35,8 +39,6 @@ namespace SimpleWindowsApp
             this.Panel_Title.MouseDown += new MouseEventHandler(this.Calculator_MouseDown);
             this.Panel_Title.MouseMove += new MouseEventHandler(this.Calculator_MouseMove);
             this.Panel_Title.MouseUp += new MouseEventHandler(this.Calculator_MouseUp);
-            //textBox_Display1.Font = new Font(textBox_Display1.Font.FontFamily, 34, textBox_Display1.Font.Style);
-            textBox_Display1.Text = "0";
             panel_CalStandard.Height = 340;     panel_CalStandard.Visible = true;
             panel_CalSci.Height = 0;            panel_CalSci.Visible = false;
             panel_ShowHistory.Height = 0;       panel_ShowHistory.Visible = false;
@@ -44,6 +46,9 @@ namespace SimpleWindowsApp
             roundedPanel_Trigo.Width = 0; 
             panel_Menu1.Width = 0;
             panel_Menu2.Width = 0;
+            textBox_Display1.Text = "0";
+            EnableButtons(this);
+            UpdateFontSize();
             UpdateHistoryDisplay();
         }
 
@@ -81,8 +86,15 @@ namespace SimpleWindowsApp
 
         private void roundedButton_ClearEntry_Click(object sender, EventArgs e)
         {
+            if (isDisabled)
+            {
+                roundedButton_Clear_Click(sender, e);
+                return;
+            }
+
             textBox_Display1.Text = "0";
-            EnableAllButtons();
+            EnableButtons(this);
+            UpdateFontSize();
         }
 
         private void roundedButton_Clear_Click(object sender, EventArgs e)
@@ -91,16 +103,24 @@ namespace SimpleWindowsApp
             textBox_Display2.Text = "";
             result = 0;
             operation = "";
-            EnableAllButtons();
+            EnableButtons(this);
+            UpdateFontSize();
         }
 
         private void roundedButton_Delete_Click(object sender, EventArgs e)
         {
+            if (isDisabled)
+            {
+                roundedButton_Clear_Click(sender, e);
+                return;
+            }
+
             if (textBox_Display1.Text.Length > 1)
                 textBox_Display1.Text = textBox_Display1.Text.Remove(textBox_Display1.Text.Length - 1);
             else
                 textBox_Display1.Text = "0";
-            EnableAllButtons();
+            EnableButtons(this);
+            UpdateFontSize();
         }
 
 
@@ -111,11 +131,7 @@ namespace SimpleWindowsApp
         private void roundedButton_Num_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            int maxDigits = (textBox_CalcType.Text == "Standard") ? 16 : 32;
-
-            //textBox_Display1.Font = (textBox_CalcType.Text != "Standard")
-            //    ? new Font(textBox_Display1.Font.FontFamily, 20, FontStyle.Bold) 
-            //    : new Font(textBox_Display1.Font.FontFamily, 34, FontStyle.Bold);
+            int maxDigits = (textBox_CalcType.Text == "Standard") ? 15 : 15;
 
             if (textBox_Display1.Text.Replace(",", "").Length >= maxDigits)
             {
@@ -188,7 +204,7 @@ namespace SimpleWindowsApp
             catch
             {
                 textBox_Display1.Text = "Invalid Input" ;
-                DisableButtonsInContainer(this);
+                DisableButtons(this);
             }
         }
 
@@ -214,6 +230,12 @@ namespace SimpleWindowsApp
             try
             {
                 double inputValue;
+
+                if (isDisabled)
+                {
+                    roundedButton_Clear_Click(sender, e);
+                    return;
+                }
 
                 if (string.IsNullOrEmpty(operation) && string.IsNullOrEmpty(textBox_Display2.Text) && textBox_Display1.Text == "0")
                 {
@@ -272,12 +294,12 @@ namespace SimpleWindowsApp
                 operation = "";
                 isOperationPerformed = true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 textBox_Display1.Text = "Invalid Input";
                 textBox_Display1.Text = "0";
                 result = 0;
-                DisableButtonsInContainer(this);
+                DisableButtons(this);
             }
         }
 
@@ -293,7 +315,7 @@ namespace SimpleWindowsApp
             catch
             {
                 textBox_Display1.Text = "Invalid Input";
-                DisableButtonsInContainer(this);
+                DisableButtons(this);
             }
 
             operation = "";
@@ -316,13 +338,13 @@ namespace SimpleWindowsApp
                 {
                     textBox_Display2.Text = $"√({value})";
                     textBox_Display1.Text = "Invalid Input";
-                    DisableButtonsInContainer(this);
+                    DisableButtons(this);
                 }
             }
             catch
             {
                 textBox_Display1.Text = "Invalid Input";
-                DisableButtonsInContainer(this);
+                DisableButtons(this);
             }
 
             operation = "";
@@ -343,15 +365,16 @@ namespace SimpleWindowsApp
                 }
                 else
                 {
+                    textBox_Display1.Font = new Font(textBox_Display1.Font.FontFamily, 20, textBox_Display1.Font.Style);
                     textBox_Display2.Text = $"1/({value})";
                     textBox_Display1.Text = "Cannot Divide by Zero";
-                    DisableButtonsInContainer(this);
+                    DisableButtons(this);
                 }
             }
             catch
             {
                 textBox_Display1.Text = "Invalid Input";
-                DisableButtonsInContainer(this);
+                DisableButtons(this);
             }
 
             operation = "";
@@ -373,7 +396,7 @@ namespace SimpleWindowsApp
             catch (Exception)
             {
                 textBox_Display1.Text = "Invalid Input";
-                DisableButtonsInContainer(this);
+                DisableButtons(this);
             }
         }
 
@@ -432,10 +455,13 @@ namespace SimpleWindowsApp
             panel_CalStandard.Height = 340;     panel_CalStandard.Visible = true;
             panel_Menu1.Width = 0;              panel_Menu2.Width = 0;
             textBox_Display1.BringToFront();    textBox_Display1.Visible = true;
-            textBox_Display1.Font = new Font(textBox_Display1.Font.FontFamily, 34, textBox_Display1.Font.Style);
+
+            button_Menu.BackColor = Color.FromArgb(32, 32, 32);
 
             operation = "";
             result = 0;
+
+            UpdateFontSize();
         }
 
         private void roundedButton_CalcScientific_Click(object sender, EventArgs e)
@@ -447,7 +473,8 @@ namespace SimpleWindowsApp
             panel_CalSci.Height = 360;          panel_CalSci.Visible = true; 
             panel_Menu1.Width = 0;              panel_Menu2.Width = 0;
             textBox_Display1.BringToFront();    textBox_Display1.Visible = true;
-            textBox_Display1.Font = new Font(textBox_Display1.Font.FontFamily, 20, textBox_Display1.Font.Style);
+
+            button_Menu.BackColor = Color.FromArgb(32, 32, 32);
 
             operation = "";
             result = 0;
@@ -455,6 +482,7 @@ namespace SimpleWindowsApp
             button_DegRadGrad.BringToFront();
             button_FENotation.BringToFront();
             textBox_Display1.SendToBack();
+            UpdateFontSize();
         }
 
 
@@ -472,17 +500,45 @@ namespace SimpleWindowsApp
                 roundedButton_Clear_Click(sender, e);
             }
             roundedButton_ClearCE.Text = "C";
-            EnableAllButtons();
+            EnableButtons(this);
         }
 
         private void button_FENotation_Click(object sender, EventArgs e)
         {
+            // TODO: WHEN NOTATION IS TOGGLED, IT REFLECTS TO DISPLAY 2 AND RESULT IS ALSO IN THE DESIRED NOTATION 
+            //
+            //try
+            //{
+            //    double value = Convert.ToDouble(textBox_Display1.Text);
 
+            //    if (!isScientificNotation)
+            //    {
+            //        string sciNotation = value.ToString("0.e+0", CultureInfo.InvariantCulture); // Format like "9.e-1"
+            //        sciNotation = sciNotation.Replace("+", ""); // Remove unnecessary '+'
+
+            //        textBox_Display1.Text = sciNotation;
+            //    }
+            //    else
+            //    {
+            //        textBox_Display1.Text = FormatResult(value); // Convert back to standard
+            //    }
+
+            //    isScientificNotation = !isScientificNotation;
+            //}
+            //catch
+            //{
+            //    textBox_Display1.Text = "Invalid Input";
+            //}
         }
+
 
         private void button_DegRadGrad_Click(object sender, EventArgs e)
         {
-
+            button_DegRadGrad.Text = (button_DegRadGrad.Text == "DEG")
+                ? "RAD"
+                : (button_DegRadGrad.Text == "RAD")
+                    ? "GRAD"
+                    : "DEG";
         }
 
         private void roundedButton_log_Click(object sender, EventArgs e)
@@ -493,7 +549,7 @@ namespace SimpleWindowsApp
             {
                 textBox_Display2.Text = $"log({input})";
                 textBox_Display1.Text = "Invalid Input";
-                DisableButtonsInContainer(this);
+                DisableButtons(this);
                 return;
             }
 
@@ -513,7 +569,7 @@ namespace SimpleWindowsApp
             {
                 textBox_Display2.Text = $"ln({input})";
                 textBox_Display1.Text = "Invalid Input";
-                DisableButtonsInContainer(this);
+                DisableButtons(this);
                 return;
             }
 
@@ -576,7 +632,7 @@ namespace SimpleWindowsApp
             {
                 textBox_Display2.Text = $"tan({input})";
                 textBox_Display1.Text = "Invalid Input";
-                DisableButtonsInContainer(this);
+                DisableButtons(this);
                 return;
             }
 
@@ -596,7 +652,7 @@ namespace SimpleWindowsApp
             {
                 textBox_Display2.Text = $"sec( {input} )";
                 textBox_Display1.Text = "Invalid Input";
-                DisableButtonsInContainer(this);
+                DisableButtons(this);
                 return;
             }
 
@@ -616,7 +672,7 @@ namespace SimpleWindowsApp
             {
                 textBox_Display2.Text = $"csc( {input} )";
                 textBox_Display1.Text = "Invalid Input";
-                DisableButtonsInContainer(this);
+                DisableButtons(this);
                 return;
             }
 
@@ -636,7 +692,7 @@ namespace SimpleWindowsApp
             {
                 textBox_Display2.Text = $"cot({input})";
                 textBox_Display1.Text = "Invalid Input";
-                DisableButtonsInContainer(this);
+                DisableButtons(this);
                 return;
             }
 
@@ -720,12 +776,43 @@ namespace SimpleWindowsApp
         {
             int length = textBox_Display1.Text.Replace(",", "").Length;
 
-            if (length <= 8)
-                textBox_Display1.Font = new Font(textBox_Display1.Font.FontFamily, 36, FontStyle.Bold);
-            else if (length <= 12)
-                textBox_Display1.Font = new Font(textBox_Display1.Font.FontFamily, 28, FontStyle.Bold);
-            else
-                textBox_Display1.Font = new Font(textBox_Display1.Font.FontFamily, 22, FontStyle.Bold);
+            // Standard
+            if (panel_CalStandard.Visible && !panel_CalSci.Visible)
+            {
+                textBox_Display1.Font = new Font(textBox_Display1.Font.FontFamily,
+                    length <= 8 ? 34 : length <= 12 ? 28 : 22, FontStyle.Bold);
+            }
+            // Scientific
+            else if (!panel_CalStandard.Visible && panel_CalSci.Visible)
+            {
+                textBox_Display1.Font = new Font(textBox_Display1.Font.FontFamily,
+                    length <= 18 
+                    ? 18 
+                    : length <= 19 
+                        ? 19 
+                        : length <= 20
+                            ? 18
+                            : length <= 21
+                                ? 17
+                                : length <= 22
+                                    ? 16
+                                    : length <= 23
+                                        ? 15
+                                        : length <= 24
+                                            ? 14
+                                            : length <= 25
+                                                ? 13
+                                                : length <= 27
+                                                    ? 12
+                                                    : length <= 28
+                                                        ? 11
+                                                        : length <= 30
+                                                            ? 10
+                                                            : length <= 32
+                                                                ? 9
+                                                                : 8
+                    , FontStyle.Bold);
+            }
         }
 
         public void AddToHistory(string expression, string result)
@@ -763,44 +850,150 @@ namespace SimpleWindowsApp
             return (Math.PI / 180) * angle;
         }
 
-        private void DisableButtonsInContainer(Control parent)
+
+
+
+        // stored variables for enabling and disabling buttons
+        string[] exemptedMenuButtons =
+            {
+                "roundedButton_Settings",
+                "roundedButton_Clear",
+                "roundedButton_ClearCE",
+                "roundedButton_ClearEntry",
+                "roundedButton_2nd_2",              //"roundedButton_2nd",
+                "roundedButton_Equals",             "roundedButton_Equals2",
+                //"roundedButton_ShowTrigo",        //"roundedButton_ShowFunctions",
+                "roundedButton_CalcStandard",       "roundedButton_CalcScientific",
+                "roundedButton_Delete",             "roundedButton_Delete2",
+                "button_Minimize",                  "button_Maximize",
+                "button_ClearHistory",
+                "button_History",
+                "button_Menu",
+                "button_Exit"
+            };
+
+        string[] exemptedMemoryButtons =
+            {
+                "button_DegRadGrad",                "button_FENotation",
+                "button_Memory",                    "button_Memory2",
+                "button_MemoryStore",               "button_MemoryStore2",
+                "button_MemorySubtract",            "button_MemorySubtract2",
+                "button_MemoryAdd",                 "button_MemoryAdd2",
+                "button_MemoryRecall",              "button_MemoryRecall2",
+                "button_MemoryClear",               "button_MemoryClear2",
+            };
+
+        string[] exemptedTrigoButtons =
+            {
+                "roundedButton_2nd_2",              "roundedButton_Hyp",
+                "roundedButton_Sin",                "roundedButton_Sec",
+                "roundedButton_Cos",                "roundedButton_Csc",
+                "roundedButton_Tan",                "roundedButton_Cot",
+            };
+
+        string[] exemptedNumButtons =
+            {
+                "roundedButton_Num",                "roundedButton_Num_2",
+                "roundedButton_Num1",               "roundedButton_Num1_2",
+                "roundedButton_Num2",               "roundedButton_Num2_2",
+                "roundedButton_Num3",               "roundedButton_Num3_2",
+                "roundedButton_Num4",               "roundedButton_Num4_2",
+                "roundedButton_Num5",               "roundedButton_Num5_2",
+                "roundedButton_Num6",               "roundedButton_Num6_2",
+                "roundedButton_Num7",               "roundedButton_Num7_2",
+                "roundedButton_Num8",               "roundedButton_Num8_2",
+                "roundedButton_Num9",               "roundedButton_Num9_2"
+            };
+
+        string[] exemptedButtonWithOwnColors =
+            {
+                "roundedButton_PositiveNegative",   "roundedButton_PositiveNegative2",
+                "roundedButton_Decimal",            "roundedButton_Decimal2",
+            };
+
+        private void DisableButtons(Control parent)
         {
+            isDisabled = true;
             foreach (Control control in parent.Controls)
             {
                 if (control is Button button)
                 {
-                    if (button.Name != "roundedButton_Clear"
-                        && button.Name != "roundedButton_Delete2"
-                        && button.Name != "roundedButton_CalcStandard"
-                        && button.Name != "roundedButton_CalcScientific"
-                        && button.Name != "roundedButton_Delete"
-                        && button.Name != "button_Exit"
-                        && button.Name != "button_Maximize"
-                        && button.Name != "button_Minimize"
-                        && button.Name != "button_History"
-                        && button.Name != "button_Menu")
+                    if (!exemptedMenuButtons.Contains(button.Name) 
+                        && !exemptedNumButtons.Contains(button.Name)
+                        && !exemptedTrigoButtons.Contains(button.Name)
+                        && !exemptedMemoryButtons.Contains(button.Name))
                     {
                         button.Enabled = false;
-                        //button.BackColor = Color.FromArgb(40, 40, 40);
+                        if (button.Name != "roundedButton_ShowTrigo" 
+                            && button.Name != "roundedButton_ShowFunctions")
+                        {
+                            button.BackColor = Color.FromArgb(40, 40, 40);
+                        }
+                        //TODO: Change button color when disabled and revert when enabled
                     }
                 }
                 else if (control is Panel || control is GroupBox)
                 {
-                    DisableButtonsInContainer(control); // Recursively check inside panels
+                    DisableButtons(control); // Recursively disable inside panels
                 }
             }
         }
 
-        private void EnableAllButtons()
+        private void EnableButtons(Control parent)
         {
-            foreach (Control control in this.Controls) 
+            isDisabled = false;
+            foreach (Control control in parent.Controls) 
             {
                 if (control is Button button) 
                 {
-                    button.Enabled = true; 
+                    button.Enabled = true;
+                    if (!exemptedMenuButtons.Contains(button.Name)
+                        && !exemptedNumButtons.Contains(button.Name)
+                        && !exemptedTrigoButtons.Contains(button.Name)
+                        && !exemptedMemoryButtons.Contains(button.Name)
+                        && button.Name != "roundedButton_ShowTrigo" 
+                        && button.Name != "roundedButton_ShowFunctions")
+                    {
+                        if (exemptedButtonWithOwnColors.Contains(button.Name))
+                        {
+                            button.BackColor = Color.FromArgb(59, 59, 59);
+                        }
+                        else
+                        { 
+                            button.BackColor = Color.FromArgb(50, 50, 50);
+                        }
+                    }
+                }
+                else if (control is Panel || control is GroupBox)
+                {
+                    EnableButtons(control); // Recursively enable inside panels
                 }
             }
         }
 
+        private void roundedButton_Pi_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roundedButton_e_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roundedButton_Exp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roundedButton_Mod_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roundedButton_Factorial_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
