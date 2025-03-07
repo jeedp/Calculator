@@ -43,7 +43,9 @@ namespace SimpleWindowsApp
             panel_CalSci.Height = 0;            panel_CalSci.Visible = false;
             panel_ShowHistory.Height = 0;       panel_ShowHistory.Visible = false;
             roundedPanel_Trigo.Height = 0;      roundedPanel_Trigo.Visible = false;
-            roundedPanel_Trigo.Width = 0; 
+            roundedPanel_Trigo.Width = 0;
+            roundedPanel_Functions.Height = 0;  roundedPanel_Functions.Visible = false;
+            roundedPanel_Functions.Width = 0;
             panel_Menu1.Width = 0;
             panel_Menu2.Width = 0;
             textBox_Display1.Text = "0";
@@ -583,8 +585,8 @@ namespace SimpleWindowsApp
 
         private void roundedButton_ShowTrigo_Click(object sender, EventArgs e)
         {
-            roundedPanel_Trigo.Height = (roundedPanel_Trigo.Height == 0) ? 100 : 0;
             roundedPanel_Trigo.Width = (roundedPanel_Trigo.Width == 0) ? 260 : 0;
+            roundedPanel_Trigo.Height = (roundedPanel_Trigo.Height == 0) ? 100 : 0;
             roundedPanel_Trigo.Visible = (roundedPanel_Trigo.Visible == false) ? true : false;
             panel_CalSci.SendToBack();
             roundedPanel_Trigo.BringToFront();
@@ -704,6 +706,14 @@ namespace SimpleWindowsApp
             roundedPanel_Trigo.Width = 0;
         }
 
+        private void roundedButton_ShowFunctions_Click(object sender, EventArgs e)
+        {
+            roundedPanel_Functions.Width = (roundedPanel_Functions.Width == 0) ? 196 : 0;
+            roundedPanel_Functions.Height = (roundedPanel_Functions.Height == 0) ? 100 : 0;
+            roundedPanel_Functions.Visible = (roundedPanel_Functions.Visible == false) ? true : false;
+            panel_CalSci.SendToBack();
+            roundedPanel_Functions.BringToFront();
+        }
 
 
 
@@ -891,6 +901,13 @@ namespace SimpleWindowsApp
                 "roundedButton_Tan",                "roundedButton_Cot",
             };
 
+        string[] exemptedFuncButtons =
+            {
+                "roundedButton_AbsoluteValue2",     "roundedButton_Random",
+                "roundedButton_FloorFunction",      "roundedButton_CeilingFunction",
+                "roundedButton_DecToDMS",           "roundedButton_DMSToDec"
+            };
+
         string[] exemptedNumButtons =
             {
                 "roundedButton_Num",                "roundedButton_Num_2",
@@ -920,6 +937,7 @@ namespace SimpleWindowsApp
                 {
                     if (!exemptedMenuButtons.Contains(button.Name) 
                         && !exemptedNumButtons.Contains(button.Name)
+                        && !exemptedFuncButtons.Contains(button.Name)
                         && !exemptedTrigoButtons.Contains(button.Name)
                         && !exemptedMemoryButtons.Contains(button.Name))
                     {
@@ -949,6 +967,7 @@ namespace SimpleWindowsApp
                     button.Enabled = true;
                     if (!exemptedMenuButtons.Contains(button.Name)
                         && !exemptedNumButtons.Contains(button.Name)
+                        && !exemptedFuncButtons.Contains(button.Name)
                         && !exemptedTrigoButtons.Contains(button.Name)
                         && !exemptedMemoryButtons.Contains(button.Name)
                         && button.Name != "roundedButton_ShowTrigo" 
@@ -995,5 +1014,7 @@ namespace SimpleWindowsApp
         {
 
         }
+
+        
     }
 }

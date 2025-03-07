@@ -92,6 +92,13 @@
             this.roundedButton_Num9 = new SimpleWindowsApp.RoundedButton();
             this.roundedButton_Num7 = new SimpleWindowsApp.RoundedButton();
             this.roundedButton_Num8 = new SimpleWindowsApp.RoundedButton();
+            this.roundedPanel_Functions = new SimpleWindowsApp.RoundedPanel();
+            this.roundedButton_DMSToDec = new SimpleWindowsApp.RoundedButton();
+            this.roundedButton_DecToDMS = new SimpleWindowsApp.RoundedButton();
+            this.roundedButton_Random = new SimpleWindowsApp.RoundedButton();
+            this.roundedButton_CeilingFunction = new SimpleWindowsApp.RoundedButton();
+            this.roundedButton_FloorFunction = new SimpleWindowsApp.RoundedButton();
+            this.roundedButton_AbsoluteValue2 = new SimpleWindowsApp.RoundedButton();
             this.roundedPanel_Trigo = new SimpleWindowsApp.RoundedPanel();
             this.roundedButton_Cot = new SimpleWindowsApp.RoundedButton();
             this.roundedButton_Csc = new SimpleWindowsApp.RoundedButton();
@@ -149,6 +156,7 @@
             this.panel_ShowHistory.SuspendLayout();
             this.panel_CalSci.SuspendLayout();
             this.panel_CalStandard.SuspendLayout();
+            this.roundedPanel_Functions.SuspendLayout();
             this.roundedPanel_Trigo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -517,6 +525,7 @@
             // 
             // panel_CalSci
             // 
+            this.panel_CalSci.Controls.Add(this.roundedPanel_Functions);
             this.panel_CalSci.Controls.Add(this.roundedPanel_Trigo);
             this.panel_CalSci.Controls.Add(this.button_DegRadGrad);
             this.panel_CalSci.Controls.Add(this.button_FENotation);
@@ -1139,6 +1148,124 @@
             this.roundedButton_Num8.UseVisualStyleBackColor = false;
             this.roundedButton_Num8.Click += new System.EventHandler(this.roundedButton_Num_Click);
             // 
+            // roundedPanel_Functions
+            // 
+            this.roundedPanel_Functions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.roundedPanel_Functions.BorderRadius = 10;
+            this.roundedPanel_Functions.Controls.Add(this.roundedButton_DMSToDec);
+            this.roundedPanel_Functions.Controls.Add(this.roundedButton_DecToDMS);
+            this.roundedPanel_Functions.Controls.Add(this.roundedButton_Random);
+            this.roundedPanel_Functions.Controls.Add(this.roundedButton_CeilingFunction);
+            this.roundedPanel_Functions.Controls.Add(this.roundedButton_FloorFunction);
+            this.roundedPanel_Functions.Controls.Add(this.roundedButton_AbsoluteValue2);
+            this.roundedPanel_Functions.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedPanel_Functions.Location = new System.Drawing.Point(90, 119);
+            this.roundedPanel_Functions.Name = "roundedPanel_Functions";
+            this.roundedPanel_Functions.Size = new System.Drawing.Size(196, 100);
+            this.roundedPanel_Functions.TabIndex = 83;
+            // 
+            // roundedButton_DMSToDec
+            // 
+            this.roundedButton_DMSToDec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.roundedButton_DMSToDec.BorderRadius = 5;
+            this.roundedButton_DMSToDec.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_DMSToDec.FlatAppearance.BorderSize = 0;
+            this.roundedButton_DMSToDec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_DMSToDec.Font = new System.Drawing.Font("Gadugi", 9F);
+            this.roundedButton_DMSToDec.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_DMSToDec.Location = new System.Drawing.Point(131, 51);
+            this.roundedButton_DMSToDec.Margin = new System.Windows.Forms.Padding(1);
+            this.roundedButton_DMSToDec.Name = "roundedButton_DMSToDec";
+            this.roundedButton_DMSToDec.Size = new System.Drawing.Size(62, 46);
+            this.roundedButton_DMSToDec.TabIndex = 96;
+            this.roundedButton_DMSToDec.Text = "→deg";
+            this.roundedButton_DMSToDec.UseVisualStyleBackColor = false;
+            // 
+            // roundedButton_DecToDMS
+            // 
+            this.roundedButton_DecToDMS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.roundedButton_DecToDMS.BorderRadius = 5;
+            this.roundedButton_DecToDMS.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_DecToDMS.FlatAppearance.BorderSize = 0;
+            this.roundedButton_DecToDMS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_DecToDMS.Font = new System.Drawing.Font("Gadugi", 9F);
+            this.roundedButton_DecToDMS.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_DecToDMS.Location = new System.Drawing.Point(67, 51);
+            this.roundedButton_DecToDMS.Margin = new System.Windows.Forms.Padding(1);
+            this.roundedButton_DecToDMS.Name = "roundedButton_DecToDMS";
+            this.roundedButton_DecToDMS.Size = new System.Drawing.Size(62, 46);
+            this.roundedButton_DecToDMS.TabIndex = 95;
+            this.roundedButton_DecToDMS.Text = "→dms";
+            this.roundedButton_DecToDMS.UseVisualStyleBackColor = false;
+            // 
+            // roundedButton_Random
+            // 
+            this.roundedButton_Random.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.roundedButton_Random.BorderRadius = 5;
+            this.roundedButton_Random.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_Random.FlatAppearance.BorderSize = 0;
+            this.roundedButton_Random.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_Random.Font = new System.Drawing.Font("Gadugi", 9F);
+            this.roundedButton_Random.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_Random.Location = new System.Drawing.Point(3, 51);
+            this.roundedButton_Random.Margin = new System.Windows.Forms.Padding(1);
+            this.roundedButton_Random.Name = "roundedButton_Random";
+            this.roundedButton_Random.Size = new System.Drawing.Size(62, 46);
+            this.roundedButton_Random.TabIndex = 94;
+            this.roundedButton_Random.Text = "rand";
+            this.roundedButton_Random.UseVisualStyleBackColor = false;
+            // 
+            // roundedButton_CeilingFunction
+            // 
+            this.roundedButton_CeilingFunction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.roundedButton_CeilingFunction.BorderRadius = 5;
+            this.roundedButton_CeilingFunction.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_CeilingFunction.FlatAppearance.BorderSize = 0;
+            this.roundedButton_CeilingFunction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_CeilingFunction.Font = new System.Drawing.Font("Gadugi", 9F);
+            this.roundedButton_CeilingFunction.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_CeilingFunction.Location = new System.Drawing.Point(131, 3);
+            this.roundedButton_CeilingFunction.Margin = new System.Windows.Forms.Padding(1);
+            this.roundedButton_CeilingFunction.Name = "roundedButton_CeilingFunction";
+            this.roundedButton_CeilingFunction.Size = new System.Drawing.Size(62, 46);
+            this.roundedButton_CeilingFunction.TabIndex = 92;
+            this.roundedButton_CeilingFunction.Text = "⌈x⌉";
+            this.roundedButton_CeilingFunction.UseVisualStyleBackColor = false;
+            // 
+            // roundedButton_FloorFunction
+            // 
+            this.roundedButton_FloorFunction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.roundedButton_FloorFunction.BorderRadius = 5;
+            this.roundedButton_FloorFunction.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_FloorFunction.FlatAppearance.BorderSize = 0;
+            this.roundedButton_FloorFunction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_FloorFunction.Font = new System.Drawing.Font("Gadugi", 9F);
+            this.roundedButton_FloorFunction.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_FloorFunction.Location = new System.Drawing.Point(67, 3);
+            this.roundedButton_FloorFunction.Margin = new System.Windows.Forms.Padding(1);
+            this.roundedButton_FloorFunction.Name = "roundedButton_FloorFunction";
+            this.roundedButton_FloorFunction.Size = new System.Drawing.Size(62, 46);
+            this.roundedButton_FloorFunction.TabIndex = 91;
+            this.roundedButton_FloorFunction.Text = "⌊x⌋";
+            this.roundedButton_FloorFunction.UseVisualStyleBackColor = false;
+            // 
+            // roundedButton_AbsoluteValue2
+            // 
+            this.roundedButton_AbsoluteValue2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.roundedButton_AbsoluteValue2.BorderRadius = 5;
+            this.roundedButton_AbsoluteValue2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_AbsoluteValue2.FlatAppearance.BorderSize = 0;
+            this.roundedButton_AbsoluteValue2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_AbsoluteValue2.Font = new System.Drawing.Font("Gadugi", 10F);
+            this.roundedButton_AbsoluteValue2.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_AbsoluteValue2.Location = new System.Drawing.Point(3, 3);
+            this.roundedButton_AbsoluteValue2.Margin = new System.Windows.Forms.Padding(1);
+            this.roundedButton_AbsoluteValue2.Name = "roundedButton_AbsoluteValue2";
+            this.roundedButton_AbsoluteValue2.Size = new System.Drawing.Size(62, 46);
+            this.roundedButton_AbsoluteValue2.TabIndex = 90;
+            this.roundedButton_AbsoluteValue2.Text = "|𝑥|";
+            this.roundedButton_AbsoluteValue2.UseVisualStyleBackColor = false;
+            // 
             // roundedPanel_Trigo
             // 
             this.roundedPanel_Trigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
@@ -1318,6 +1445,7 @@
             this.roundedButton_ShowFunctions.TabIndex = 80;
             this.roundedButton_ShowFunctions.Text = "    Function ∨";
             this.roundedButton_ShowFunctions.UseVisualStyleBackColor = false;
+            this.roundedButton_ShowFunctions.Click += new System.EventHandler(this.roundedButton_ShowFunctions_Click);
             // 
             // roundedButton_ShowTrigo
             // 
@@ -2022,6 +2150,7 @@
             this.panel_ShowHistory.ResumeLayout(false);
             this.panel_CalSci.ResumeLayout(false);
             this.panel_CalStandard.ResumeLayout(false);
+            this.roundedPanel_Functions.ResumeLayout(false);
             this.roundedPanel_Trigo.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -2142,6 +2271,13 @@
         private RoundedButton roundedButton_Cos;
         private RoundedButton roundedButton_Sin;
         private RoundedButton roundedButton_2nd_2;
+        private RoundedPanel roundedPanel_Functions;
+        private RoundedButton roundedButton_DMSToDec;
+        private RoundedButton roundedButton_DecToDMS;
+        private RoundedButton roundedButton_Random;
+        private RoundedButton roundedButton_CeilingFunction;
+        private RoundedButton roundedButton_FloorFunction;
+        private RoundedButton roundedButton_AbsoluteValue2;
     }
 }
 
