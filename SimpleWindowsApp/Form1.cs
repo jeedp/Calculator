@@ -135,11 +135,7 @@ namespace SimpleWindowsApp
             Button button = (Button)sender;
             int maxDigits = (textBox_CalcType.Text == "Standard") ? 15 : 15;
 
-            if (textBox_Display1.Text.Replace(",", "").Length >= maxDigits)
-            {
-                return;
-            }
-
+            // new inputs
             if (textBox_Display1.Text == "0" || isOperationPerformed)
             {
                 textBox_Display1.Clear();
@@ -150,6 +146,13 @@ namespace SimpleWindowsApp
                 textBox_Display1.Clear();
             }
 
+            // input limit
+            if (textBox_Display1.Text.Replace(",", "").Length >= maxDigits)
+            {
+                return;
+            }
+
+            // decimal input
             if (isOperationPerformed)
             {
                 textBox_Display1.Text = (button.Text == ".") ? "0." : button.Text;
@@ -167,6 +170,7 @@ namespace SimpleWindowsApp
                 }
             }
 
+            // format for readability
             if (double.TryParse(textBox_Display1.Text, out double formattedValue))
             {
                 if (!textBox_Display1.Text.Contains("."))
@@ -612,13 +616,18 @@ namespace SimpleWindowsApp
 
         private void roundedButton_Pi_Click(object sender, EventArgs e)
         {
-            textBox_Display1.Text = Math.PI.ToString();
+            textBox_Display1.Text = "3.14159265358979";
+            isOperationPerformed = true; // Ensures next input replaces π
+            roundedButton_ClearCE.Text = "CE";
         }
 
         private void roundedButton_e_Click(object sender, EventArgs e)
         {
-            textBox_Display1.Text = Math.E.ToString();
+            textBox_Display1.Text = "2.71828182845905";
+            isOperationPerformed = true; // Ensures next input replaces e
+            roundedButton_ClearCE.Text = "CE";
         }
+
 
         private void roundedButton_AbsoluteValue_Click(object sender, EventArgs e)
         {
@@ -654,7 +663,7 @@ namespace SimpleWindowsApp
                     result *= i;
 
                 textBox_Display1.Text = result.ToString();
-                textBox_Display2.Text = $"fact({result})";
+                textBox_Display2.Text = $"fact({input})";
             }
             catch
             {
@@ -671,6 +680,7 @@ namespace SimpleWindowsApp
             {
                 double input = Convert.ToDouble(textBox_Display1.Text);
                 textBox_Display1.Text = Math.Pow(10, input).ToString();
+                textBox_Display2.Text = $"10^({input})";
             }
             catch
             {
