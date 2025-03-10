@@ -19,6 +19,7 @@ namespace SimpleWindowsApp
 {
     public partial class Calculator : Form
     {
+        private int openParenthesesCount = 0;
         private bool mouseDown;
         private bool isDisabled = false;
         private bool isOperationPerformed = false;
@@ -97,6 +98,7 @@ namespace SimpleWindowsApp
             textBox_Display1.Text = "0";
             EnableButtons(this);
             UpdateFontSize();
+            UpdateParenthesisButton();
         }
 
         private void roundedButton_Clear_Click(object sender, EventArgs e)
@@ -107,6 +109,7 @@ namespace SimpleWindowsApp
             operation = "";
             EnableButtons(this);
             UpdateFontSize();
+            UpdateParenthesisButton();
         }
 
         private void roundedButton_Delete_Click(object sender, EventArgs e)
@@ -123,6 +126,7 @@ namespace SimpleWindowsApp
                 textBox_Display1.Text = "0";
             EnableButtons(this);
             UpdateFontSize();
+            UpdateParenthesisButton();
         }
 
 
@@ -239,6 +243,12 @@ namespace SimpleWindowsApp
             {
                 double inputValue;
 
+                while (openParenthesesCount > 0)
+                {
+                    textBox_Display2.Text += ")";
+                    openParenthesesCount--;
+                }
+
                 if (isDisabled)
                 {
                     roundedButton_Clear_Click(sender, e);
@@ -314,8 +324,8 @@ namespace SimpleWindowsApp
 
 
                 textBox_Display1.Text = FormatResult(result);
-                expression += " =";
                 AddToHistory(Convert.ToString(expression), Convert.ToString(result));
+                expression += " =";
                 textBox_Display2.Text = expression;
                 
                 operation = "";
@@ -323,6 +333,7 @@ namespace SimpleWindowsApp
             }
             catch (Exception)
             {
+                CheckOverflow();
                 textBox_Display1.Text = "Invalid Input";
                 textBox_Display1.Text = "0";
                 result = 0;
@@ -332,44 +343,49 @@ namespace SimpleWindowsApp
 
         private void roundedButton_Square_Click(object sender, EventArgs e)
         {
+
             try
             {
                 double input = Convert.ToDouble(textBox_Display1.Text);
+                //double result = Math.Pow(input, 2);
                 textBox_Display1.Text = FormatResult(Math.Pow(input, 2));
-                textBox_Display2.Text = $"sqr({input})";
-                AddToHistory(Convert.ToString(input), Convert.ToString(result));
+                textBox_Display2.Text = $"sqr( {input} )";
+                AddToHistory($"sqr( {input} )", FormatResult(Math.Pow(input, 2)));
             }
             catch
             {
+                CheckOverflow();
                 textBox_Display1.Text = "Invalid Input";
                 DisableButtons(this);
             }
 
             operation = "";
-            isOperationPerformed = true;
+            isOperationPerformed = false;
         }
 
         private void roundedButton_SquareRoot_Click(object sender, EventArgs e)
         {
+
             try
             {
                 double input = Convert.ToDouble(textBox_Display1.Text);
                 if (input >= 0)
                 {
-                    double result = Math.Sqrt(input);
-                    textBox_Display1.Text = FormatResult(result);
-                    textBox_Display2.Text = $"√({input})";
-                    AddToHistory($"√({input})", Convert.ToString(result));
+                    //double result = Math.Sqrt(input);
+                    textBox_Display1.Text = FormatResult(Math.Sqrt(input));
+                    textBox_Display2.Text = $"√( {input} )";
+                    AddToHistory($"√( {input} )", FormatResult(Math.Sqrt(input)));
                 }
                 else
                 {
-                    textBox_Display2.Text = $"√({input})";
+                    textBox_Display2.Text = $"√( {input} )";
                     textBox_Display1.Text = "Invalid Input";
                     DisableButtons(this);
                 }
             }
             catch
             {
+                CheckOverflow();
                 textBox_Display1.Text = "Invalid Input";
                 DisableButtons(this);
             }
@@ -380,26 +396,28 @@ namespace SimpleWindowsApp
 
         private void roundedButton_DivBy1_Click(object sender, EventArgs e)
         {
+
             try
             {
                 double input = Convert.ToDouble(textBox_Display1.Text);
                 if (input != 0)
                 {
-                    double result = 1 / input;
-                    textBox_Display1.Text = FormatResult(result);
-                    textBox_Display2.Text = $"1/({input})";
-                    AddToHistory($"1/({input})", Convert.ToString(result));
+                    //double result = 1 / input;
+                    textBox_Display1.Text = FormatResult(1 / input);
+                    textBox_Display2.Text = $"1/( {input} )";
+                    AddToHistory($"1/( {input} )", FormatResult(1 / input));
                 }
                 else
                 {
                     textBox_Display1.Font = new Font(textBox_Display1.Font.FontFamily, 20, textBox_Display1.Font.Style);
-                    textBox_Display2.Text = $"1/({input})";
+                    textBox_Display2.Text = $"1/( {input} )";
                     textBox_Display1.Text = "Cannot Divide by Zero";
                     DisableButtons(this);
                 }
             }
             catch
             {
+                //CheckOverflow();
                 textBox_Display1.Text = "Invalid Input";
                 DisableButtons(this);
             }
@@ -414,18 +432,24 @@ namespace SimpleWindowsApp
             try
             {
                 double input = Convert.ToDouble(textBox_Display1.Text);
-                double temp = (result != 0 && !string.IsNullOrEmpty(operation)) ? (input /= 100) * result: input /= 100;
-                textBox_Display2.Text = $"{result} {operation} {input}";
+                double temp = (result != 0 && !string.IsNullOrEmpty(operation)) ? (input /= 100) * result : input /= 100;
+                textBox_Display2.Text = (result == 0) ? $"{operation} {input}" : $"{result} {operation} {input}";
                 textBox_Display1.Text = FormatResult(input);
-                AddToHistory(Convert.ToString(input), Convert.ToString(result));
+                //AddToHistory(Convert.ToString(input), Convert.ToString(result));
                 isOperationPerformed = true;
             }
             catch (Exception)
             {
+                CheckOverflow();
                 textBox_Display1.Text = "Invalid Input";
                 DisableButtons(this);
             }
         }
+
+
+
+
+
 
 
 
@@ -567,6 +591,7 @@ namespace SimpleWindowsApp
 
         private void button_DegRadGrad_Click(object sender, EventArgs e)
         {
+            //TODO: IMPLEMENT DEGREES, RADIANS, GRADIANS
             button_DegRadGrad.Text = (button_DegRadGrad.Text == "DEG")
                 ? "RAD"
                 : (button_DegRadGrad.Text == "RAD")
@@ -580,14 +605,14 @@ namespace SimpleWindowsApp
 
             if (input <= 0)
             {
-                textBox_Display2.Text = $"log({input})";
+                textBox_Display2.Text = $"log( {input} )";
                 textBox_Display1.Text = "Invalid Input";
                 DisableButtons(this);
                 return;
             }
 
             double result = Math.Log10(input);
-            textBox_Display2.Text = $"log({input})";
+            textBox_Display2.Text = $"log( {input} )";
             textBox_Display1.Text = FormatResult(result);
 
             roundedPanel_Trigo.Height = 0;
@@ -600,14 +625,14 @@ namespace SimpleWindowsApp
 
             if (input <= 0)
             {
-                textBox_Display2.Text = $"ln({input})";
+                textBox_Display2.Text = $"ln( {input} )";
                 textBox_Display1.Text = "Invalid Input";
                 DisableButtons(this);
                 return;
             }
 
             double result = Math.Log(input);
-            textBox_Display2.Text = $"ln({input})";
+            textBox_Display2.Text = $"ln( {input} )";
             textBox_Display1.Text = FormatResult(result);
 
             roundedPanel_Trigo.Height = 0;
@@ -636,8 +661,8 @@ namespace SimpleWindowsApp
                 double input = Convert.ToDouble(textBox_Display1.Text);
                 double result = Math.Abs(input);
 
-                textBox_Display1.Text = Convert.ToString(result);
-                textBox_Display2.Text = $"Abs({input})";
+                textBox_Display1.Text = FormatResult(result);
+                textBox_Display2.Text = $"Abs( {input} )";
             }
             catch
             {
@@ -653,7 +678,7 @@ namespace SimpleWindowsApp
                 int input = Convert.ToInt32(textBox_Display1.Text);
                 if (input < 0)
                 {
-                    textBox_Display1.Text = "Error";
+                    textBox_Display1.Text = "Invalid Input";
                     DisableButtons(this);
                     return;
                 }
@@ -662,12 +687,12 @@ namespace SimpleWindowsApp
                 for (int i = 2; i <= input; i++)
                     result *= i;
 
-                textBox_Display1.Text = result.ToString();
-                textBox_Display2.Text = $"fact({input})";
+                textBox_Display1.Text = FormatResult(result);
+                textBox_Display2.Text = $"fact( {input} )";
             }
             catch
             {
-                textBox_Display1.Text = "Error";
+                CheckOverflow();
                 DisableButtons(this);
             }
 
@@ -676,20 +701,58 @@ namespace SimpleWindowsApp
 
         private void roundedButton_TenRaisedToN_Click(object sender, EventArgs e)
         {
+            CheckOverflow();
+
             try
             {
                 double input = Convert.ToDouble(textBox_Display1.Text);
-                textBox_Display1.Text = Math.Pow(10, input).ToString();
-                textBox_Display2.Text = $"10^({input})";
+                textBox_Display1.Text = FormatResult(Math.Pow(10, input));
+                textBox_Display2.Text = $"10^( {input} )";
             }
             catch
             {
-                textBox_Display1.Text = "Error";
+                textBox_Display1.Text = "Invalid Input";
                 DisableButtons(this);
             }
 
             roundedButton_ClearCE.Text = (textBox_Display1.Text != "0") ? "CE" : "C";
         }
+
+        private void roundedButton_ParenthesisOpen_Click(object sender, EventArgs e)
+        {
+            if (isOperationPerformed)
+            {
+                textBox_Display1.Clear();
+                isOperationPerformed = false;
+            }
+
+            textBox_Display2.Text += "( ";
+            openParenthesesCount++;
+
+            UpdateParenthesisButton();
+        }
+
+        private void roundedButton_ParenthesisClose_Click(object sender, EventArgs e)
+        {
+            if (openParenthesesCount > 0)
+            {
+                if ((string.IsNullOrEmpty(textBox_Display1.Text) || textBox_Display2.Text == "0")
+                    && (!string.IsNullOrEmpty(textBox_Display2.Text) && textBox_Display2.Text[textBox_Display2.Text.Length - 1] == '('))
+                {
+                    textBox_Display2.Text += $"0 )";
+                }
+                else
+                {
+                    textBox_Display2.Text += $"{textBox_Display1.Text} )";
+                }
+                    
+                openParenthesesCount--;
+            }
+
+
+                UpdateParenthesisButton();
+        }
+
 
 
 
@@ -739,7 +802,7 @@ namespace SimpleWindowsApp
 
             double result = Math.Sin(DegreeToRadian(input));
 
-            textBox_Display2.Text = $"sin({input})";
+            textBox_Display2.Text = $"sin( {input} )";
             textBox_Display1.Text = FormatResult(result);
 
             roundedPanel_Trigo.Visible = false;
@@ -758,7 +821,7 @@ namespace SimpleWindowsApp
 
             double result = Math.Cos(DegreeToRadian(input));
 
-            textBox_Display2.Text = $"cos({input})";
+            textBox_Display2.Text = $"cos( {input} )";
             textBox_Display1.Text = FormatResult(result);
 
             roundedPanel_Trigo.Visible = false;
@@ -777,14 +840,14 @@ namespace SimpleWindowsApp
 
             if (input % 90 == 0 && (input / 90) % 2 != 0)
             {
-                textBox_Display2.Text = $"tan({input})";
+                textBox_Display2.Text = $"tan( {input} )";
                 textBox_Display1.Text = "Invalid Input";
                 DisableButtons(this);
                 return;
             }
 
             double result = Math.Tan(DegreeToRadian(input));
-            textBox_Display2.Text = $"tan({input})";
+            textBox_Display2.Text = $"tan( {input} )";
             textBox_Display1.Text = FormatResult(result);
 
             roundedPanel_Trigo.Visible = false;
@@ -810,7 +873,7 @@ namespace SimpleWindowsApp
             }
 
             double result = 1 / Math.Cos(DegreeToRadian(input));
-            textBox_Display2.Text = $"sec({input})";
+            textBox_Display2.Text = $"sec( {input} )";
             textBox_Display1.Text = FormatResult(result);
 
             roundedPanel_Trigo.Visible = false;
@@ -836,7 +899,7 @@ namespace SimpleWindowsApp
             }
 
             double result = 1 / Math.Sin(DegreeToRadian(input));
-            textBox_Display2.Text = $"csc({input})";
+            textBox_Display2.Text = $"csc( {input} )";
             textBox_Display1.Text = FormatResult(result);
 
             roundedPanel_Trigo.Visible = false;
@@ -855,7 +918,7 @@ namespace SimpleWindowsApp
 
             if (Math.Tan(DegreeToRadian(input)) == 0)
             {
-                textBox_Display2.Text = $"cot({input})";
+                textBox_Display2.Text = $"cot( {input} )";
                 textBox_Display1.Text = "Invalid Input";
                 DisableButtons(this);
                 return;
@@ -869,6 +932,8 @@ namespace SimpleWindowsApp
             roundedPanel_Trigo.Width = 0;
             roundedPanel_Trigo.Height = 0;
         }
+
+
 
 
 
@@ -895,6 +960,8 @@ namespace SimpleWindowsApp
                 panel_CalSci.BringToFront();
             }
         }
+
+
 
         
 
@@ -937,6 +1004,11 @@ namespace SimpleWindowsApp
 
 
 
+
+
+
+
+
         private void Calculator_MouseDown(object sender, MouseEventArgs e)
         {
             mouseDown = true;
@@ -958,13 +1030,54 @@ namespace SimpleWindowsApp
             mouseDown = false;
         }
 
+
+
+
+
+
+
+
+
+
+
         private string FormatResult(double value)
         {
-            if (value % 1 == 0)
+            if (Math.Abs(value) >= 1e15 || Math.Abs(value) < 1e-6)
+            {
+                return value.ToString("0.###############e+0"); // Scientific notation with up to 8 decimal places
+            }
+            else if (value % 1 == 0)
                 return value.ToString("N0"); // Whole number (e.g., 1,234)
             else
                 return value.ToString("N16").TrimEnd('0').TrimEnd('.'); // Show up to 16 decimal places
         }
+
+        private double DegreeToRadian(double angle)
+        {
+            return (Math.PI / 180) * angle;
+        }
+
+        public void AddToHistory(string expression, string result)
+        {
+            string formattedHistory = $"{expression} = {result}";
+
+            if (historyList.Count == 0 || historyList[0] == "There's no history yet")
+            {
+                historyList.Clear();
+            }
+
+            historyList.Insert(0, formattedHistory);
+            UpdateHistoryDisplay();
+        }
+
+
+
+
+
+
+
+
+
 
         private void UpdateFontSize()
         {
@@ -974,7 +1087,18 @@ namespace SimpleWindowsApp
             if (panel_CalStandard.Visible && !panel_CalSci.Visible)
             {
                 textBox_Display1.Font = new Font(textBox_Display1.Font.FontFamily,
-                    length <= 8 ? 34 : length <= 12 ? 28 : 22, FontStyle.Bold);
+                    length <= 9 
+                    ? 34 
+                    : length <= 10 
+                        ? 32 
+                        : length <= 11
+                            ? 30
+                            : length <= 12
+                                ? 28
+                                : length <= 13
+                                    ? 24
+                                    : 22
+                    , FontStyle.Bold);
             }
             // Scientific
             else if (!panel_CalStandard.Visible && panel_CalSci.Visible)
@@ -1009,20 +1133,6 @@ namespace SimpleWindowsApp
             }
         }
 
-        public void AddToHistory(string expression, string result)
-        {
-            string formattedHistory = $"{expression} {result}";
-
-            if (historyList.Count == 0 || historyList[0] == "There's no history yet")
-            {
-                historyList.Clear();
-            }
-
-            historyList.Insert(0, formattedHistory); 
-            UpdateHistoryDisplay();
-        }
-
-
         private void UpdateHistoryDisplay()
         {
             listBox_History.Items.Clear();
@@ -1039,10 +1149,23 @@ namespace SimpleWindowsApp
             }
         }
 
-        private double DegreeToRadian(double angle)
+        private void UpdateParenthesisButton()
         {
-            return (Math.PI / 180) * angle;
+            roundedButton_ParenthesisOpen.Text = (openParenthesesCount == 0) ? "(" : $"(  {openParenthesesCount}";
         }
+
+        private void CheckOverflow()
+        {
+            if (textBox_Display2.Text.Length > 25)
+            {
+                textBox_Display1.Text = "Overflow";
+                DisableButtons(this);
+            }
+        }
+
+
+
+
 
 
 

@@ -36,10 +36,7 @@
             this.button_Exit = new System.Windows.Forms.Button();
             this.pictureBox_Calculator = new System.Windows.Forms.PictureBox();
             this.panel_Menu1 = new System.Windows.Forms.Panel();
-            this.roundedButton_Settings = new SimpleWindowsApp.RoundedButton();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.roundedButton_CalcScientific = new SimpleWindowsApp.RoundedButton();
-            this.roundedButton_CalcStandard = new SimpleWindowsApp.RoundedButton();
             this.textBox_MenuCalcTitle = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button_Menu = new System.Windows.Forms.Button();
@@ -61,6 +58,40 @@
             this.listBox_History = new System.Windows.Forms.ListBox();
             this.button_ClearHistory = new System.Windows.Forms.Button();
             this.panel_CalSci = new System.Windows.Forms.Panel();
+            this.button_DegRadGrad = new System.Windows.Forms.Button();
+            this.button_FENotation = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.button_Memory2 = new System.Windows.Forms.Button();
+            this.button_MemoryStore2 = new System.Windows.Forms.Button();
+            this.button_MemorySubtract2 = new System.Windows.Forms.Button();
+            this.button_MemoryAdd2 = new System.Windows.Forms.Button();
+            this.button_MemoryRecall2 = new System.Windows.Forms.Button();
+            this.button_MemoryClear2 = new System.Windows.Forms.Button();
+            this.panel_CalStandard = new System.Windows.Forms.Panel();
+            this.roundedButton_Num6 = new SimpleWindowsApp.RoundedButton();
+            this.roundedButton_Equals = new SimpleWindowsApp.RoundedButton();
+            this.roundedButton_Decimal = new SimpleWindowsApp.RoundedButton();
+            this.roundedButton_Num = new SimpleWindowsApp.RoundedButton();
+            this.roundedButton_PositiveNegative = new SimpleWindowsApp.RoundedButton();
+            this.roundedButton_Addition = new SimpleWindowsApp.RoundedButton();
+            this.roundedButton_Percent = new SimpleWindowsApp.RoundedButton();
+            this.roundedButton_Num3 = new SimpleWindowsApp.RoundedButton();
+            this.roundedButton_ClearEntry = new SimpleWindowsApp.RoundedButton();
+            this.roundedButton_Num2 = new SimpleWindowsApp.RoundedButton();
+            this.roundedButton_Clear = new SimpleWindowsApp.RoundedButton();
+            this.roundedButton_Num1 = new SimpleWindowsApp.RoundedButton();
+            this.roundedButton_Delete = new SimpleWindowsApp.RoundedButton();
+            this.roundedButton_Subtraction = new SimpleWindowsApp.RoundedButton();
+            this.roundedButton_DivBy1 = new SimpleWindowsApp.RoundedButton();
+            this.roundedButton_Num5 = new SimpleWindowsApp.RoundedButton();
+            this.roundedButton_Square = new SimpleWindowsApp.RoundedButton();
+            this.roundedButton_Num4 = new SimpleWindowsApp.RoundedButton();
+            this.roundedButton_SquareRoot = new SimpleWindowsApp.RoundedButton();
+            this.roundedButton_Multiplication = new SimpleWindowsApp.RoundedButton();
+            this.roundedButton_Division = new SimpleWindowsApp.RoundedButton();
+            this.roundedButton_Num9 = new SimpleWindowsApp.RoundedButton();
+            this.roundedButton_Num7 = new SimpleWindowsApp.RoundedButton();
+            this.roundedButton_Num8 = new SimpleWindowsApp.RoundedButton();
             this.roundedPanel_Functions = new SimpleWindowsApp.RoundedPanel();
             this.roundedButton_DMSToDec = new SimpleWindowsApp.RoundedButton();
             this.roundedButton_DecToDMS = new SimpleWindowsApp.RoundedButton();
@@ -77,21 +108,12 @@
             this.roundedButton_Cos = new SimpleWindowsApp.RoundedButton();
             this.roundedButton_Sin = new SimpleWindowsApp.RoundedButton();
             this.roundedButton_2nd_2 = new SimpleWindowsApp.RoundedButton();
-            this.button_DegRadGrad = new System.Windows.Forms.Button();
-            this.button_FENotation = new System.Windows.Forms.Button();
             this.roundedButton_ShowFunctions = new SimpleWindowsApp.RoundedButton();
             this.roundedButton_ShowTrigo = new SimpleWindowsApp.RoundedButton();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.button_Memory2 = new System.Windows.Forms.Button();
             this.roundedButton_Square2 = new SimpleWindowsApp.RoundedButton();
-            this.button_MemoryStore2 = new System.Windows.Forms.Button();
             this.roundedButton_ln = new SimpleWindowsApp.RoundedButton();
-            this.button_MemorySubtract2 = new System.Windows.Forms.Button();
             this.roundedButton_log = new SimpleWindowsApp.RoundedButton();
-            this.button_MemoryAdd2 = new System.Windows.Forms.Button();
-            this.button_MemoryRecall2 = new System.Windows.Forms.Button();
             this.roundedButton_TenRaisedToN = new SimpleWindowsApp.RoundedButton();
-            this.button_MemoryClear2 = new System.Windows.Forms.Button();
             this.roundedButton_Power = new SimpleWindowsApp.RoundedButton();
             this.roundedButton_SquareRoot2 = new SimpleWindowsApp.RoundedButton();
             this.roundedButton_2nd = new SimpleWindowsApp.RoundedButton();
@@ -123,31 +145,9 @@
             this.roundedButton_e = new SimpleWindowsApp.RoundedButton();
             this.roundedButton_Pi = new SimpleWindowsApp.RoundedButton();
             this.roundedButton_Mod = new SimpleWindowsApp.RoundedButton();
-            this.panel_CalStandard = new System.Windows.Forms.Panel();
-            this.roundedButton_Num6 = new SimpleWindowsApp.RoundedButton();
-            this.roundedButton_Equals = new SimpleWindowsApp.RoundedButton();
-            this.roundedButton_Decimal = new SimpleWindowsApp.RoundedButton();
-            this.roundedButton_Num = new SimpleWindowsApp.RoundedButton();
-            this.roundedButton_PositiveNegative = new SimpleWindowsApp.RoundedButton();
-            this.roundedButton_Addition = new SimpleWindowsApp.RoundedButton();
-            this.roundedButton_Percent = new SimpleWindowsApp.RoundedButton();
-            this.roundedButton_Num3 = new SimpleWindowsApp.RoundedButton();
-            this.roundedButton_ClearEntry = new SimpleWindowsApp.RoundedButton();
-            this.roundedButton_Num2 = new SimpleWindowsApp.RoundedButton();
-            this.roundedButton_Clear = new SimpleWindowsApp.RoundedButton();
-            this.roundedButton_Num1 = new SimpleWindowsApp.RoundedButton();
-            this.roundedButton_Delete = new SimpleWindowsApp.RoundedButton();
-            this.roundedButton_Subtraction = new SimpleWindowsApp.RoundedButton();
-            this.roundedButton_DivBy1 = new SimpleWindowsApp.RoundedButton();
-            this.roundedButton_Num5 = new SimpleWindowsApp.RoundedButton();
-            this.roundedButton_Square = new SimpleWindowsApp.RoundedButton();
-            this.roundedButton_Num4 = new SimpleWindowsApp.RoundedButton();
-            this.roundedButton_SquareRoot = new SimpleWindowsApp.RoundedButton();
-            this.roundedButton_Multiplication = new SimpleWindowsApp.RoundedButton();
-            this.roundedButton_Division = new SimpleWindowsApp.RoundedButton();
-            this.roundedButton_Num9 = new SimpleWindowsApp.RoundedButton();
-            this.roundedButton_Num7 = new SimpleWindowsApp.RoundedButton();
-            this.roundedButton_Num8 = new SimpleWindowsApp.RoundedButton();
+            this.roundedButton_Settings = new SimpleWindowsApp.RoundedButton();
+            this.roundedButton_CalcScientific = new SimpleWindowsApp.RoundedButton();
+            this.roundedButton_CalcStandard = new SimpleWindowsApp.RoundedButton();
             this.Panel_Title.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Calculator)).BeginInit();
             this.panel_Menu1.SuspendLayout();
@@ -155,9 +155,9 @@
             this.panel1.SuspendLayout();
             this.panel_ShowHistory.SuspendLayout();
             this.panel_CalSci.SuspendLayout();
+            this.panel_CalStandard.SuspendLayout();
             this.roundedPanel_Functions.SuspendLayout();
             this.roundedPanel_Trigo.SuspendLayout();
-            this.panel_CalStandard.SuspendLayout();
             this.SuspendLayout();
             // 
             // Panel_Title
@@ -252,26 +252,6 @@
             this.panel_Menu1.Size = new System.Drawing.Size(0, 421);
             this.panel_Menu1.TabIndex = 41;
             // 
-            // roundedButton_Settings
-            // 
-            this.roundedButton_Settings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
-            this.roundedButton_Settings.BorderRadius = 5;
-            this.roundedButton_Settings.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_Settings.FlatAppearance.BorderSize = 0;
-            this.roundedButton_Settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_Settings.Font = new System.Drawing.Font("Gadugi", 10F);
-            this.roundedButton_Settings.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_Settings.Image = ((System.Drawing.Image)(resources.GetObject("roundedButton_Settings.Image")));
-            this.roundedButton_Settings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.roundedButton_Settings.Location = new System.Drawing.Point(11, 380);
-            this.roundedButton_Settings.Margin = new System.Windows.Forms.Padding(1);
-            this.roundedButton_Settings.Name = "roundedButton_Settings";
-            this.roundedButton_Settings.Size = new System.Drawing.Size(240, 34);
-            this.roundedButton_Settings.TabIndex = 78;
-            this.roundedButton_Settings.Text = "        Settings";
-            this.roundedButton_Settings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.roundedButton_Settings.UseVisualStyleBackColor = false;
-            // 
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -279,48 +259,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(252, 1);
             this.panel5.TabIndex = 77;
-            // 
-            // roundedButton_CalcScientific
-            // 
-            this.roundedButton_CalcScientific.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
-            this.roundedButton_CalcScientific.BorderRadius = 5;
-            this.roundedButton_CalcScientific.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_CalcScientific.FlatAppearance.BorderSize = 0;
-            this.roundedButton_CalcScientific.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_CalcScientific.Font = new System.Drawing.Font("Gadugi", 10F);
-            this.roundedButton_CalcScientific.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_CalcScientific.Image = ((System.Drawing.Image)(resources.GetObject("roundedButton_CalcScientific.Image")));
-            this.roundedButton_CalcScientific.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.roundedButton_CalcScientific.Location = new System.Drawing.Point(11, 80);
-            this.roundedButton_CalcScientific.Margin = new System.Windows.Forms.Padding(1);
-            this.roundedButton_CalcScientific.Name = "roundedButton_CalcScientific";
-            this.roundedButton_CalcScientific.Size = new System.Drawing.Size(240, 36);
-            this.roundedButton_CalcScientific.TabIndex = 44;
-            this.roundedButton_CalcScientific.Text = "       Scientific";
-            this.roundedButton_CalcScientific.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.roundedButton_CalcScientific.UseVisualStyleBackColor = false;
-            this.roundedButton_CalcScientific.Click += new System.EventHandler(this.roundedButton_CalcScientific_Click);
-            // 
-            // roundedButton_CalcStandard
-            // 
-            this.roundedButton_CalcStandard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
-            this.roundedButton_CalcStandard.BorderRadius = 5;
-            this.roundedButton_CalcStandard.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_CalcStandard.FlatAppearance.BorderSize = 0;
-            this.roundedButton_CalcStandard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_CalcStandard.Font = new System.Drawing.Font("Gadugi", 10F);
-            this.roundedButton_CalcStandard.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_CalcStandard.Image = ((System.Drawing.Image)(resources.GetObject("roundedButton_CalcStandard.Image")));
-            this.roundedButton_CalcStandard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.roundedButton_CalcStandard.Location = new System.Drawing.Point(11, 42);
-            this.roundedButton_CalcStandard.Margin = new System.Windows.Forms.Padding(1);
-            this.roundedButton_CalcStandard.Name = "roundedButton_CalcStandard";
-            this.roundedButton_CalcStandard.Size = new System.Drawing.Size(240, 36);
-            this.roundedButton_CalcStandard.TabIndex = 42;
-            this.roundedButton_CalcStandard.Text = "       Standard";
-            this.roundedButton_CalcStandard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.roundedButton_CalcStandard.UseVisualStyleBackColor = false;
-            this.roundedButton_CalcStandard.Click += new System.EventHandler(this.roundedButton_CalcStandard_Click);
             // 
             // textBox_MenuCalcTitle
             // 
@@ -406,6 +344,7 @@
             this.textBox_Display2.ForeColor = System.Drawing.Color.Silver;
             this.textBox_Display2.Location = new System.Drawing.Point(-1, 82);
             this.textBox_Display2.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox_Display2.MaxLength = 25;
             this.textBox_Display2.Multiline = true;
             this.textBox_Display2.Name = "textBox_Display2";
             this.textBox_Display2.ReadOnly = true;
@@ -419,9 +358,9 @@
             this.textBox_Display1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_Display1.Font = new System.Drawing.Font("Gadugi", 34F, System.Drawing.FontStyle.Bold);
             this.textBox_Display1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox_Display1.Location = new System.Drawing.Point(10, 108);
+            this.textBox_Display1.Location = new System.Drawing.Point(10, 107);
             this.textBox_Display1.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox_Display1.MaxLength = 999999;
+            this.textBox_Display1.MaxLength = 16;
             this.textBox_Display1.Multiline = true;
             this.textBox_Display1.Name = "textBox_Display1";
             this.textBox_Display1.ReadOnly = true;
@@ -641,286 +580,6 @@
             this.panel_CalSci.Size = new System.Drawing.Size(320, 360);
             this.panel_CalSci.TabIndex = 42;
             // 
-            // roundedPanel_Functions
-            // 
-            this.roundedPanel_Functions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.roundedPanel_Functions.BorderRadius = 10;
-            this.roundedPanel_Functions.Controls.Add(this.roundedButton_DMSToDec);
-            this.roundedPanel_Functions.Controls.Add(this.roundedButton_DecToDMS);
-            this.roundedPanel_Functions.Controls.Add(this.roundedButton_Random);
-            this.roundedPanel_Functions.Controls.Add(this.roundedButton_CeilingFunction);
-            this.roundedPanel_Functions.Controls.Add(this.roundedButton_FloorFunction);
-            this.roundedPanel_Functions.Controls.Add(this.roundedButton_AbsoluteValue2);
-            this.roundedPanel_Functions.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedPanel_Functions.Location = new System.Drawing.Point(90, 119);
-            this.roundedPanel_Functions.Name = "roundedPanel_Functions";
-            this.roundedPanel_Functions.Size = new System.Drawing.Size(0, 0);
-            this.roundedPanel_Functions.TabIndex = 83;
-            // 
-            // roundedButton_DMSToDec
-            // 
-            this.roundedButton_DMSToDec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.roundedButton_DMSToDec.BorderRadius = 5;
-            this.roundedButton_DMSToDec.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_DMSToDec.FlatAppearance.BorderSize = 0;
-            this.roundedButton_DMSToDec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_DMSToDec.Font = new System.Drawing.Font("Gadugi", 9F);
-            this.roundedButton_DMSToDec.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_DMSToDec.Location = new System.Drawing.Point(131, 51);
-            this.roundedButton_DMSToDec.Margin = new System.Windows.Forms.Padding(1);
-            this.roundedButton_DMSToDec.Name = "roundedButton_DMSToDec";
-            this.roundedButton_DMSToDec.Size = new System.Drawing.Size(62, 46);
-            this.roundedButton_DMSToDec.TabIndex = 96;
-            this.roundedButton_DMSToDec.Text = "→deg";
-            this.roundedButton_DMSToDec.UseVisualStyleBackColor = false;
-            // 
-            // roundedButton_DecToDMS
-            // 
-            this.roundedButton_DecToDMS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.roundedButton_DecToDMS.BorderRadius = 5;
-            this.roundedButton_DecToDMS.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_DecToDMS.FlatAppearance.BorderSize = 0;
-            this.roundedButton_DecToDMS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_DecToDMS.Font = new System.Drawing.Font("Gadugi", 9F);
-            this.roundedButton_DecToDMS.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_DecToDMS.Location = new System.Drawing.Point(67, 51);
-            this.roundedButton_DecToDMS.Margin = new System.Windows.Forms.Padding(1);
-            this.roundedButton_DecToDMS.Name = "roundedButton_DecToDMS";
-            this.roundedButton_DecToDMS.Size = new System.Drawing.Size(62, 46);
-            this.roundedButton_DecToDMS.TabIndex = 95;
-            this.roundedButton_DecToDMS.Text = "→dms";
-            this.roundedButton_DecToDMS.UseVisualStyleBackColor = false;
-            // 
-            // roundedButton_Random
-            // 
-            this.roundedButton_Random.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.roundedButton_Random.BorderRadius = 5;
-            this.roundedButton_Random.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_Random.FlatAppearance.BorderSize = 0;
-            this.roundedButton_Random.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_Random.Font = new System.Drawing.Font("Gadugi", 9F);
-            this.roundedButton_Random.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_Random.Location = new System.Drawing.Point(3, 51);
-            this.roundedButton_Random.Margin = new System.Windows.Forms.Padding(1);
-            this.roundedButton_Random.Name = "roundedButton_Random";
-            this.roundedButton_Random.Size = new System.Drawing.Size(62, 46);
-            this.roundedButton_Random.TabIndex = 94;
-            this.roundedButton_Random.Text = "rand";
-            this.roundedButton_Random.UseVisualStyleBackColor = false;
-            // 
-            // roundedButton_CeilingFunction
-            // 
-            this.roundedButton_CeilingFunction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.roundedButton_CeilingFunction.BorderRadius = 5;
-            this.roundedButton_CeilingFunction.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_CeilingFunction.FlatAppearance.BorderSize = 0;
-            this.roundedButton_CeilingFunction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_CeilingFunction.Font = new System.Drawing.Font("Gadugi", 9F);
-            this.roundedButton_CeilingFunction.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_CeilingFunction.Location = new System.Drawing.Point(131, 3);
-            this.roundedButton_CeilingFunction.Margin = new System.Windows.Forms.Padding(1);
-            this.roundedButton_CeilingFunction.Name = "roundedButton_CeilingFunction";
-            this.roundedButton_CeilingFunction.Size = new System.Drawing.Size(62, 46);
-            this.roundedButton_CeilingFunction.TabIndex = 92;
-            this.roundedButton_CeilingFunction.Text = "⌈x⌉";
-            this.roundedButton_CeilingFunction.UseVisualStyleBackColor = false;
-            // 
-            // roundedButton_FloorFunction
-            // 
-            this.roundedButton_FloorFunction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.roundedButton_FloorFunction.BorderRadius = 5;
-            this.roundedButton_FloorFunction.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_FloorFunction.FlatAppearance.BorderSize = 0;
-            this.roundedButton_FloorFunction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_FloorFunction.Font = new System.Drawing.Font("Gadugi", 9F);
-            this.roundedButton_FloorFunction.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_FloorFunction.Location = new System.Drawing.Point(67, 3);
-            this.roundedButton_FloorFunction.Margin = new System.Windows.Forms.Padding(1);
-            this.roundedButton_FloorFunction.Name = "roundedButton_FloorFunction";
-            this.roundedButton_FloorFunction.Size = new System.Drawing.Size(62, 46);
-            this.roundedButton_FloorFunction.TabIndex = 91;
-            this.roundedButton_FloorFunction.Text = "⌊x⌋";
-            this.roundedButton_FloorFunction.UseVisualStyleBackColor = false;
-            // 
-            // roundedButton_AbsoluteValue2
-            // 
-            this.roundedButton_AbsoluteValue2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.roundedButton_AbsoluteValue2.BorderRadius = 5;
-            this.roundedButton_AbsoluteValue2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_AbsoluteValue2.FlatAppearance.BorderSize = 0;
-            this.roundedButton_AbsoluteValue2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_AbsoluteValue2.Font = new System.Drawing.Font("Gadugi", 10F);
-            this.roundedButton_AbsoluteValue2.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_AbsoluteValue2.Location = new System.Drawing.Point(3, 3);
-            this.roundedButton_AbsoluteValue2.Margin = new System.Windows.Forms.Padding(1);
-            this.roundedButton_AbsoluteValue2.Name = "roundedButton_AbsoluteValue2";
-            this.roundedButton_AbsoluteValue2.Size = new System.Drawing.Size(62, 46);
-            this.roundedButton_AbsoluteValue2.TabIndex = 90;
-            this.roundedButton_AbsoluteValue2.Text = "|𝑥|";
-            this.roundedButton_AbsoluteValue2.UseVisualStyleBackColor = false;
-            // 
-            // roundedPanel_Trigo
-            // 
-            this.roundedPanel_Trigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.roundedPanel_Trigo.BorderRadius = 10;
-            this.roundedPanel_Trigo.Controls.Add(this.roundedButton_Cot);
-            this.roundedPanel_Trigo.Controls.Add(this.roundedButton_Csc);
-            this.roundedPanel_Trigo.Controls.Add(this.roundedButton_Sec);
-            this.roundedPanel_Trigo.Controls.Add(this.roundedButton_Hyp);
-            this.roundedPanel_Trigo.Controls.Add(this.roundedButton_Tan);
-            this.roundedPanel_Trigo.Controls.Add(this.roundedButton_Cos);
-            this.roundedPanel_Trigo.Controls.Add(this.roundedButton_Sin);
-            this.roundedPanel_Trigo.Controls.Add(this.roundedButton_2nd_2);
-            this.roundedPanel_Trigo.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedPanel_Trigo.Location = new System.Drawing.Point(5, 119);
-            this.roundedPanel_Trigo.Name = "roundedPanel_Trigo";
-            this.roundedPanel_Trigo.Size = new System.Drawing.Size(0, 0);
-            this.roundedPanel_Trigo.TabIndex = 82;
-            // 
-            // roundedButton_Cot
-            // 
-            this.roundedButton_Cot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.roundedButton_Cot.BorderRadius = 5;
-            this.roundedButton_Cot.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_Cot.FlatAppearance.BorderSize = 0;
-            this.roundedButton_Cot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_Cot.Font = new System.Drawing.Font("Gadugi", 9F);
-            this.roundedButton_Cot.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_Cot.Location = new System.Drawing.Point(195, 51);
-            this.roundedButton_Cot.Margin = new System.Windows.Forms.Padding(1);
-            this.roundedButton_Cot.Name = "roundedButton_Cot";
-            this.roundedButton_Cot.Size = new System.Drawing.Size(62, 46);
-            this.roundedButton_Cot.TabIndex = 97;
-            this.roundedButton_Cot.Text = "cot";
-            this.roundedButton_Cot.UseVisualStyleBackColor = false;
-            this.roundedButton_Cot.Click += new System.EventHandler(this.roundedButton_Cot_Click);
-            // 
-            // roundedButton_Csc
-            // 
-            this.roundedButton_Csc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.roundedButton_Csc.BorderRadius = 5;
-            this.roundedButton_Csc.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_Csc.FlatAppearance.BorderSize = 0;
-            this.roundedButton_Csc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_Csc.Font = new System.Drawing.Font("Gadugi", 9F);
-            this.roundedButton_Csc.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_Csc.Location = new System.Drawing.Point(131, 51);
-            this.roundedButton_Csc.Margin = new System.Windows.Forms.Padding(1);
-            this.roundedButton_Csc.Name = "roundedButton_Csc";
-            this.roundedButton_Csc.Size = new System.Drawing.Size(62, 46);
-            this.roundedButton_Csc.TabIndex = 96;
-            this.roundedButton_Csc.Text = "csc";
-            this.roundedButton_Csc.UseVisualStyleBackColor = false;
-            this.roundedButton_Csc.Click += new System.EventHandler(this.roundedButton_Csc_Click);
-            // 
-            // roundedButton_Sec
-            // 
-            this.roundedButton_Sec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.roundedButton_Sec.BorderRadius = 5;
-            this.roundedButton_Sec.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_Sec.FlatAppearance.BorderSize = 0;
-            this.roundedButton_Sec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_Sec.Font = new System.Drawing.Font("Gadugi", 9F);
-            this.roundedButton_Sec.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_Sec.Location = new System.Drawing.Point(67, 51);
-            this.roundedButton_Sec.Margin = new System.Windows.Forms.Padding(1);
-            this.roundedButton_Sec.Name = "roundedButton_Sec";
-            this.roundedButton_Sec.Size = new System.Drawing.Size(62, 46);
-            this.roundedButton_Sec.TabIndex = 95;
-            this.roundedButton_Sec.Text = "sec";
-            this.roundedButton_Sec.UseVisualStyleBackColor = false;
-            this.roundedButton_Sec.Click += new System.EventHandler(this.roundedButton_Sec_Click);
-            // 
-            // roundedButton_Hyp
-            // 
-            this.roundedButton_Hyp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
-            this.roundedButton_Hyp.BorderRadius = 5;
-            this.roundedButton_Hyp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_Hyp.FlatAppearance.BorderSize = 0;
-            this.roundedButton_Hyp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_Hyp.Font = new System.Drawing.Font("Gadugi", 9F);
-            this.roundedButton_Hyp.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_Hyp.Location = new System.Drawing.Point(3, 51);
-            this.roundedButton_Hyp.Margin = new System.Windows.Forms.Padding(1);
-            this.roundedButton_Hyp.Name = "roundedButton_Hyp";
-            this.roundedButton_Hyp.Size = new System.Drawing.Size(62, 46);
-            this.roundedButton_Hyp.TabIndex = 94;
-            this.roundedButton_Hyp.Text = "hyp";
-            this.roundedButton_Hyp.UseVisualStyleBackColor = false;
-            this.roundedButton_Hyp.Click += new System.EventHandler(this.roundedButton_Hyp_Click);
-            // 
-            // roundedButton_Tan
-            // 
-            this.roundedButton_Tan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.roundedButton_Tan.BorderRadius = 5;
-            this.roundedButton_Tan.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_Tan.FlatAppearance.BorderSize = 0;
-            this.roundedButton_Tan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_Tan.Font = new System.Drawing.Font("Gadugi", 9F);
-            this.roundedButton_Tan.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_Tan.Location = new System.Drawing.Point(195, 3);
-            this.roundedButton_Tan.Margin = new System.Windows.Forms.Padding(1);
-            this.roundedButton_Tan.Name = "roundedButton_Tan";
-            this.roundedButton_Tan.Size = new System.Drawing.Size(62, 46);
-            this.roundedButton_Tan.TabIndex = 93;
-            this.roundedButton_Tan.Text = "tan";
-            this.roundedButton_Tan.UseVisualStyleBackColor = false;
-            this.roundedButton_Tan.Click += new System.EventHandler(this.roundedButton_Tan_Click);
-            // 
-            // roundedButton_Cos
-            // 
-            this.roundedButton_Cos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.roundedButton_Cos.BorderRadius = 5;
-            this.roundedButton_Cos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_Cos.FlatAppearance.BorderSize = 0;
-            this.roundedButton_Cos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_Cos.Font = new System.Drawing.Font("Gadugi", 9F);
-            this.roundedButton_Cos.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_Cos.Location = new System.Drawing.Point(131, 3);
-            this.roundedButton_Cos.Margin = new System.Windows.Forms.Padding(1);
-            this.roundedButton_Cos.Name = "roundedButton_Cos";
-            this.roundedButton_Cos.Size = new System.Drawing.Size(62, 46);
-            this.roundedButton_Cos.TabIndex = 92;
-            this.roundedButton_Cos.Text = "cos";
-            this.roundedButton_Cos.UseVisualStyleBackColor = false;
-            this.roundedButton_Cos.Click += new System.EventHandler(this.roundedButton_Cos_Click);
-            // 
-            // roundedButton_Sin
-            // 
-            this.roundedButton_Sin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.roundedButton_Sin.BorderRadius = 5;
-            this.roundedButton_Sin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_Sin.FlatAppearance.BorderSize = 0;
-            this.roundedButton_Sin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_Sin.Font = new System.Drawing.Font("Gadugi", 9F);
-            this.roundedButton_Sin.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_Sin.Location = new System.Drawing.Point(67, 3);
-            this.roundedButton_Sin.Margin = new System.Windows.Forms.Padding(1);
-            this.roundedButton_Sin.Name = "roundedButton_Sin";
-            this.roundedButton_Sin.Size = new System.Drawing.Size(62, 46);
-            this.roundedButton_Sin.TabIndex = 91;
-            this.roundedButton_Sin.Text = "sin";
-            this.roundedButton_Sin.UseVisualStyleBackColor = false;
-            this.roundedButton_Sin.Click += new System.EventHandler(this.roundedButton_Sin_Click);
-            // 
-            // roundedButton_2nd_2
-            // 
-            this.roundedButton_2nd_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
-            this.roundedButton_2nd_2.BorderRadius = 5;
-            this.roundedButton_2nd_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_2nd_2.FlatAppearance.BorderSize = 0;
-            this.roundedButton_2nd_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_2nd_2.Font = new System.Drawing.Font("Gadugi", 10F);
-            this.roundedButton_2nd_2.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_2nd_2.Location = new System.Drawing.Point(3, 3);
-            this.roundedButton_2nd_2.Margin = new System.Windows.Forms.Padding(1);
-            this.roundedButton_2nd_2.Name = "roundedButton_2nd_2";
-            this.roundedButton_2nd_2.Size = new System.Drawing.Size(62, 46);
-            this.roundedButton_2nd_2.TabIndex = 90;
-            this.roundedButton_2nd_2.Text = "2ⁿᵈ";
-            this.roundedButton_2nd_2.UseVisualStyleBackColor = false;
-            this.roundedButton_2nd_2.Click += new System.EventHandler(this.roundedButton_2nd_2_Click);
-            // 
             // button_DegRadGrad
             // 
             this.button_DegRadGrad.FlatAppearance.BorderSize = 0;
@@ -951,44 +610,6 @@
             this.button_FENotation.UseVisualStyleBackColor = true;
             this.button_FENotation.Click += new System.EventHandler(this.button_FENotation_Click);
             // 
-            // roundedButton_ShowFunctions
-            // 
-            this.roundedButton_ShowFunctions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_ShowFunctions.BorderRadius = 5;
-            this.roundedButton_ShowFunctions.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_ShowFunctions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_ShowFunctions.Font = new System.Drawing.Font("Gadugi", 9F);
-            this.roundedButton_ShowFunctions.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_ShowFunctions.Image = ((System.Drawing.Image)(resources.GetObject("roundedButton_ShowFunctions.Image")));
-            this.roundedButton_ShowFunctions.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.roundedButton_ShowFunctions.Location = new System.Drawing.Point(139, 82);
-            this.roundedButton_ShowFunctions.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_ShowFunctions.Name = "roundedButton_ShowFunctions";
-            this.roundedButton_ShowFunctions.Size = new System.Drawing.Size(108, 34);
-            this.roundedButton_ShowFunctions.TabIndex = 80;
-            this.roundedButton_ShowFunctions.Text = "    Function ∨";
-            this.roundedButton_ShowFunctions.UseVisualStyleBackColor = false;
-            this.roundedButton_ShowFunctions.Click += new System.EventHandler(this.roundedButton_ShowFunctions_Click);
-            // 
-            // roundedButton_ShowTrigo
-            // 
-            this.roundedButton_ShowTrigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_ShowTrigo.BorderRadius = 5;
-            this.roundedButton_ShowTrigo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_ShowTrigo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_ShowTrigo.Font = new System.Drawing.Font("Gadugi", 9F);
-            this.roundedButton_ShowTrigo.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_ShowTrigo.Image = ((System.Drawing.Image)(resources.GetObject("roundedButton_ShowTrigo.Image")));
-            this.roundedButton_ShowTrigo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.roundedButton_ShowTrigo.Location = new System.Drawing.Point(5, 82);
-            this.roundedButton_ShowTrigo.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_ShowTrigo.Name = "roundedButton_ShowTrigo";
-            this.roundedButton_ShowTrigo.Size = new System.Drawing.Size(134, 34);
-            this.roundedButton_ShowTrigo.TabIndex = 79;
-            this.roundedButton_ShowTrigo.Text = "   Trigonometry ∨";
-            this.roundedButton_ShowTrigo.UseVisualStyleBackColor = false;
-            this.roundedButton_ShowTrigo.Click += new System.EventHandler(this.roundedButton_ShowTrigo_Click);
-            // 
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -1011,23 +632,6 @@
             this.button_Memory2.Text = "M∨";
             this.button_Memory2.UseVisualStyleBackColor = true;
             // 
-            // roundedButton_Square2
-            // 
-            this.roundedButton_Square2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.roundedButton_Square2.BorderRadius = 5;
-            this.roundedButton_Square2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_Square2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_Square2.Font = new System.Drawing.Font("Gadugi", 13F);
-            this.roundedButton_Square2.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_Square2.Location = new System.Drawing.Point(4, 152);
-            this.roundedButton_Square2.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_Square2.Name = "roundedButton_Square2";
-            this.roundedButton_Square2.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_Square2.TabIndex = 75;
-            this.roundedButton_Square2.Text = "𝑥²";
-            this.roundedButton_Square2.UseVisualStyleBackColor = false;
-            this.roundedButton_Square2.Click += new System.EventHandler(this.roundedButton_Square_Click);
-            // 
             // button_MemoryStore2
             // 
             this.button_MemoryStore2.FlatAppearance.BorderSize = 0;
@@ -1042,23 +646,6 @@
             this.button_MemoryStore2.Text = "MS";
             this.button_MemoryStore2.UseVisualStyleBackColor = true;
             // 
-            // roundedButton_ln
-            // 
-            this.roundedButton_ln.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.roundedButton_ln.BorderRadius = 5;
-            this.roundedButton_ln.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_ln.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_ln.Font = new System.Drawing.Font("Gadugi", 9.5F);
-            this.roundedButton_ln.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_ln.Location = new System.Drawing.Point(4, 322);
-            this.roundedButton_ln.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_ln.Name = "roundedButton_ln";
-            this.roundedButton_ln.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_ln.TabIndex = 74;
-            this.roundedButton_ln.Text = "ln";
-            this.roundedButton_ln.UseVisualStyleBackColor = false;
-            this.roundedButton_ln.Click += new System.EventHandler(this.roundedButton_ln_Click);
-            // 
             // button_MemorySubtract2
             // 
             this.button_MemorySubtract2.FlatAppearance.BorderSize = 0;
@@ -1072,23 +659,6 @@
             this.button_MemorySubtract2.TabIndex = 46;
             this.button_MemorySubtract2.Text = "M-";
             this.button_MemorySubtract2.UseVisualStyleBackColor = true;
-            // 
-            // roundedButton_log
-            // 
-            this.roundedButton_log.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.roundedButton_log.BorderRadius = 5;
-            this.roundedButton_log.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_log.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_log.Font = new System.Drawing.Font("Gadugi", 9.5F);
-            this.roundedButton_log.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_log.Location = new System.Drawing.Point(4, 288);
-            this.roundedButton_log.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_log.Name = "roundedButton_log";
-            this.roundedButton_log.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_log.TabIndex = 73;
-            this.roundedButton_log.Text = "log";
-            this.roundedButton_log.UseVisualStyleBackColor = false;
-            this.roundedButton_log.Click += new System.EventHandler(this.roundedButton_log_Click);
             // 
             // button_MemoryAdd2
             // 
@@ -1118,23 +688,6 @@
             this.button_MemoryRecall2.Text = "MR";
             this.button_MemoryRecall2.UseVisualStyleBackColor = true;
             // 
-            // roundedButton_TenRaisedToN
-            // 
-            this.roundedButton_TenRaisedToN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.roundedButton_TenRaisedToN.BorderRadius = 5;
-            this.roundedButton_TenRaisedToN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_TenRaisedToN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_TenRaisedToN.Font = new System.Drawing.Font("Gadugi", 9.5F);
-            this.roundedButton_TenRaisedToN.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_TenRaisedToN.Location = new System.Drawing.Point(4, 254);
-            this.roundedButton_TenRaisedToN.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_TenRaisedToN.Name = "roundedButton_TenRaisedToN";
-            this.roundedButton_TenRaisedToN.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_TenRaisedToN.TabIndex = 72;
-            this.roundedButton_TenRaisedToN.Text = "10𝑥";
-            this.roundedButton_TenRaisedToN.UseVisualStyleBackColor = false;
-            this.roundedButton_TenRaisedToN.Click += new System.EventHandler(this.roundedButton_TenRaisedToN_Click);
-            // 
             // button_MemoryClear2
             // 
             this.button_MemoryClear2.FlatAppearance.BorderSize = 0;
@@ -1148,530 +701,6 @@
             this.button_MemoryClear2.TabIndex = 43;
             this.button_MemoryClear2.Text = "MC";
             this.button_MemoryClear2.UseVisualStyleBackColor = true;
-            // 
-            // roundedButton_Power
-            // 
-            this.roundedButton_Power.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.roundedButton_Power.BorderRadius = 5;
-            this.roundedButton_Power.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_Power.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_Power.Font = new System.Drawing.Font("Gadugi", 9.5F);
-            this.roundedButton_Power.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_Power.Location = new System.Drawing.Point(4, 220);
-            this.roundedButton_Power.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_Power.Name = "roundedButton_Power";
-            this.roundedButton_Power.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_Power.TabIndex = 71;
-            this.roundedButton_Power.Text = "x^y";
-            this.roundedButton_Power.UseVisualStyleBackColor = false;
-            this.roundedButton_Power.Click += new System.EventHandler(this.roundedButton_Operation_Click);
-            // 
-            // roundedButton_SquareRoot2
-            // 
-            this.roundedButton_SquareRoot2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.roundedButton_SquareRoot2.BorderRadius = 5;
-            this.roundedButton_SquareRoot2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_SquareRoot2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_SquareRoot2.Font = new System.Drawing.Font("Gadugi", 13F);
-            this.roundedButton_SquareRoot2.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_SquareRoot2.Location = new System.Drawing.Point(4, 186);
-            this.roundedButton_SquareRoot2.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_SquareRoot2.Name = "roundedButton_SquareRoot2";
-            this.roundedButton_SquareRoot2.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_SquareRoot2.TabIndex = 70;
-            this.roundedButton_SquareRoot2.Text = "√𝑥";
-            this.roundedButton_SquareRoot2.UseVisualStyleBackColor = false;
-            this.roundedButton_SquareRoot2.Click += new System.EventHandler(this.roundedButton_SquareRoot_Click);
-            // 
-            // roundedButton_2nd
-            // 
-            this.roundedButton_2nd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.roundedButton_2nd.BorderRadius = 5;
-            this.roundedButton_2nd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_2nd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_2nd.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundedButton_2nd.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_2nd.Location = new System.Drawing.Point(4, 118);
-            this.roundedButton_2nd.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_2nd.Name = "roundedButton_2nd";
-            this.roundedButton_2nd.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_2nd.TabIndex = 69;
-            this.roundedButton_2nd.Text = "2ⁿᵈ";
-            this.roundedButton_2nd.UseVisualStyleBackColor = false;
-            // 
-            // roundedButton_Exp
-            // 
-            this.roundedButton_Exp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.roundedButton_Exp.BorderRadius = 5;
-            this.roundedButton_Exp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_Exp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_Exp.Font = new System.Drawing.Font("Gadugi", 9.5F);
-            this.roundedButton_Exp.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_Exp.Location = new System.Drawing.Point(190, 152);
-            this.roundedButton_Exp.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_Exp.Name = "roundedButton_Exp";
-            this.roundedButton_Exp.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_Exp.TabIndex = 67;
-            this.roundedButton_Exp.Text = "exp";
-            this.roundedButton_Exp.UseVisualStyleBackColor = false;
-            this.roundedButton_Exp.Click += new System.EventHandler(this.roundedButton_Operation_Click);
-            // 
-            // roundedButton_AbsoluteValue
-            // 
-            this.roundedButton_AbsoluteValue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.roundedButton_AbsoluteValue.BorderRadius = 5;
-            this.roundedButton_AbsoluteValue.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_AbsoluteValue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_AbsoluteValue.Font = new System.Drawing.Font("Gadugi", 13F);
-            this.roundedButton_AbsoluteValue.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_AbsoluteValue.Location = new System.Drawing.Point(128, 152);
-            this.roundedButton_AbsoluteValue.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_AbsoluteValue.Name = "roundedButton_AbsoluteValue";
-            this.roundedButton_AbsoluteValue.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_AbsoluteValue.TabIndex = 66;
-            this.roundedButton_AbsoluteValue.Text = "|𝑥|";
-            this.roundedButton_AbsoluteValue.UseVisualStyleBackColor = false;
-            this.roundedButton_AbsoluteValue.Click += new System.EventHandler(this.roundedButton_AbsoluteValue_Click);
-            // 
-            // roundedButton_DivBy1_2
-            // 
-            this.roundedButton_DivBy1_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.roundedButton_DivBy1_2.BorderRadius = 5;
-            this.roundedButton_DivBy1_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_DivBy1_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_DivBy1_2.Font = new System.Drawing.Font("Gadugi", 13F);
-            this.roundedButton_DivBy1_2.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_DivBy1_2.Location = new System.Drawing.Point(66, 152);
-            this.roundedButton_DivBy1_2.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_DivBy1_2.Name = "roundedButton_DivBy1_2";
-            this.roundedButton_DivBy1_2.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_DivBy1_2.TabIndex = 65;
-            this.roundedButton_DivBy1_2.Text = "⅟𝑥";
-            this.roundedButton_DivBy1_2.UseVisualStyleBackColor = false;
-            this.roundedButton_DivBy1_2.Click += new System.EventHandler(this.roundedButton_DivBy1_Click);
-            // 
-            // roundedButton_Num6_2
-            // 
-            this.roundedButton_Num6_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.roundedButton_Num6_2.BorderRadius = 5;
-            this.roundedButton_Num6_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_Num6_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_Num6_2.Font = new System.Drawing.Font("Gadugi", 14F);
-            this.roundedButton_Num6_2.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_Num6_2.Location = new System.Drawing.Point(190, 254);
-            this.roundedButton_Num6_2.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_Num6_2.Name = "roundedButton_Num6_2";
-            this.roundedButton_Num6_2.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_Num6_2.TabIndex = 64;
-            this.roundedButton_Num6_2.Text = "6";
-            this.roundedButton_Num6_2.UseVisualStyleBackColor = false;
-            this.roundedButton_Num6_2.Click += new System.EventHandler(this.roundedButton_Num_Click);
-            // 
-            // roundedButton_Equals2
-            // 
-            this.roundedButton_Equals2.BackColor = System.Drawing.SystemColors.Highlight;
-            this.roundedButton_Equals2.BorderRadius = 5;
-            this.roundedButton_Equals2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_Equals2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_Equals2.Font = new System.Drawing.Font("Gadugi", 14F);
-            this.roundedButton_Equals2.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_Equals2.Location = new System.Drawing.Point(252, 322);
-            this.roundedButton_Equals2.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_Equals2.Name = "roundedButton_Equals2";
-            this.roundedButton_Equals2.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_Equals2.TabIndex = 63;
-            this.roundedButton_Equals2.Text = "=";
-            this.roundedButton_Equals2.UseVisualStyleBackColor = false;
-            this.roundedButton_Equals2.Click += new System.EventHandler(this.roundedButton_Equals_Click);
-            // 
-            // roundedButton_Decimal2
-            // 
-            this.roundedButton_Decimal2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.roundedButton_Decimal2.BorderRadius = 5;
-            this.roundedButton_Decimal2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_Decimal2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_Decimal2.Font = new System.Drawing.Font("Gadugi", 14F);
-            this.roundedButton_Decimal2.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_Decimal2.Location = new System.Drawing.Point(190, 322);
-            this.roundedButton_Decimal2.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_Decimal2.Name = "roundedButton_Decimal2";
-            this.roundedButton_Decimal2.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_Decimal2.TabIndex = 62;
-            this.roundedButton_Decimal2.Text = ".";
-            this.roundedButton_Decimal2.UseVisualStyleBackColor = false;
-            this.roundedButton_Decimal2.Click += new System.EventHandler(this.roundedButton_Decimal_Click);
-            // 
-            // roundedButton_Num_2
-            // 
-            this.roundedButton_Num_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.roundedButton_Num_2.BorderRadius = 5;
-            this.roundedButton_Num_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_Num_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_Num_2.Font = new System.Drawing.Font("Gadugi", 14F);
-            this.roundedButton_Num_2.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_Num_2.Location = new System.Drawing.Point(128, 322);
-            this.roundedButton_Num_2.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_Num_2.Name = "roundedButton_Num_2";
-            this.roundedButton_Num_2.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_Num_2.TabIndex = 61;
-            this.roundedButton_Num_2.Text = "0";
-            this.roundedButton_Num_2.UseVisualStyleBackColor = false;
-            this.roundedButton_Num_2.Click += new System.EventHandler(this.roundedButton_Num_Click);
-            // 
-            // roundedButton_PositiveNegative2
-            // 
-            this.roundedButton_PositiveNegative2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.roundedButton_PositiveNegative2.BorderRadius = 5;
-            this.roundedButton_PositiveNegative2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_PositiveNegative2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_PositiveNegative2.Font = new System.Drawing.Font("Gadugi", 14F);
-            this.roundedButton_PositiveNegative2.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_PositiveNegative2.Location = new System.Drawing.Point(66, 322);
-            this.roundedButton_PositiveNegative2.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_PositiveNegative2.Name = "roundedButton_PositiveNegative2";
-            this.roundedButton_PositiveNegative2.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_PositiveNegative2.TabIndex = 60;
-            this.roundedButton_PositiveNegative2.Text = "±";
-            this.roundedButton_PositiveNegative2.UseVisualStyleBackColor = false;
-            this.roundedButton_PositiveNegative2.Click += new System.EventHandler(this.roundedButton_PositiveNegative_Click);
-            // 
-            // roundedButton_Addition2
-            // 
-            this.roundedButton_Addition2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.roundedButton_Addition2.BorderRadius = 5;
-            this.roundedButton_Addition2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_Addition2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_Addition2.Font = new System.Drawing.Font("Gadugi", 14F);
-            this.roundedButton_Addition2.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_Addition2.Location = new System.Drawing.Point(252, 288);
-            this.roundedButton_Addition2.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_Addition2.Name = "roundedButton_Addition2";
-            this.roundedButton_Addition2.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_Addition2.TabIndex = 59;
-            this.roundedButton_Addition2.Text = "+";
-            this.roundedButton_Addition2.UseVisualStyleBackColor = false;
-            this.roundedButton_Addition2.Click += new System.EventHandler(this.roundedButton_Operation_Click);
-            // 
-            // roundedButton_Num3_2
-            // 
-            this.roundedButton_Num3_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.roundedButton_Num3_2.BorderRadius = 5;
-            this.roundedButton_Num3_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_Num3_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_Num3_2.Font = new System.Drawing.Font("Gadugi", 14F);
-            this.roundedButton_Num3_2.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_Num3_2.Location = new System.Drawing.Point(190, 288);
-            this.roundedButton_Num3_2.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_Num3_2.Name = "roundedButton_Num3_2";
-            this.roundedButton_Num3_2.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_Num3_2.TabIndex = 58;
-            this.roundedButton_Num3_2.Text = "3";
-            this.roundedButton_Num3_2.UseVisualStyleBackColor = false;
-            this.roundedButton_Num3_2.Click += new System.EventHandler(this.roundedButton_Num_Click);
-            // 
-            // roundedButton_Num2_2
-            // 
-            this.roundedButton_Num2_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.roundedButton_Num2_2.BorderRadius = 5;
-            this.roundedButton_Num2_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_Num2_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_Num2_2.Font = new System.Drawing.Font("Gadugi", 14F);
-            this.roundedButton_Num2_2.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_Num2_2.Location = new System.Drawing.Point(128, 288);
-            this.roundedButton_Num2_2.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_Num2_2.Name = "roundedButton_Num2_2";
-            this.roundedButton_Num2_2.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_Num2_2.TabIndex = 57;
-            this.roundedButton_Num2_2.Text = "2";
-            this.roundedButton_Num2_2.UseVisualStyleBackColor = false;
-            this.roundedButton_Num2_2.Click += new System.EventHandler(this.roundedButton_Num_Click);
-            // 
-            // roundedButton_Num1_2
-            // 
-            this.roundedButton_Num1_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.roundedButton_Num1_2.BorderRadius = 5;
-            this.roundedButton_Num1_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_Num1_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_Num1_2.Font = new System.Drawing.Font("Gadugi", 14F);
-            this.roundedButton_Num1_2.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_Num1_2.Location = new System.Drawing.Point(66, 288);
-            this.roundedButton_Num1_2.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_Num1_2.Name = "roundedButton_Num1_2";
-            this.roundedButton_Num1_2.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_Num1_2.TabIndex = 56;
-            this.roundedButton_Num1_2.Text = "1";
-            this.roundedButton_Num1_2.UseVisualStyleBackColor = false;
-            this.roundedButton_Num1_2.Click += new System.EventHandler(this.roundedButton_Num_Click);
-            // 
-            // roundedButton_Subtraction2
-            // 
-            this.roundedButton_Subtraction2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.roundedButton_Subtraction2.BorderRadius = 5;
-            this.roundedButton_Subtraction2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_Subtraction2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_Subtraction2.Font = new System.Drawing.Font("Gadugi", 14F);
-            this.roundedButton_Subtraction2.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_Subtraction2.Location = new System.Drawing.Point(252, 254);
-            this.roundedButton_Subtraction2.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_Subtraction2.Name = "roundedButton_Subtraction2";
-            this.roundedButton_Subtraction2.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_Subtraction2.TabIndex = 55;
-            this.roundedButton_Subtraction2.Text = "-";
-            this.roundedButton_Subtraction2.UseVisualStyleBackColor = false;
-            this.roundedButton_Subtraction2.Click += new System.EventHandler(this.roundedButton_Operation_Click);
-            // 
-            // roundedButton_Num5_2
-            // 
-            this.roundedButton_Num5_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.roundedButton_Num5_2.BorderRadius = 5;
-            this.roundedButton_Num5_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_Num5_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_Num5_2.Font = new System.Drawing.Font("Gadugi", 14F);
-            this.roundedButton_Num5_2.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_Num5_2.Location = new System.Drawing.Point(128, 254);
-            this.roundedButton_Num5_2.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_Num5_2.Name = "roundedButton_Num5_2";
-            this.roundedButton_Num5_2.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_Num5_2.TabIndex = 54;
-            this.roundedButton_Num5_2.Text = "5";
-            this.roundedButton_Num5_2.UseVisualStyleBackColor = false;
-            this.roundedButton_Num5_2.Click += new System.EventHandler(this.roundedButton_Num_Click);
-            // 
-            // roundedButton_Num4_2
-            // 
-            this.roundedButton_Num4_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.roundedButton_Num4_2.BorderRadius = 5;
-            this.roundedButton_Num4_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_Num4_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_Num4_2.Font = new System.Drawing.Font("Gadugi", 14F);
-            this.roundedButton_Num4_2.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_Num4_2.Location = new System.Drawing.Point(66, 254);
-            this.roundedButton_Num4_2.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_Num4_2.Name = "roundedButton_Num4_2";
-            this.roundedButton_Num4_2.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_Num4_2.TabIndex = 53;
-            this.roundedButton_Num4_2.Text = "4";
-            this.roundedButton_Num4_2.UseVisualStyleBackColor = false;
-            this.roundedButton_Num4_2.Click += new System.EventHandler(this.roundedButton_Num_Click);
-            // 
-            // roundedButton_Multiplication2
-            // 
-            this.roundedButton_Multiplication2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.roundedButton_Multiplication2.BorderRadius = 5;
-            this.roundedButton_Multiplication2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_Multiplication2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_Multiplication2.Font = new System.Drawing.Font("Gadugi", 14F);
-            this.roundedButton_Multiplication2.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_Multiplication2.Location = new System.Drawing.Point(252, 220);
-            this.roundedButton_Multiplication2.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_Multiplication2.Name = "roundedButton_Multiplication2";
-            this.roundedButton_Multiplication2.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_Multiplication2.TabIndex = 52;
-            this.roundedButton_Multiplication2.Text = "×";
-            this.roundedButton_Multiplication2.UseVisualStyleBackColor = false;
-            this.roundedButton_Multiplication2.Click += new System.EventHandler(this.roundedButton_Operation_Click);
-            // 
-            // roundedButton_Num9_2
-            // 
-            this.roundedButton_Num9_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.roundedButton_Num9_2.BorderRadius = 5;
-            this.roundedButton_Num9_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_Num9_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_Num9_2.Font = new System.Drawing.Font("Gadugi", 14F);
-            this.roundedButton_Num9_2.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_Num9_2.Location = new System.Drawing.Point(190, 220);
-            this.roundedButton_Num9_2.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_Num9_2.Name = "roundedButton_Num9_2";
-            this.roundedButton_Num9_2.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_Num9_2.TabIndex = 51;
-            this.roundedButton_Num9_2.Text = "9";
-            this.roundedButton_Num9_2.UseVisualStyleBackColor = false;
-            this.roundedButton_Num9_2.Click += new System.EventHandler(this.roundedButton_Num_Click);
-            // 
-            // roundedButton_Num8_2
-            // 
-            this.roundedButton_Num8_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.roundedButton_Num8_2.BorderRadius = 5;
-            this.roundedButton_Num8_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_Num8_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_Num8_2.Font = new System.Drawing.Font("Gadugi", 14F);
-            this.roundedButton_Num8_2.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_Num8_2.Location = new System.Drawing.Point(128, 220);
-            this.roundedButton_Num8_2.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_Num8_2.Name = "roundedButton_Num8_2";
-            this.roundedButton_Num8_2.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_Num8_2.TabIndex = 50;
-            this.roundedButton_Num8_2.Text = "8";
-            this.roundedButton_Num8_2.UseVisualStyleBackColor = false;
-            this.roundedButton_Num8_2.Click += new System.EventHandler(this.roundedButton_Num_Click);
-            // 
-            // roundedButton_Num7_2
-            // 
-            this.roundedButton_Num7_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.roundedButton_Num7_2.BorderRadius = 5;
-            this.roundedButton_Num7_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_Num7_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_Num7_2.Font = new System.Drawing.Font("Gadugi", 14F);
-            this.roundedButton_Num7_2.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_Num7_2.Location = new System.Drawing.Point(66, 220);
-            this.roundedButton_Num7_2.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_Num7_2.Name = "roundedButton_Num7_2";
-            this.roundedButton_Num7_2.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_Num7_2.TabIndex = 49;
-            this.roundedButton_Num7_2.Text = "7";
-            this.roundedButton_Num7_2.UseVisualStyleBackColor = false;
-            this.roundedButton_Num7_2.Click += new System.EventHandler(this.roundedButton_Num_Click);
-            // 
-            // roundedButton_Division2
-            // 
-            this.roundedButton_Division2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.roundedButton_Division2.BorderRadius = 5;
-            this.roundedButton_Division2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_Division2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_Division2.Font = new System.Drawing.Font("Gadugi", 14F);
-            this.roundedButton_Division2.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_Division2.Location = new System.Drawing.Point(252, 186);
-            this.roundedButton_Division2.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_Division2.Name = "roundedButton_Division2";
-            this.roundedButton_Division2.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_Division2.TabIndex = 48;
-            this.roundedButton_Division2.Text = "÷";
-            this.roundedButton_Division2.UseVisualStyleBackColor = false;
-            this.roundedButton_Division2.Click += new System.EventHandler(this.roundedButton_Operation_Click);
-            // 
-            // roundedButton_Factorial
-            // 
-            this.roundedButton_Factorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.roundedButton_Factorial.BorderRadius = 5;
-            this.roundedButton_Factorial.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_Factorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_Factorial.Font = new System.Drawing.Font("Gadugi", 9.5F);
-            this.roundedButton_Factorial.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_Factorial.Location = new System.Drawing.Point(190, 186);
-            this.roundedButton_Factorial.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_Factorial.Name = "roundedButton_Factorial";
-            this.roundedButton_Factorial.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_Factorial.TabIndex = 47;
-            this.roundedButton_Factorial.Text = "n!";
-            this.roundedButton_Factorial.UseVisualStyleBackColor = false;
-            this.roundedButton_Factorial.Click += new System.EventHandler(this.roundedButton_Factorial_Click);
-            // 
-            // roundedButton_ParenthesisClose
-            // 
-            this.roundedButton_ParenthesisClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.roundedButton_ParenthesisClose.BorderRadius = 5;
-            this.roundedButton_ParenthesisClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_ParenthesisClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_ParenthesisClose.Font = new System.Drawing.Font("Gadugi", 10F);
-            this.roundedButton_ParenthesisClose.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_ParenthesisClose.Location = new System.Drawing.Point(128, 186);
-            this.roundedButton_ParenthesisClose.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_ParenthesisClose.Name = "roundedButton_ParenthesisClose";
-            this.roundedButton_ParenthesisClose.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_ParenthesisClose.TabIndex = 46;
-            this.roundedButton_ParenthesisClose.Text = ")";
-            this.roundedButton_ParenthesisClose.UseVisualStyleBackColor = false;
-            // 
-            // roundedButton_ParenthesisOpen
-            // 
-            this.roundedButton_ParenthesisOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.roundedButton_ParenthesisOpen.BorderRadius = 5;
-            this.roundedButton_ParenthesisOpen.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_ParenthesisOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_ParenthesisOpen.Font = new System.Drawing.Font("Gadugi", 10F);
-            this.roundedButton_ParenthesisOpen.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_ParenthesisOpen.Location = new System.Drawing.Point(66, 186);
-            this.roundedButton_ParenthesisOpen.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_ParenthesisOpen.Name = "roundedButton_ParenthesisOpen";
-            this.roundedButton_ParenthesisOpen.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_ParenthesisOpen.TabIndex = 45;
-            this.roundedButton_ParenthesisOpen.Text = "(";
-            this.roundedButton_ParenthesisOpen.UseVisualStyleBackColor = false;
-            // 
-            // roundedButton_Delete2
-            // 
-            this.roundedButton_Delete2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.roundedButton_Delete2.BorderRadius = 5;
-            this.roundedButton_Delete2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_Delete2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_Delete2.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundedButton_Delete2.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_Delete2.Image = ((System.Drawing.Image)(resources.GetObject("roundedButton_Delete2.Image")));
-            this.roundedButton_Delete2.Location = new System.Drawing.Point(252, 118);
-            this.roundedButton_Delete2.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_Delete2.Name = "roundedButton_Delete2";
-            this.roundedButton_Delete2.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_Delete2.TabIndex = 44;
-            this.roundedButton_Delete2.UseVisualStyleBackColor = false;
-            this.roundedButton_Delete2.Click += new System.EventHandler(this.roundedButton_Delete_Click);
-            // 
-            // roundedButton_ClearCE
-            // 
-            this.roundedButton_ClearCE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.roundedButton_ClearCE.BorderRadius = 5;
-            this.roundedButton_ClearCE.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_ClearCE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_ClearCE.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundedButton_ClearCE.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_ClearCE.Location = new System.Drawing.Point(190, 118);
-            this.roundedButton_ClearCE.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_ClearCE.Name = "roundedButton_ClearCE";
-            this.roundedButton_ClearCE.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_ClearCE.TabIndex = 43;
-            this.roundedButton_ClearCE.Text = "C";
-            this.roundedButton_ClearCE.UseVisualStyleBackColor = false;
-            this.roundedButton_ClearCE.Click += new System.EventHandler(this.roundedButton_ClearCE_Click);
-            // 
-            // roundedButton_e
-            // 
-            this.roundedButton_e.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.roundedButton_e.BorderRadius = 5;
-            this.roundedButton_e.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_e.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_e.Font = new System.Drawing.Font("Gadugi", 10F);
-            this.roundedButton_e.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_e.Location = new System.Drawing.Point(128, 118);
-            this.roundedButton_e.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_e.Name = "roundedButton_e";
-            this.roundedButton_e.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_e.TabIndex = 42;
-            this.roundedButton_e.Text = "e";
-            this.roundedButton_e.UseVisualStyleBackColor = false;
-            this.roundedButton_e.Click += new System.EventHandler(this.roundedButton_e_Click);
-            // 
-            // roundedButton_Pi
-            // 
-            this.roundedButton_Pi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.roundedButton_Pi.BorderRadius = 5;
-            this.roundedButton_Pi.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_Pi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_Pi.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundedButton_Pi.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_Pi.Location = new System.Drawing.Point(66, 118);
-            this.roundedButton_Pi.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_Pi.Name = "roundedButton_Pi";
-            this.roundedButton_Pi.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_Pi.TabIndex = 41;
-            this.roundedButton_Pi.Text = "𝝅";
-            this.roundedButton_Pi.UseVisualStyleBackColor = false;
-            this.roundedButton_Pi.Click += new System.EventHandler(this.roundedButton_Pi_Click);
-            // 
-            // roundedButton_Mod
-            // 
-            this.roundedButton_Mod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.roundedButton_Mod.BorderRadius = 5;
-            this.roundedButton_Mod.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.roundedButton_Mod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton_Mod.Font = new System.Drawing.Font("Gadugi", 9.5F);
-            this.roundedButton_Mod.ForeColor = System.Drawing.Color.Transparent;
-            this.roundedButton_Mod.Location = new System.Drawing.Point(252, 152);
-            this.roundedButton_Mod.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton_Mod.Name = "roundedButton_Mod";
-            this.roundedButton_Mod.Size = new System.Drawing.Size(62, 34);
-            this.roundedButton_Mod.TabIndex = 69;
-            this.roundedButton_Mod.Text = "mod";
-            this.roundedButton_Mod.UseVisualStyleBackColor = false;
-            this.roundedButton_Mod.Click += new System.EventHandler(this.roundedButton_Operation_Click);
             // 
             // panel_CalStandard
             // 
@@ -2120,6 +1149,980 @@
             this.roundedButton_Num8.UseVisualStyleBackColor = false;
             this.roundedButton_Num8.Click += new System.EventHandler(this.roundedButton_Num_Click);
             // 
+            // roundedPanel_Functions
+            // 
+            this.roundedPanel_Functions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.roundedPanel_Functions.BorderRadius = 10;
+            this.roundedPanel_Functions.Controls.Add(this.roundedButton_DMSToDec);
+            this.roundedPanel_Functions.Controls.Add(this.roundedButton_DecToDMS);
+            this.roundedPanel_Functions.Controls.Add(this.roundedButton_Random);
+            this.roundedPanel_Functions.Controls.Add(this.roundedButton_CeilingFunction);
+            this.roundedPanel_Functions.Controls.Add(this.roundedButton_FloorFunction);
+            this.roundedPanel_Functions.Controls.Add(this.roundedButton_AbsoluteValue2);
+            this.roundedPanel_Functions.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedPanel_Functions.Location = new System.Drawing.Point(90, 119);
+            this.roundedPanel_Functions.Name = "roundedPanel_Functions";
+            this.roundedPanel_Functions.Size = new System.Drawing.Size(0, 0);
+            this.roundedPanel_Functions.TabIndex = 83;
+            // 
+            // roundedButton_DMSToDec
+            // 
+            this.roundedButton_DMSToDec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.roundedButton_DMSToDec.BorderRadius = 5;
+            this.roundedButton_DMSToDec.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_DMSToDec.FlatAppearance.BorderSize = 0;
+            this.roundedButton_DMSToDec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_DMSToDec.Font = new System.Drawing.Font("Gadugi", 9F);
+            this.roundedButton_DMSToDec.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_DMSToDec.Location = new System.Drawing.Point(131, 51);
+            this.roundedButton_DMSToDec.Margin = new System.Windows.Forms.Padding(1);
+            this.roundedButton_DMSToDec.Name = "roundedButton_DMSToDec";
+            this.roundedButton_DMSToDec.Size = new System.Drawing.Size(62, 46);
+            this.roundedButton_DMSToDec.TabIndex = 96;
+            this.roundedButton_DMSToDec.Text = "→deg";
+            this.roundedButton_DMSToDec.UseVisualStyleBackColor = false;
+            // 
+            // roundedButton_DecToDMS
+            // 
+            this.roundedButton_DecToDMS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.roundedButton_DecToDMS.BorderRadius = 5;
+            this.roundedButton_DecToDMS.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_DecToDMS.FlatAppearance.BorderSize = 0;
+            this.roundedButton_DecToDMS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_DecToDMS.Font = new System.Drawing.Font("Gadugi", 9F);
+            this.roundedButton_DecToDMS.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_DecToDMS.Location = new System.Drawing.Point(67, 51);
+            this.roundedButton_DecToDMS.Margin = new System.Windows.Forms.Padding(1);
+            this.roundedButton_DecToDMS.Name = "roundedButton_DecToDMS";
+            this.roundedButton_DecToDMS.Size = new System.Drawing.Size(62, 46);
+            this.roundedButton_DecToDMS.TabIndex = 95;
+            this.roundedButton_DecToDMS.Text = "→dms";
+            this.roundedButton_DecToDMS.UseVisualStyleBackColor = false;
+            // 
+            // roundedButton_Random
+            // 
+            this.roundedButton_Random.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.roundedButton_Random.BorderRadius = 5;
+            this.roundedButton_Random.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_Random.FlatAppearance.BorderSize = 0;
+            this.roundedButton_Random.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_Random.Font = new System.Drawing.Font("Gadugi", 9F);
+            this.roundedButton_Random.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_Random.Location = new System.Drawing.Point(3, 51);
+            this.roundedButton_Random.Margin = new System.Windows.Forms.Padding(1);
+            this.roundedButton_Random.Name = "roundedButton_Random";
+            this.roundedButton_Random.Size = new System.Drawing.Size(62, 46);
+            this.roundedButton_Random.TabIndex = 94;
+            this.roundedButton_Random.Text = "rand";
+            this.roundedButton_Random.UseVisualStyleBackColor = false;
+            // 
+            // roundedButton_CeilingFunction
+            // 
+            this.roundedButton_CeilingFunction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.roundedButton_CeilingFunction.BorderRadius = 5;
+            this.roundedButton_CeilingFunction.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_CeilingFunction.FlatAppearance.BorderSize = 0;
+            this.roundedButton_CeilingFunction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_CeilingFunction.Font = new System.Drawing.Font("Gadugi", 9F);
+            this.roundedButton_CeilingFunction.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_CeilingFunction.Location = new System.Drawing.Point(131, 3);
+            this.roundedButton_CeilingFunction.Margin = new System.Windows.Forms.Padding(1);
+            this.roundedButton_CeilingFunction.Name = "roundedButton_CeilingFunction";
+            this.roundedButton_CeilingFunction.Size = new System.Drawing.Size(62, 46);
+            this.roundedButton_CeilingFunction.TabIndex = 92;
+            this.roundedButton_CeilingFunction.Text = "⌈x⌉";
+            this.roundedButton_CeilingFunction.UseVisualStyleBackColor = false;
+            // 
+            // roundedButton_FloorFunction
+            // 
+            this.roundedButton_FloorFunction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.roundedButton_FloorFunction.BorderRadius = 5;
+            this.roundedButton_FloorFunction.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_FloorFunction.FlatAppearance.BorderSize = 0;
+            this.roundedButton_FloorFunction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_FloorFunction.Font = new System.Drawing.Font("Gadugi", 9F);
+            this.roundedButton_FloorFunction.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_FloorFunction.Location = new System.Drawing.Point(67, 3);
+            this.roundedButton_FloorFunction.Margin = new System.Windows.Forms.Padding(1);
+            this.roundedButton_FloorFunction.Name = "roundedButton_FloorFunction";
+            this.roundedButton_FloorFunction.Size = new System.Drawing.Size(62, 46);
+            this.roundedButton_FloorFunction.TabIndex = 91;
+            this.roundedButton_FloorFunction.Text = "⌊x⌋";
+            this.roundedButton_FloorFunction.UseVisualStyleBackColor = false;
+            // 
+            // roundedButton_AbsoluteValue2
+            // 
+            this.roundedButton_AbsoluteValue2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.roundedButton_AbsoluteValue2.BorderRadius = 5;
+            this.roundedButton_AbsoluteValue2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_AbsoluteValue2.FlatAppearance.BorderSize = 0;
+            this.roundedButton_AbsoluteValue2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_AbsoluteValue2.Font = new System.Drawing.Font("Gadugi", 10F);
+            this.roundedButton_AbsoluteValue2.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_AbsoluteValue2.Location = new System.Drawing.Point(3, 3);
+            this.roundedButton_AbsoluteValue2.Margin = new System.Windows.Forms.Padding(1);
+            this.roundedButton_AbsoluteValue2.Name = "roundedButton_AbsoluteValue2";
+            this.roundedButton_AbsoluteValue2.Size = new System.Drawing.Size(62, 46);
+            this.roundedButton_AbsoluteValue2.TabIndex = 90;
+            this.roundedButton_AbsoluteValue2.Text = "|𝑥|";
+            this.roundedButton_AbsoluteValue2.UseVisualStyleBackColor = false;
+            // 
+            // roundedPanel_Trigo
+            // 
+            this.roundedPanel_Trigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.roundedPanel_Trigo.BorderRadius = 10;
+            this.roundedPanel_Trigo.Controls.Add(this.roundedButton_Cot);
+            this.roundedPanel_Trigo.Controls.Add(this.roundedButton_Csc);
+            this.roundedPanel_Trigo.Controls.Add(this.roundedButton_Sec);
+            this.roundedPanel_Trigo.Controls.Add(this.roundedButton_Hyp);
+            this.roundedPanel_Trigo.Controls.Add(this.roundedButton_Tan);
+            this.roundedPanel_Trigo.Controls.Add(this.roundedButton_Cos);
+            this.roundedPanel_Trigo.Controls.Add(this.roundedButton_Sin);
+            this.roundedPanel_Trigo.Controls.Add(this.roundedButton_2nd_2);
+            this.roundedPanel_Trigo.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedPanel_Trigo.Location = new System.Drawing.Point(5, 119);
+            this.roundedPanel_Trigo.Name = "roundedPanel_Trigo";
+            this.roundedPanel_Trigo.Size = new System.Drawing.Size(0, 0);
+            this.roundedPanel_Trigo.TabIndex = 82;
+            // 
+            // roundedButton_Cot
+            // 
+            this.roundedButton_Cot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.roundedButton_Cot.BorderRadius = 5;
+            this.roundedButton_Cot.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_Cot.FlatAppearance.BorderSize = 0;
+            this.roundedButton_Cot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_Cot.Font = new System.Drawing.Font("Gadugi", 9F);
+            this.roundedButton_Cot.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_Cot.Location = new System.Drawing.Point(195, 51);
+            this.roundedButton_Cot.Margin = new System.Windows.Forms.Padding(1);
+            this.roundedButton_Cot.Name = "roundedButton_Cot";
+            this.roundedButton_Cot.Size = new System.Drawing.Size(62, 46);
+            this.roundedButton_Cot.TabIndex = 97;
+            this.roundedButton_Cot.Text = "cot";
+            this.roundedButton_Cot.UseVisualStyleBackColor = false;
+            this.roundedButton_Cot.Click += new System.EventHandler(this.roundedButton_Cot_Click);
+            // 
+            // roundedButton_Csc
+            // 
+            this.roundedButton_Csc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.roundedButton_Csc.BorderRadius = 5;
+            this.roundedButton_Csc.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_Csc.FlatAppearance.BorderSize = 0;
+            this.roundedButton_Csc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_Csc.Font = new System.Drawing.Font("Gadugi", 9F);
+            this.roundedButton_Csc.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_Csc.Location = new System.Drawing.Point(131, 51);
+            this.roundedButton_Csc.Margin = new System.Windows.Forms.Padding(1);
+            this.roundedButton_Csc.Name = "roundedButton_Csc";
+            this.roundedButton_Csc.Size = new System.Drawing.Size(62, 46);
+            this.roundedButton_Csc.TabIndex = 96;
+            this.roundedButton_Csc.Text = "csc";
+            this.roundedButton_Csc.UseVisualStyleBackColor = false;
+            this.roundedButton_Csc.Click += new System.EventHandler(this.roundedButton_Csc_Click);
+            // 
+            // roundedButton_Sec
+            // 
+            this.roundedButton_Sec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.roundedButton_Sec.BorderRadius = 5;
+            this.roundedButton_Sec.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_Sec.FlatAppearance.BorderSize = 0;
+            this.roundedButton_Sec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_Sec.Font = new System.Drawing.Font("Gadugi", 9F);
+            this.roundedButton_Sec.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_Sec.Location = new System.Drawing.Point(67, 51);
+            this.roundedButton_Sec.Margin = new System.Windows.Forms.Padding(1);
+            this.roundedButton_Sec.Name = "roundedButton_Sec";
+            this.roundedButton_Sec.Size = new System.Drawing.Size(62, 46);
+            this.roundedButton_Sec.TabIndex = 95;
+            this.roundedButton_Sec.Text = "sec";
+            this.roundedButton_Sec.UseVisualStyleBackColor = false;
+            this.roundedButton_Sec.Click += new System.EventHandler(this.roundedButton_Sec_Click);
+            // 
+            // roundedButton_Hyp
+            // 
+            this.roundedButton_Hyp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
+            this.roundedButton_Hyp.BorderRadius = 5;
+            this.roundedButton_Hyp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_Hyp.FlatAppearance.BorderSize = 0;
+            this.roundedButton_Hyp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_Hyp.Font = new System.Drawing.Font("Gadugi", 9F);
+            this.roundedButton_Hyp.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_Hyp.Location = new System.Drawing.Point(3, 51);
+            this.roundedButton_Hyp.Margin = new System.Windows.Forms.Padding(1);
+            this.roundedButton_Hyp.Name = "roundedButton_Hyp";
+            this.roundedButton_Hyp.Size = new System.Drawing.Size(62, 46);
+            this.roundedButton_Hyp.TabIndex = 94;
+            this.roundedButton_Hyp.Text = "hyp";
+            this.roundedButton_Hyp.UseVisualStyleBackColor = false;
+            this.roundedButton_Hyp.Click += new System.EventHandler(this.roundedButton_Hyp_Click);
+            // 
+            // roundedButton_Tan
+            // 
+            this.roundedButton_Tan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.roundedButton_Tan.BorderRadius = 5;
+            this.roundedButton_Tan.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_Tan.FlatAppearance.BorderSize = 0;
+            this.roundedButton_Tan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_Tan.Font = new System.Drawing.Font("Gadugi", 9F);
+            this.roundedButton_Tan.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_Tan.Location = new System.Drawing.Point(195, 3);
+            this.roundedButton_Tan.Margin = new System.Windows.Forms.Padding(1);
+            this.roundedButton_Tan.Name = "roundedButton_Tan";
+            this.roundedButton_Tan.Size = new System.Drawing.Size(62, 46);
+            this.roundedButton_Tan.TabIndex = 93;
+            this.roundedButton_Tan.Text = "tan";
+            this.roundedButton_Tan.UseVisualStyleBackColor = false;
+            this.roundedButton_Tan.Click += new System.EventHandler(this.roundedButton_Tan_Click);
+            // 
+            // roundedButton_Cos
+            // 
+            this.roundedButton_Cos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.roundedButton_Cos.BorderRadius = 5;
+            this.roundedButton_Cos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_Cos.FlatAppearance.BorderSize = 0;
+            this.roundedButton_Cos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_Cos.Font = new System.Drawing.Font("Gadugi", 9F);
+            this.roundedButton_Cos.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_Cos.Location = new System.Drawing.Point(131, 3);
+            this.roundedButton_Cos.Margin = new System.Windows.Forms.Padding(1);
+            this.roundedButton_Cos.Name = "roundedButton_Cos";
+            this.roundedButton_Cos.Size = new System.Drawing.Size(62, 46);
+            this.roundedButton_Cos.TabIndex = 92;
+            this.roundedButton_Cos.Text = "cos";
+            this.roundedButton_Cos.UseVisualStyleBackColor = false;
+            this.roundedButton_Cos.Click += new System.EventHandler(this.roundedButton_Cos_Click);
+            // 
+            // roundedButton_Sin
+            // 
+            this.roundedButton_Sin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.roundedButton_Sin.BorderRadius = 5;
+            this.roundedButton_Sin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_Sin.FlatAppearance.BorderSize = 0;
+            this.roundedButton_Sin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_Sin.Font = new System.Drawing.Font("Gadugi", 9F);
+            this.roundedButton_Sin.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_Sin.Location = new System.Drawing.Point(67, 3);
+            this.roundedButton_Sin.Margin = new System.Windows.Forms.Padding(1);
+            this.roundedButton_Sin.Name = "roundedButton_Sin";
+            this.roundedButton_Sin.Size = new System.Drawing.Size(62, 46);
+            this.roundedButton_Sin.TabIndex = 91;
+            this.roundedButton_Sin.Text = "sin";
+            this.roundedButton_Sin.UseVisualStyleBackColor = false;
+            this.roundedButton_Sin.Click += new System.EventHandler(this.roundedButton_Sin_Click);
+            // 
+            // roundedButton_2nd_2
+            // 
+            this.roundedButton_2nd_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
+            this.roundedButton_2nd_2.BorderRadius = 5;
+            this.roundedButton_2nd_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_2nd_2.FlatAppearance.BorderSize = 0;
+            this.roundedButton_2nd_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_2nd_2.Font = new System.Drawing.Font("Gadugi", 10F);
+            this.roundedButton_2nd_2.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_2nd_2.Location = new System.Drawing.Point(3, 3);
+            this.roundedButton_2nd_2.Margin = new System.Windows.Forms.Padding(1);
+            this.roundedButton_2nd_2.Name = "roundedButton_2nd_2";
+            this.roundedButton_2nd_2.Size = new System.Drawing.Size(62, 46);
+            this.roundedButton_2nd_2.TabIndex = 90;
+            this.roundedButton_2nd_2.Text = "2ⁿᵈ";
+            this.roundedButton_2nd_2.UseVisualStyleBackColor = false;
+            this.roundedButton_2nd_2.Click += new System.EventHandler(this.roundedButton_2nd_2_Click);
+            // 
+            // roundedButton_ShowFunctions
+            // 
+            this.roundedButton_ShowFunctions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_ShowFunctions.BorderRadius = 5;
+            this.roundedButton_ShowFunctions.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_ShowFunctions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_ShowFunctions.Font = new System.Drawing.Font("Gadugi", 9F);
+            this.roundedButton_ShowFunctions.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_ShowFunctions.Image = ((System.Drawing.Image)(resources.GetObject("roundedButton_ShowFunctions.Image")));
+            this.roundedButton_ShowFunctions.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.roundedButton_ShowFunctions.Location = new System.Drawing.Point(139, 82);
+            this.roundedButton_ShowFunctions.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_ShowFunctions.Name = "roundedButton_ShowFunctions";
+            this.roundedButton_ShowFunctions.Size = new System.Drawing.Size(108, 34);
+            this.roundedButton_ShowFunctions.TabIndex = 80;
+            this.roundedButton_ShowFunctions.Text = "    Function ∨";
+            this.roundedButton_ShowFunctions.UseVisualStyleBackColor = false;
+            this.roundedButton_ShowFunctions.Click += new System.EventHandler(this.roundedButton_ShowFunctions_Click);
+            // 
+            // roundedButton_ShowTrigo
+            // 
+            this.roundedButton_ShowTrigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_ShowTrigo.BorderRadius = 5;
+            this.roundedButton_ShowTrigo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_ShowTrigo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_ShowTrigo.Font = new System.Drawing.Font("Gadugi", 9F);
+            this.roundedButton_ShowTrigo.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_ShowTrigo.Image = ((System.Drawing.Image)(resources.GetObject("roundedButton_ShowTrigo.Image")));
+            this.roundedButton_ShowTrigo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.roundedButton_ShowTrigo.Location = new System.Drawing.Point(5, 82);
+            this.roundedButton_ShowTrigo.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_ShowTrigo.Name = "roundedButton_ShowTrigo";
+            this.roundedButton_ShowTrigo.Size = new System.Drawing.Size(134, 34);
+            this.roundedButton_ShowTrigo.TabIndex = 79;
+            this.roundedButton_ShowTrigo.Text = "   Trigonometry ∨";
+            this.roundedButton_ShowTrigo.UseVisualStyleBackColor = false;
+            this.roundedButton_ShowTrigo.Click += new System.EventHandler(this.roundedButton_ShowTrigo_Click);
+            // 
+            // roundedButton_Square2
+            // 
+            this.roundedButton_Square2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.roundedButton_Square2.BorderRadius = 5;
+            this.roundedButton_Square2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_Square2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_Square2.Font = new System.Drawing.Font("Gadugi", 13F);
+            this.roundedButton_Square2.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_Square2.Location = new System.Drawing.Point(4, 152);
+            this.roundedButton_Square2.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_Square2.Name = "roundedButton_Square2";
+            this.roundedButton_Square2.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_Square2.TabIndex = 75;
+            this.roundedButton_Square2.Text = "𝑥²";
+            this.roundedButton_Square2.UseVisualStyleBackColor = false;
+            this.roundedButton_Square2.Click += new System.EventHandler(this.roundedButton_Square_Click);
+            // 
+            // roundedButton_ln
+            // 
+            this.roundedButton_ln.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.roundedButton_ln.BorderRadius = 5;
+            this.roundedButton_ln.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_ln.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_ln.Font = new System.Drawing.Font("Gadugi", 9.5F);
+            this.roundedButton_ln.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_ln.Location = new System.Drawing.Point(4, 322);
+            this.roundedButton_ln.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_ln.Name = "roundedButton_ln";
+            this.roundedButton_ln.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_ln.TabIndex = 74;
+            this.roundedButton_ln.Text = "ln";
+            this.roundedButton_ln.UseVisualStyleBackColor = false;
+            this.roundedButton_ln.Click += new System.EventHandler(this.roundedButton_ln_Click);
+            // 
+            // roundedButton_log
+            // 
+            this.roundedButton_log.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.roundedButton_log.BorderRadius = 5;
+            this.roundedButton_log.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_log.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_log.Font = new System.Drawing.Font("Gadugi", 9.5F);
+            this.roundedButton_log.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_log.Location = new System.Drawing.Point(4, 288);
+            this.roundedButton_log.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_log.Name = "roundedButton_log";
+            this.roundedButton_log.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_log.TabIndex = 73;
+            this.roundedButton_log.Text = "log";
+            this.roundedButton_log.UseVisualStyleBackColor = false;
+            this.roundedButton_log.Click += new System.EventHandler(this.roundedButton_log_Click);
+            // 
+            // roundedButton_TenRaisedToN
+            // 
+            this.roundedButton_TenRaisedToN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.roundedButton_TenRaisedToN.BorderRadius = 5;
+            this.roundedButton_TenRaisedToN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_TenRaisedToN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_TenRaisedToN.Font = new System.Drawing.Font("Gadugi", 9.5F);
+            this.roundedButton_TenRaisedToN.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_TenRaisedToN.Location = new System.Drawing.Point(4, 254);
+            this.roundedButton_TenRaisedToN.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_TenRaisedToN.Name = "roundedButton_TenRaisedToN";
+            this.roundedButton_TenRaisedToN.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_TenRaisedToN.TabIndex = 72;
+            this.roundedButton_TenRaisedToN.Text = "10𝑥";
+            this.roundedButton_TenRaisedToN.UseVisualStyleBackColor = false;
+            this.roundedButton_TenRaisedToN.Click += new System.EventHandler(this.roundedButton_TenRaisedToN_Click);
+            // 
+            // roundedButton_Power
+            // 
+            this.roundedButton_Power.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.roundedButton_Power.BorderRadius = 5;
+            this.roundedButton_Power.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_Power.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_Power.Font = new System.Drawing.Font("Gadugi", 9.5F);
+            this.roundedButton_Power.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_Power.Location = new System.Drawing.Point(4, 220);
+            this.roundedButton_Power.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_Power.Name = "roundedButton_Power";
+            this.roundedButton_Power.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_Power.TabIndex = 71;
+            this.roundedButton_Power.Text = "x^y";
+            this.roundedButton_Power.UseVisualStyleBackColor = false;
+            this.roundedButton_Power.Click += new System.EventHandler(this.roundedButton_Operation_Click);
+            // 
+            // roundedButton_SquareRoot2
+            // 
+            this.roundedButton_SquareRoot2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.roundedButton_SquareRoot2.BorderRadius = 5;
+            this.roundedButton_SquareRoot2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_SquareRoot2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_SquareRoot2.Font = new System.Drawing.Font("Gadugi", 13F);
+            this.roundedButton_SquareRoot2.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_SquareRoot2.Location = new System.Drawing.Point(4, 186);
+            this.roundedButton_SquareRoot2.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_SquareRoot2.Name = "roundedButton_SquareRoot2";
+            this.roundedButton_SquareRoot2.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_SquareRoot2.TabIndex = 70;
+            this.roundedButton_SquareRoot2.Text = "√𝑥";
+            this.roundedButton_SquareRoot2.UseVisualStyleBackColor = false;
+            this.roundedButton_SquareRoot2.Click += new System.EventHandler(this.roundedButton_SquareRoot_Click);
+            // 
+            // roundedButton_2nd
+            // 
+            this.roundedButton_2nd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.roundedButton_2nd.BorderRadius = 5;
+            this.roundedButton_2nd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_2nd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_2nd.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButton_2nd.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_2nd.Location = new System.Drawing.Point(4, 118);
+            this.roundedButton_2nd.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_2nd.Name = "roundedButton_2nd";
+            this.roundedButton_2nd.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_2nd.TabIndex = 69;
+            this.roundedButton_2nd.Text = "2ⁿᵈ";
+            this.roundedButton_2nd.UseVisualStyleBackColor = false;
+            // 
+            // roundedButton_Exp
+            // 
+            this.roundedButton_Exp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.roundedButton_Exp.BorderRadius = 5;
+            this.roundedButton_Exp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_Exp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_Exp.Font = new System.Drawing.Font("Gadugi", 9.5F);
+            this.roundedButton_Exp.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_Exp.Location = new System.Drawing.Point(190, 152);
+            this.roundedButton_Exp.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_Exp.Name = "roundedButton_Exp";
+            this.roundedButton_Exp.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_Exp.TabIndex = 67;
+            this.roundedButton_Exp.Text = "exp";
+            this.roundedButton_Exp.UseVisualStyleBackColor = false;
+            this.roundedButton_Exp.Click += new System.EventHandler(this.roundedButton_Operation_Click);
+            // 
+            // roundedButton_AbsoluteValue
+            // 
+            this.roundedButton_AbsoluteValue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.roundedButton_AbsoluteValue.BorderRadius = 5;
+            this.roundedButton_AbsoluteValue.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_AbsoluteValue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_AbsoluteValue.Font = new System.Drawing.Font("Gadugi", 13F);
+            this.roundedButton_AbsoluteValue.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_AbsoluteValue.Location = new System.Drawing.Point(128, 152);
+            this.roundedButton_AbsoluteValue.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_AbsoluteValue.Name = "roundedButton_AbsoluteValue";
+            this.roundedButton_AbsoluteValue.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_AbsoluteValue.TabIndex = 66;
+            this.roundedButton_AbsoluteValue.Text = "|𝑥|";
+            this.roundedButton_AbsoluteValue.UseVisualStyleBackColor = false;
+            this.roundedButton_AbsoluteValue.Click += new System.EventHandler(this.roundedButton_AbsoluteValue_Click);
+            // 
+            // roundedButton_DivBy1_2
+            // 
+            this.roundedButton_DivBy1_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.roundedButton_DivBy1_2.BorderRadius = 5;
+            this.roundedButton_DivBy1_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_DivBy1_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_DivBy1_2.Font = new System.Drawing.Font("Gadugi", 13F);
+            this.roundedButton_DivBy1_2.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_DivBy1_2.Location = new System.Drawing.Point(66, 152);
+            this.roundedButton_DivBy1_2.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_DivBy1_2.Name = "roundedButton_DivBy1_2";
+            this.roundedButton_DivBy1_2.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_DivBy1_2.TabIndex = 65;
+            this.roundedButton_DivBy1_2.Text = "⅟𝑥";
+            this.roundedButton_DivBy1_2.UseVisualStyleBackColor = false;
+            this.roundedButton_DivBy1_2.Click += new System.EventHandler(this.roundedButton_DivBy1_Click);
+            // 
+            // roundedButton_Num6_2
+            // 
+            this.roundedButton_Num6_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
+            this.roundedButton_Num6_2.BorderRadius = 5;
+            this.roundedButton_Num6_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_Num6_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_Num6_2.Font = new System.Drawing.Font("Gadugi", 14F);
+            this.roundedButton_Num6_2.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_Num6_2.Location = new System.Drawing.Point(190, 254);
+            this.roundedButton_Num6_2.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_Num6_2.Name = "roundedButton_Num6_2";
+            this.roundedButton_Num6_2.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_Num6_2.TabIndex = 64;
+            this.roundedButton_Num6_2.Text = "6";
+            this.roundedButton_Num6_2.UseVisualStyleBackColor = false;
+            this.roundedButton_Num6_2.Click += new System.EventHandler(this.roundedButton_Num_Click);
+            // 
+            // roundedButton_Equals2
+            // 
+            this.roundedButton_Equals2.BackColor = System.Drawing.SystemColors.Highlight;
+            this.roundedButton_Equals2.BorderRadius = 5;
+            this.roundedButton_Equals2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_Equals2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_Equals2.Font = new System.Drawing.Font("Gadugi", 14F);
+            this.roundedButton_Equals2.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_Equals2.Location = new System.Drawing.Point(252, 322);
+            this.roundedButton_Equals2.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_Equals2.Name = "roundedButton_Equals2";
+            this.roundedButton_Equals2.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_Equals2.TabIndex = 63;
+            this.roundedButton_Equals2.Text = "=";
+            this.roundedButton_Equals2.UseVisualStyleBackColor = false;
+            this.roundedButton_Equals2.Click += new System.EventHandler(this.roundedButton_Equals_Click);
+            // 
+            // roundedButton_Decimal2
+            // 
+            this.roundedButton_Decimal2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
+            this.roundedButton_Decimal2.BorderRadius = 5;
+            this.roundedButton_Decimal2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_Decimal2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_Decimal2.Font = new System.Drawing.Font("Gadugi", 14F);
+            this.roundedButton_Decimal2.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_Decimal2.Location = new System.Drawing.Point(190, 322);
+            this.roundedButton_Decimal2.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_Decimal2.Name = "roundedButton_Decimal2";
+            this.roundedButton_Decimal2.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_Decimal2.TabIndex = 62;
+            this.roundedButton_Decimal2.Text = ".";
+            this.roundedButton_Decimal2.UseVisualStyleBackColor = false;
+            this.roundedButton_Decimal2.Click += new System.EventHandler(this.roundedButton_Decimal_Click);
+            // 
+            // roundedButton_Num_2
+            // 
+            this.roundedButton_Num_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
+            this.roundedButton_Num_2.BorderRadius = 5;
+            this.roundedButton_Num_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_Num_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_Num_2.Font = new System.Drawing.Font("Gadugi", 14F);
+            this.roundedButton_Num_2.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_Num_2.Location = new System.Drawing.Point(128, 322);
+            this.roundedButton_Num_2.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_Num_2.Name = "roundedButton_Num_2";
+            this.roundedButton_Num_2.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_Num_2.TabIndex = 61;
+            this.roundedButton_Num_2.Text = "0";
+            this.roundedButton_Num_2.UseVisualStyleBackColor = false;
+            this.roundedButton_Num_2.Click += new System.EventHandler(this.roundedButton_Num_Click);
+            // 
+            // roundedButton_PositiveNegative2
+            // 
+            this.roundedButton_PositiveNegative2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
+            this.roundedButton_PositiveNegative2.BorderRadius = 5;
+            this.roundedButton_PositiveNegative2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_PositiveNegative2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_PositiveNegative2.Font = new System.Drawing.Font("Gadugi", 14F);
+            this.roundedButton_PositiveNegative2.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_PositiveNegative2.Location = new System.Drawing.Point(66, 322);
+            this.roundedButton_PositiveNegative2.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_PositiveNegative2.Name = "roundedButton_PositiveNegative2";
+            this.roundedButton_PositiveNegative2.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_PositiveNegative2.TabIndex = 60;
+            this.roundedButton_PositiveNegative2.Text = "±";
+            this.roundedButton_PositiveNegative2.UseVisualStyleBackColor = false;
+            this.roundedButton_PositiveNegative2.Click += new System.EventHandler(this.roundedButton_PositiveNegative_Click);
+            // 
+            // roundedButton_Addition2
+            // 
+            this.roundedButton_Addition2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.roundedButton_Addition2.BorderRadius = 5;
+            this.roundedButton_Addition2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_Addition2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_Addition2.Font = new System.Drawing.Font("Gadugi", 14F);
+            this.roundedButton_Addition2.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_Addition2.Location = new System.Drawing.Point(252, 288);
+            this.roundedButton_Addition2.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_Addition2.Name = "roundedButton_Addition2";
+            this.roundedButton_Addition2.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_Addition2.TabIndex = 59;
+            this.roundedButton_Addition2.Text = "+";
+            this.roundedButton_Addition2.UseVisualStyleBackColor = false;
+            this.roundedButton_Addition2.Click += new System.EventHandler(this.roundedButton_Operation_Click);
+            // 
+            // roundedButton_Num3_2
+            // 
+            this.roundedButton_Num3_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
+            this.roundedButton_Num3_2.BorderRadius = 5;
+            this.roundedButton_Num3_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_Num3_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_Num3_2.Font = new System.Drawing.Font("Gadugi", 14F);
+            this.roundedButton_Num3_2.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_Num3_2.Location = new System.Drawing.Point(190, 288);
+            this.roundedButton_Num3_2.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_Num3_2.Name = "roundedButton_Num3_2";
+            this.roundedButton_Num3_2.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_Num3_2.TabIndex = 58;
+            this.roundedButton_Num3_2.Text = "3";
+            this.roundedButton_Num3_2.UseVisualStyleBackColor = false;
+            this.roundedButton_Num3_2.Click += new System.EventHandler(this.roundedButton_Num_Click);
+            // 
+            // roundedButton_Num2_2
+            // 
+            this.roundedButton_Num2_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
+            this.roundedButton_Num2_2.BorderRadius = 5;
+            this.roundedButton_Num2_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_Num2_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_Num2_2.Font = new System.Drawing.Font("Gadugi", 14F);
+            this.roundedButton_Num2_2.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_Num2_2.Location = new System.Drawing.Point(128, 288);
+            this.roundedButton_Num2_2.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_Num2_2.Name = "roundedButton_Num2_2";
+            this.roundedButton_Num2_2.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_Num2_2.TabIndex = 57;
+            this.roundedButton_Num2_2.Text = "2";
+            this.roundedButton_Num2_2.UseVisualStyleBackColor = false;
+            this.roundedButton_Num2_2.Click += new System.EventHandler(this.roundedButton_Num_Click);
+            // 
+            // roundedButton_Num1_2
+            // 
+            this.roundedButton_Num1_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
+            this.roundedButton_Num1_2.BorderRadius = 5;
+            this.roundedButton_Num1_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_Num1_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_Num1_2.Font = new System.Drawing.Font("Gadugi", 14F);
+            this.roundedButton_Num1_2.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_Num1_2.Location = new System.Drawing.Point(66, 288);
+            this.roundedButton_Num1_2.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_Num1_2.Name = "roundedButton_Num1_2";
+            this.roundedButton_Num1_2.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_Num1_2.TabIndex = 56;
+            this.roundedButton_Num1_2.Text = "1";
+            this.roundedButton_Num1_2.UseVisualStyleBackColor = false;
+            this.roundedButton_Num1_2.Click += new System.EventHandler(this.roundedButton_Num_Click);
+            // 
+            // roundedButton_Subtraction2
+            // 
+            this.roundedButton_Subtraction2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.roundedButton_Subtraction2.BorderRadius = 5;
+            this.roundedButton_Subtraction2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_Subtraction2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_Subtraction2.Font = new System.Drawing.Font("Gadugi", 14F);
+            this.roundedButton_Subtraction2.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_Subtraction2.Location = new System.Drawing.Point(252, 254);
+            this.roundedButton_Subtraction2.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_Subtraction2.Name = "roundedButton_Subtraction2";
+            this.roundedButton_Subtraction2.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_Subtraction2.TabIndex = 55;
+            this.roundedButton_Subtraction2.Text = "-";
+            this.roundedButton_Subtraction2.UseVisualStyleBackColor = false;
+            this.roundedButton_Subtraction2.Click += new System.EventHandler(this.roundedButton_Operation_Click);
+            // 
+            // roundedButton_Num5_2
+            // 
+            this.roundedButton_Num5_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
+            this.roundedButton_Num5_2.BorderRadius = 5;
+            this.roundedButton_Num5_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_Num5_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_Num5_2.Font = new System.Drawing.Font("Gadugi", 14F);
+            this.roundedButton_Num5_2.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_Num5_2.Location = new System.Drawing.Point(128, 254);
+            this.roundedButton_Num5_2.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_Num5_2.Name = "roundedButton_Num5_2";
+            this.roundedButton_Num5_2.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_Num5_2.TabIndex = 54;
+            this.roundedButton_Num5_2.Text = "5";
+            this.roundedButton_Num5_2.UseVisualStyleBackColor = false;
+            this.roundedButton_Num5_2.Click += new System.EventHandler(this.roundedButton_Num_Click);
+            // 
+            // roundedButton_Num4_2
+            // 
+            this.roundedButton_Num4_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
+            this.roundedButton_Num4_2.BorderRadius = 5;
+            this.roundedButton_Num4_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_Num4_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_Num4_2.Font = new System.Drawing.Font("Gadugi", 14F);
+            this.roundedButton_Num4_2.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_Num4_2.Location = new System.Drawing.Point(66, 254);
+            this.roundedButton_Num4_2.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_Num4_2.Name = "roundedButton_Num4_2";
+            this.roundedButton_Num4_2.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_Num4_2.TabIndex = 53;
+            this.roundedButton_Num4_2.Text = "4";
+            this.roundedButton_Num4_2.UseVisualStyleBackColor = false;
+            this.roundedButton_Num4_2.Click += new System.EventHandler(this.roundedButton_Num_Click);
+            // 
+            // roundedButton_Multiplication2
+            // 
+            this.roundedButton_Multiplication2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.roundedButton_Multiplication2.BorderRadius = 5;
+            this.roundedButton_Multiplication2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_Multiplication2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_Multiplication2.Font = new System.Drawing.Font("Gadugi", 14F);
+            this.roundedButton_Multiplication2.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_Multiplication2.Location = new System.Drawing.Point(252, 220);
+            this.roundedButton_Multiplication2.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_Multiplication2.Name = "roundedButton_Multiplication2";
+            this.roundedButton_Multiplication2.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_Multiplication2.TabIndex = 52;
+            this.roundedButton_Multiplication2.Text = "×";
+            this.roundedButton_Multiplication2.UseVisualStyleBackColor = false;
+            this.roundedButton_Multiplication2.Click += new System.EventHandler(this.roundedButton_Operation_Click);
+            // 
+            // roundedButton_Num9_2
+            // 
+            this.roundedButton_Num9_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
+            this.roundedButton_Num9_2.BorderRadius = 5;
+            this.roundedButton_Num9_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_Num9_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_Num9_2.Font = new System.Drawing.Font("Gadugi", 14F);
+            this.roundedButton_Num9_2.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_Num9_2.Location = new System.Drawing.Point(190, 220);
+            this.roundedButton_Num9_2.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_Num9_2.Name = "roundedButton_Num9_2";
+            this.roundedButton_Num9_2.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_Num9_2.TabIndex = 51;
+            this.roundedButton_Num9_2.Text = "9";
+            this.roundedButton_Num9_2.UseVisualStyleBackColor = false;
+            this.roundedButton_Num9_2.Click += new System.EventHandler(this.roundedButton_Num_Click);
+            // 
+            // roundedButton_Num8_2
+            // 
+            this.roundedButton_Num8_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
+            this.roundedButton_Num8_2.BorderRadius = 5;
+            this.roundedButton_Num8_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_Num8_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_Num8_2.Font = new System.Drawing.Font("Gadugi", 14F);
+            this.roundedButton_Num8_2.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_Num8_2.Location = new System.Drawing.Point(128, 220);
+            this.roundedButton_Num8_2.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_Num8_2.Name = "roundedButton_Num8_2";
+            this.roundedButton_Num8_2.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_Num8_2.TabIndex = 50;
+            this.roundedButton_Num8_2.Text = "8";
+            this.roundedButton_Num8_2.UseVisualStyleBackColor = false;
+            this.roundedButton_Num8_2.Click += new System.EventHandler(this.roundedButton_Num_Click);
+            // 
+            // roundedButton_Num7_2
+            // 
+            this.roundedButton_Num7_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
+            this.roundedButton_Num7_2.BorderRadius = 5;
+            this.roundedButton_Num7_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_Num7_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_Num7_2.Font = new System.Drawing.Font("Gadugi", 14F);
+            this.roundedButton_Num7_2.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_Num7_2.Location = new System.Drawing.Point(66, 220);
+            this.roundedButton_Num7_2.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_Num7_2.Name = "roundedButton_Num7_2";
+            this.roundedButton_Num7_2.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_Num7_2.TabIndex = 49;
+            this.roundedButton_Num7_2.Text = "7";
+            this.roundedButton_Num7_2.UseVisualStyleBackColor = false;
+            this.roundedButton_Num7_2.Click += new System.EventHandler(this.roundedButton_Num_Click);
+            // 
+            // roundedButton_Division2
+            // 
+            this.roundedButton_Division2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.roundedButton_Division2.BorderRadius = 5;
+            this.roundedButton_Division2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_Division2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_Division2.Font = new System.Drawing.Font("Gadugi", 14F);
+            this.roundedButton_Division2.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_Division2.Location = new System.Drawing.Point(252, 186);
+            this.roundedButton_Division2.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_Division2.Name = "roundedButton_Division2";
+            this.roundedButton_Division2.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_Division2.TabIndex = 48;
+            this.roundedButton_Division2.Text = "÷";
+            this.roundedButton_Division2.UseVisualStyleBackColor = false;
+            this.roundedButton_Division2.Click += new System.EventHandler(this.roundedButton_Operation_Click);
+            // 
+            // roundedButton_Factorial
+            // 
+            this.roundedButton_Factorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.roundedButton_Factorial.BorderRadius = 5;
+            this.roundedButton_Factorial.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_Factorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_Factorial.Font = new System.Drawing.Font("Gadugi", 9.5F);
+            this.roundedButton_Factorial.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_Factorial.Location = new System.Drawing.Point(190, 186);
+            this.roundedButton_Factorial.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_Factorial.Name = "roundedButton_Factorial";
+            this.roundedButton_Factorial.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_Factorial.TabIndex = 47;
+            this.roundedButton_Factorial.Text = "n!";
+            this.roundedButton_Factorial.UseVisualStyleBackColor = false;
+            this.roundedButton_Factorial.Click += new System.EventHandler(this.roundedButton_Factorial_Click);
+            // 
+            // roundedButton_ParenthesisClose
+            // 
+            this.roundedButton_ParenthesisClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.roundedButton_ParenthesisClose.BorderRadius = 5;
+            this.roundedButton_ParenthesisClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_ParenthesisClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_ParenthesisClose.Font = new System.Drawing.Font("Gadugi", 10F);
+            this.roundedButton_ParenthesisClose.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_ParenthesisClose.Location = new System.Drawing.Point(128, 186);
+            this.roundedButton_ParenthesisClose.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_ParenthesisClose.Name = "roundedButton_ParenthesisClose";
+            this.roundedButton_ParenthesisClose.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_ParenthesisClose.TabIndex = 46;
+            this.roundedButton_ParenthesisClose.Text = ")";
+            this.roundedButton_ParenthesisClose.UseVisualStyleBackColor = false;
+            this.roundedButton_ParenthesisClose.Click += new System.EventHandler(this.roundedButton_ParenthesisClose_Click);
+            // 
+            // roundedButton_ParenthesisOpen
+            // 
+            this.roundedButton_ParenthesisOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.roundedButton_ParenthesisOpen.BorderRadius = 5;
+            this.roundedButton_ParenthesisOpen.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_ParenthesisOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_ParenthesisOpen.Font = new System.Drawing.Font("Gadugi", 10F);
+            this.roundedButton_ParenthesisOpen.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_ParenthesisOpen.Location = new System.Drawing.Point(66, 186);
+            this.roundedButton_ParenthesisOpen.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_ParenthesisOpen.Name = "roundedButton_ParenthesisOpen";
+            this.roundedButton_ParenthesisOpen.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_ParenthesisOpen.TabIndex = 45;
+            this.roundedButton_ParenthesisOpen.Text = "(";
+            this.roundedButton_ParenthesisOpen.UseVisualStyleBackColor = false;
+            this.roundedButton_ParenthesisOpen.Click += new System.EventHandler(this.roundedButton_ParenthesisOpen_Click);
+            // 
+            // roundedButton_Delete2
+            // 
+            this.roundedButton_Delete2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.roundedButton_Delete2.BorderRadius = 5;
+            this.roundedButton_Delete2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_Delete2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_Delete2.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButton_Delete2.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_Delete2.Image = ((System.Drawing.Image)(resources.GetObject("roundedButton_Delete2.Image")));
+            this.roundedButton_Delete2.Location = new System.Drawing.Point(252, 118);
+            this.roundedButton_Delete2.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_Delete2.Name = "roundedButton_Delete2";
+            this.roundedButton_Delete2.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_Delete2.TabIndex = 44;
+            this.roundedButton_Delete2.UseVisualStyleBackColor = false;
+            this.roundedButton_Delete2.Click += new System.EventHandler(this.roundedButton_Delete_Click);
+            // 
+            // roundedButton_ClearCE
+            // 
+            this.roundedButton_ClearCE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.roundedButton_ClearCE.BorderRadius = 5;
+            this.roundedButton_ClearCE.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_ClearCE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_ClearCE.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButton_ClearCE.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_ClearCE.Location = new System.Drawing.Point(190, 118);
+            this.roundedButton_ClearCE.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_ClearCE.Name = "roundedButton_ClearCE";
+            this.roundedButton_ClearCE.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_ClearCE.TabIndex = 43;
+            this.roundedButton_ClearCE.Text = "C";
+            this.roundedButton_ClearCE.UseVisualStyleBackColor = false;
+            this.roundedButton_ClearCE.Click += new System.EventHandler(this.roundedButton_ClearCE_Click);
+            // 
+            // roundedButton_e
+            // 
+            this.roundedButton_e.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.roundedButton_e.BorderRadius = 5;
+            this.roundedButton_e.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_e.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_e.Font = new System.Drawing.Font("Gadugi", 10F);
+            this.roundedButton_e.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_e.Location = new System.Drawing.Point(128, 118);
+            this.roundedButton_e.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_e.Name = "roundedButton_e";
+            this.roundedButton_e.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_e.TabIndex = 42;
+            this.roundedButton_e.Text = "e";
+            this.roundedButton_e.UseVisualStyleBackColor = false;
+            this.roundedButton_e.Click += new System.EventHandler(this.roundedButton_e_Click);
+            // 
+            // roundedButton_Pi
+            // 
+            this.roundedButton_Pi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.roundedButton_Pi.BorderRadius = 5;
+            this.roundedButton_Pi.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_Pi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_Pi.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButton_Pi.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_Pi.Location = new System.Drawing.Point(66, 118);
+            this.roundedButton_Pi.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_Pi.Name = "roundedButton_Pi";
+            this.roundedButton_Pi.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_Pi.TabIndex = 41;
+            this.roundedButton_Pi.Text = "𝝅";
+            this.roundedButton_Pi.UseVisualStyleBackColor = false;
+            this.roundedButton_Pi.Click += new System.EventHandler(this.roundedButton_Pi_Click);
+            // 
+            // roundedButton_Mod
+            // 
+            this.roundedButton_Mod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.roundedButton_Mod.BorderRadius = 5;
+            this.roundedButton_Mod.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_Mod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_Mod.Font = new System.Drawing.Font("Gadugi", 9.5F);
+            this.roundedButton_Mod.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_Mod.Location = new System.Drawing.Point(252, 152);
+            this.roundedButton_Mod.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton_Mod.Name = "roundedButton_Mod";
+            this.roundedButton_Mod.Size = new System.Drawing.Size(62, 34);
+            this.roundedButton_Mod.TabIndex = 69;
+            this.roundedButton_Mod.Text = "mod";
+            this.roundedButton_Mod.UseVisualStyleBackColor = false;
+            this.roundedButton_Mod.Click += new System.EventHandler(this.roundedButton_Operation_Click);
+            // 
+            // roundedButton_Settings
+            // 
+            this.roundedButton_Settings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
+            this.roundedButton_Settings.BorderRadius = 5;
+            this.roundedButton_Settings.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_Settings.FlatAppearance.BorderSize = 0;
+            this.roundedButton_Settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_Settings.Font = new System.Drawing.Font("Gadugi", 10F);
+            this.roundedButton_Settings.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_Settings.Image = ((System.Drawing.Image)(resources.GetObject("roundedButton_Settings.Image")));
+            this.roundedButton_Settings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.roundedButton_Settings.Location = new System.Drawing.Point(11, 380);
+            this.roundedButton_Settings.Margin = new System.Windows.Forms.Padding(1);
+            this.roundedButton_Settings.Name = "roundedButton_Settings";
+            this.roundedButton_Settings.Size = new System.Drawing.Size(240, 34);
+            this.roundedButton_Settings.TabIndex = 78;
+            this.roundedButton_Settings.Text = "        Settings";
+            this.roundedButton_Settings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.roundedButton_Settings.UseVisualStyleBackColor = false;
+            // 
+            // roundedButton_CalcScientific
+            // 
+            this.roundedButton_CalcScientific.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
+            this.roundedButton_CalcScientific.BorderRadius = 5;
+            this.roundedButton_CalcScientific.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_CalcScientific.FlatAppearance.BorderSize = 0;
+            this.roundedButton_CalcScientific.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_CalcScientific.Font = new System.Drawing.Font("Gadugi", 10F);
+            this.roundedButton_CalcScientific.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_CalcScientific.Image = ((System.Drawing.Image)(resources.GetObject("roundedButton_CalcScientific.Image")));
+            this.roundedButton_CalcScientific.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.roundedButton_CalcScientific.Location = new System.Drawing.Point(11, 80);
+            this.roundedButton_CalcScientific.Margin = new System.Windows.Forms.Padding(1);
+            this.roundedButton_CalcScientific.Name = "roundedButton_CalcScientific";
+            this.roundedButton_CalcScientific.Size = new System.Drawing.Size(240, 36);
+            this.roundedButton_CalcScientific.TabIndex = 44;
+            this.roundedButton_CalcScientific.Text = "       Scientific";
+            this.roundedButton_CalcScientific.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.roundedButton_CalcScientific.UseVisualStyleBackColor = false;
+            this.roundedButton_CalcScientific.Click += new System.EventHandler(this.roundedButton_CalcScientific_Click);
+            // 
+            // roundedButton_CalcStandard
+            // 
+            this.roundedButton_CalcStandard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
+            this.roundedButton_CalcStandard.BorderRadius = 5;
+            this.roundedButton_CalcStandard.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.roundedButton_CalcStandard.FlatAppearance.BorderSize = 0;
+            this.roundedButton_CalcStandard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_CalcStandard.Font = new System.Drawing.Font("Gadugi", 10F);
+            this.roundedButton_CalcStandard.ForeColor = System.Drawing.Color.Transparent;
+            this.roundedButton_CalcStandard.Image = ((System.Drawing.Image)(resources.GetObject("roundedButton_CalcStandard.Image")));
+            this.roundedButton_CalcStandard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.roundedButton_CalcStandard.Location = new System.Drawing.Point(11, 42);
+            this.roundedButton_CalcStandard.Margin = new System.Windows.Forms.Padding(1);
+            this.roundedButton_CalcStandard.Name = "roundedButton_CalcStandard";
+            this.roundedButton_CalcStandard.Size = new System.Drawing.Size(240, 36);
+            this.roundedButton_CalcStandard.TabIndex = 42;
+            this.roundedButton_CalcStandard.Text = "       Standard";
+            this.roundedButton_CalcStandard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.roundedButton_CalcStandard.UseVisualStyleBackColor = false;
+            this.roundedButton_CalcStandard.Click += new System.EventHandler(this.roundedButton_CalcStandard_Click);
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2152,9 +2155,9 @@
             this.panel1.ResumeLayout(false);
             this.panel_ShowHistory.ResumeLayout(false);
             this.panel_CalSci.ResumeLayout(false);
+            this.panel_CalStandard.ResumeLayout(false);
             this.roundedPanel_Functions.ResumeLayout(false);
             this.roundedPanel_Trigo.ResumeLayout(false);
-            this.panel_CalStandard.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
