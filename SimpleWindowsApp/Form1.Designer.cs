@@ -360,7 +360,7 @@
             this.textBox_Display1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.textBox_Display1.Location = new System.Drawing.Point(10, 107);
             this.textBox_Display1.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox_Display1.MaxLength = 16;
+            this.textBox_Display1.MaxLength = 25;
             this.textBox_Display1.Multiline = true;
             this.textBox_Display1.Name = "textBox_Display1";
             this.textBox_Display1.ReadOnly = true;

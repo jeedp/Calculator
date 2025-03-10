@@ -96,9 +96,9 @@ namespace SimpleWindowsApp
             }
 
             textBox_Display1.Text = "0";
-            EnableButtons(this);
             UpdateFontSize();
             UpdateParenthesisButton();
+            EnableButtons(this);
         }
 
         private void roundedButton_Clear_Click(object sender, EventArgs e)
@@ -107,9 +107,10 @@ namespace SimpleWindowsApp
             textBox_Display2.Text = "";
             result = 0;
             operation = "";
-            EnableButtons(this);
+            
             UpdateFontSize();
             UpdateParenthesisButton();
+            EnableButtons(this);
         }
 
         private void roundedButton_Delete_Click(object sender, EventArgs e)
@@ -121,13 +122,19 @@ namespace SimpleWindowsApp
             }
 
             if (textBox_Display1.Text.Length > 1)
-                textBox_Display1.Text = textBox_Display1.Text.Remove(textBox_Display1.Text.Length - 1);
+                textBox_Display1.Text = FormatResult(Convert.ToDouble(textBox_Display1.Text.Remove(textBox_Display1.Text.Length - 1)));
             else
                 textBox_Display1.Text = "0";
-            EnableButtons(this);
+
             UpdateFontSize();
             UpdateParenthesisButton();
+            EnableButtons(this);
         }
+
+
+
+
+
 
 
 
@@ -339,6 +346,7 @@ namespace SimpleWindowsApp
                 result = 0;
                 DisableButtons(this);
             }
+            UpdateFontSize();
         }
 
         private void roundedButton_Square_Click(object sender, EventArgs e)
@@ -1042,9 +1050,9 @@ namespace SimpleWindowsApp
 
         private string FormatResult(double value)
         {
-            if (Math.Abs(value) >= 1e15 || Math.Abs(value) < 1e-6)
+            if (Math.Abs(value) >= 1e10 || Math.Abs(value) < 1e-6)
             {
-                return value.ToString("0.###############e+0"); // Scientific notation with up to 8 decimal places
+                return value.ToString("0.###############e+0"); // Up to 10 decimal places in scientific notation
             }
             else if (value % 1 == 0)
                 return value.ToString("N0"); // Whole number (e.g., 1,234)
@@ -1097,7 +1105,9 @@ namespace SimpleWindowsApp
                                 ? 28
                                 : length <= 13
                                     ? 24
-                                    : 22
+                                    : length > 15
+                                        ? 19
+                                        : 22
                     , FontStyle.Bold);
             }
             // Scientific
