@@ -23,7 +23,6 @@ namespace SimpleWindowsApp
         private bool mouseDown;
         private bool isDisabled = false;
         private bool isOperationPerformed = false;
-        private bool isScientificNotation = false;
         private double result = 0;
         private double lastOperand = 0;
         private string operation = "";
@@ -121,8 +120,10 @@ namespace SimpleWindowsApp
                 return;
             }
 
-            if (textBox_Display1.Text.Length > 1)
+            if (textBox_Display1.Text.Length > 1 && !textBox_Display1.Text.Contains("."))
                 textBox_Display1.Text = FormatResult(Convert.ToDouble(textBox_Display1.Text.Remove(textBox_Display1.Text.Length - 1)));
+            else if (textBox_Display1.Text.Contains("."))
+                textBox_Display1.Text = Convert.ToString(textBox_Display1.Text.Remove(textBox_Display1.Text.Length - 1));
             else
                 textBox_Display1.Text = "0";
 
@@ -145,6 +146,12 @@ namespace SimpleWindowsApp
         {
             Button button = (Button)sender;
             int maxDigits = (textBox_CalcType.Text == "Standard") ? 15 : 15;
+
+            if (isDisabled)
+            {
+                roundedButton_Clear_Click(sender, e);
+                //return;
+            }
 
             // new inputs
             if (textBox_Display1.Text == "0" || isOperationPerformed)
@@ -235,8 +242,10 @@ namespace SimpleWindowsApp
             }
 
             operation = button.Text;
+
             if (operation == "x^y")
                 operation = "^";
+
             result = Convert.ToDouble(textBox_Display1.Text);
             isOperationPerformed = true;
 
@@ -289,6 +298,7 @@ namespace SimpleWindowsApp
                 {
                     return;
                 }
+
                 string expression = result + " " + operation + " " + inputValue;
 
                 switch (operation)
@@ -303,8 +313,7 @@ namespace SimpleWindowsApp
                             result = (int)result % (int)inputValue; 
                             operation = "Mod";
                             break;
-
-                        case "x^y":
+                        case "^":
                             result = Math.Pow(result, inputValue);
                             operation = "^";
                             break;
@@ -480,8 +489,8 @@ namespace SimpleWindowsApp
                 panel_CalSci.BringToFront();
             }
 
-                panel_ShowHistory.Height = (panel_ShowHistory.Height == 0) ? 300 : 0;
-                panel_ShowHistory.BringToFront();
+            panel_ShowHistory.Height = (panel_ShowHistory.Height == 0) ? 300 : 0;
+            panel_ShowHistory.BringToFront();
         }
 
         private void button_Menu_Click(object sender, EventArgs e)
@@ -503,7 +512,7 @@ namespace SimpleWindowsApp
                 textBox_Display1.Visible = true;    textBox_Display1.BringToFront();
             }
 
-                button_Menu.BringToFront();
+            button_Menu.BringToFront();
         }
 
         private void roundedButton_CalcStandard_Click(object sender, EventArgs e)
@@ -758,7 +767,7 @@ namespace SimpleWindowsApp
             }
 
 
-                UpdateParenthesisButton();
+            UpdateParenthesisButton();
         }
 
 
